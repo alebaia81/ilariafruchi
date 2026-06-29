@@ -1,4 +1,5 @@
 import { Phone, Mail, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export const FooterInstitutional = () => {
   return (
@@ -40,8 +41,9 @@ export const FooterInstitutional = () => {
           <div className="border-t border-stone-800 pt-6 mt-6 text-xs text-stone-500 flex flex-col sm:flex-row justify-between gap-4">
             <span>© {new Date().getFullYear()} Ilaria Fruchi. Tutti i diritti riservati.</span>
             <div className="flex gap-4">
-              <a href="#privacy" className="hover:text-stone-400 focus:outline-none">Privacy Policy</a>
-              <a href="#cookie" className="hover:text-stone-400 focus:outline-none">Cookie Policy</a>
+              <Link to="/privacy-policy" className="hover:text-stone-400 focus:outline-none transition-colors">
+                Informativa Privacy & Cookie Policy
+              </Link>
             </div>
           </div>
         </div>

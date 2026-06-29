@@ -1,4 +1,4 @@
-import { User, TrendingUp, Shield, BarChart3, Briefcase, Users, Landmark, ArrowRight } from 'lucide-react';
+import { User, TrendingUp, Shield, BarChart3, Landmark, ArrowRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const serviceCategories = [
@@ -37,20 +37,6 @@ const serviceCategories = [
     title: "Grandi Patrimoni",
     desc: "Consulenza avanzata su architetture finanziarie complesse, efficienza nei costi di gestione e diversificazione internazionale."
   },
-  {
-    id: "servizi-aziende",
-    path: "/servizi/aziende",
-    icon: Briefcase,
-    title: "Servizi per le Aziende",
-    desc: "Gestione della liquidità aziendale, ottimizzazione del TFR e strumenti di welfare aziendale per la protezione del business."
-  },
-  {
-    id: "servizi-collaborazioni",
-    path: "/servizi/collaborazioni",
-    icon: Users,
-    title: "Collaborazioni tra professionisti",
-    desc: "Sinergie strategiche con commercialisti e avvocati per offrire una consulenza patrimoniale e legale integrata a 360 gradi."
-  }
 ];
 
 export const Expertise = () => {

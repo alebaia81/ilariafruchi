@@ -1,4 +1,6 @@
-import { useId } from 'react';
+import { useState, useId } from 'react';
+import type { FormEvent } from 'react';
+import { MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import {
   ArrowLeft,
@@ -18,6 +20,18 @@ const ServiceContactForm = () => {
   const nameId = useId();
   const emailId = useId();
   const messageId = useId();
+  const privacyId = useId();
+
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const text = `Ciao Ilaria, sono ${name} (${email}). Vorrei rivedere il mio portafoglio. Nota aggiuntiva: ${message || 'Nessuna nota aggiuntiva.'}`;
+    const whatsappUrl = `https://wa.me/390523123456?text=${encodeURIComponent(text)}`;
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+  };
 
   return (
     <section
@@ -39,7 +53,7 @@ const ServiceContactForm = () => {
 
         <form
           className="space-y-4 text-left"
-          onSubmit={(e) => e.preventDefault()}
+          onSubmit={handleSubmit}
         >
           <div>
             <label
@@ -52,6 +66,8 @@ const ServiceContactForm = () => {
               type="text"
               id={nameId}
               required
+              value={name}
+              onChange={(e) => setName(e.target.value)}
               className="w-full p-3 bg-stone-50 border border-stone-300 rounded-lg focus:outline-none"
             />
           </div>
@@ -67,6 +83,8 @@ const ServiceContactForm = () => {
               type="email"
               id={emailId}
               required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               className="w-full p-3 bg-stone-50 border border-stone-300 rounded-lg focus:outline-none"
             />
           </div>
@@ -81,23 +99,33 @@ const ServiceContactForm = () => {
             <textarea
               id={messageId}
               rows={3}
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
               placeholder="Es. ho un portafoglio fondi che non ho mai rivisto, ho ricevuto un'eredità, voglio capire se sto rischiando troppo..."
               className="w-full p-3 bg-stone-50 border border-stone-300 rounded-lg focus:outline-none resize-none"
             />
           </div>
 
+          <div className="flex items-start gap-3">
+            <input
+              type="checkbox"
+              id={privacyId}
+              required
+              className="mt-1 w-4 h-4 shrink-0 accent-gold-amber cursor-pointer"
+            />
+            <label htmlFor={privacyId} className="text-sm text-text-secondary leading-snug cursor-pointer">
+              Accetto il trattamento dei dati personali secondo la{' '}
+              <a href="/privacy-policy" className="underline hover:text-text-primary focus:outline-none">Privacy Policy</a>
+            </label>
+          </div>
+
           <button
             type="submit"
-            className="w-full bg-gold-amber text-white font-bold py-3 px-6 rounded-lg shadow-md hover:opacity-90 transition-opacity focus:outline-none"
+            className="w-full bg-[#25D366] text-[#1A1816] font-bold py-3 px-6 rounded-lg shadow-md hover:brightness-95 transition-all focus:outline-none min-h-[48px] flex items-center justify-center gap-2"
           >
-            Richiedi analisi del portafoglio
+            <MessageCircle className="w-5 h-5 shrink-0" aria-hidden="true" />
+            <span>Contattami su WhatsApp</span>
           </button>
-
-          <p className="text-[11px] text-stone-500 leading-tight mt-4">
-            Inviando il modulo confermi il trattamento dei dati personali a norma
-            di legge per finalità legate esclusivamente alla richiesta di contatto
-            professionale.
-          </p>
         </form>
       </div>
     </section>

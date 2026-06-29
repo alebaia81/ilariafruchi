@@ -9,8 +9,6 @@ const subServices = [
   { name: "Gestione delle risorse – Mezza età", path: "/servizi/mezza-eta" },
   { name: "Pensionati e fase di decumulo", path: "/servizi/pensionati" },
   { name: "Grandi Patrimoni", path: "/servizi/grandi-patrimoni" },
-  { name: "Servizi per le Aziende", path: "/servizi/aziende" },
-  { name: "Collaborazioni tra professionisti", path: "/servizi/collaborazioni" },
 ];
 
 export const Navbar = () => {
@@ -71,7 +69,7 @@ export const Navbar = () => {
             )}
           </div>
 
-          <a href="/#calculator-section" className="font-bold text-stone-600 hover:text-text-primary">Simulatore di interessi</a>
+
           <button
             onClick={() => {
               navigate('/analisi-portafoglio');

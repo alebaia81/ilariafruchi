@@ -1,4 +1,5 @@
-import { useId } from 'react';
+import { useState, useId } from 'react';
+import type { FormEvent } from 'react';
 import { Link } from 'react-router-dom';
 import {
   ArrowLeft,
@@ -22,6 +23,18 @@ const AnalysisForm = () => {
   const nameId = useId();
   const emailId = useId();
   const notesId = useId();
+  const privacyId = useId();
+
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [notes, setNotes] = useState('');
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const text = `Ciao Ilaria, sono ${name} (${email}). Vorrei richiedere un'analisi gratuita del mio portafoglio. Note: ${notes || 'Nessuna nota aggiuntiva.'}`;
+    const whatsappUrl = `https://wa.me/390523123456?text=${encodeURIComponent(text)}`;
+    window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+  };
 
   return (
     <section
@@ -46,7 +59,7 @@ const AnalysisForm = () => {
         <div className="bg-white p-8 rounded-2xl border border-stone-200 shadow-md">
           <form
             className="space-y-5 text-left"
-            onSubmit={(e) => e.preventDefault()}
+            onSubmit={handleSubmit}
           >
             <div>
               <label
@@ -59,6 +72,8 @@ const AnalysisForm = () => {
                 type="text"
                 id={nameId}
                 required
+                value={name}
+                onChange={(e) => setName(e.target.value)}
                 className="w-full p-3 bg-stone-50 border border-stone-300 rounded-lg focus:outline-none"
               />
             </div>
@@ -74,6 +89,8 @@ const AnalysisForm = () => {
                 type="email"
                 id={emailId}
                 required
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="w-full p-3 bg-stone-50 border border-stone-300 rounded-lg focus:outline-none"
               />
             </div>
@@ -88,6 +105,8 @@ const AnalysisForm = () => {
               <textarea
                 id={notesId}
                 rows={4}
+                value={notes}
+                onChange={(e) => setNotes(e.target.value)}
                 placeholder="Es. ho un portafoglio con la mia banca attuale, ho fondi e polizze di cui non conosco i costi reali, voglio capire se sto investendo bene..."
                 className="w-full p-3 bg-stone-50 border border-stone-300 rounded-lg focus:outline-none resize-none"
               />
@@ -110,11 +129,26 @@ const AnalysisForm = () => {
               />
             </div>
 
+            {/* Consenso GDPR */}
+            <div className="flex items-start gap-3">
+              <input
+                type="checkbox"
+                id={privacyId}
+                required
+                className="mt-1 w-4 h-4 shrink-0 accent-gold-amber cursor-pointer"
+              />
+              <label htmlFor={privacyId} className="text-sm text-text-secondary leading-snug cursor-pointer">
+                Accetto il trattamento dei dati personali secondo la{' '}
+                <a href="/privacy-policy" className="underline hover:text-text-primary focus:outline-none">Privacy Policy</a>
+              </label>
+            </div>
+
             <button
               type="submit"
-              className="w-full bg-gold-amber text-white font-bold py-3.5 px-6 rounded-lg shadow-md hover:opacity-90 transition-opacity focus:outline-none text-base"
+              className="w-full bg-[#25D366] text-[#1A1816] font-bold py-3.5 px-6 rounded-lg shadow-md hover:brightness-95 transition-all focus:outline-none min-h-[48px] flex items-center justify-center gap-2 text-base"
             >
-              Richiedi analisi gratuita
+              <MessageCircle className="w-5 h-5 shrink-0" aria-hidden="true" />
+              <span>Contattami su WhatsApp</span>
             </button>
 
             {/* Canali alternativi */}
@@ -126,23 +160,7 @@ const AnalysisForm = () => {
                 <Mail className="w-4 h-4" aria-hidden="true" />
                 Invia via Email
               </a>
-              <a
-                href="https://wa.me/390523123456"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 flex items-center justify-center gap-2 border border-stone-300 text-text-secondary text-sm font-bold py-3 px-4 rounded-lg hover:border-gold-amber hover:text-text-primary transition-colors focus:outline-none"
-              >
-                <MessageCircle className="w-4 h-4" aria-hidden="true" />
-                Invia via WhatsApp
-              </a>
             </div>
-
-            <p className="text-[11px] text-stone-500 leading-tight">
-              Inviando il modulo confermi il trattamento dei dati personali a norma
-              di legge per finalità legate esclusivamente alla richiesta di analisi
-              professionale. I documenti condivisi vengono trattati con la massima
-              riservatezza e non vengono ceduti a terzi.
-            </p>
           </form>
         </div>
       </div>
