@@ -38,8 +38,21 @@ export const FooterInstitutional = () => {
             </ul>
           </div>
           
-          <div className="border-t border-stone-800 pt-6 mt-6 text-xs text-stone-500 flex flex-col sm:flex-row justify-between gap-4">
-            <span>© {new Date().getFullYear()} Ilaria Fruchi. Tutti i diritti riservati.</span>
+          <div className="border-t border-stone-800 pt-6 mt-6 text-xs text-stone-500 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+            <div className="flex flex-col gap-1">
+              <span>© {new Date().getFullYear()} Ilaria Fruchi. Tutti i diritti riservati.</span>
+              <span>
+                Design & Sviluppo:{' '}
+                <a 
+                  href="https://presenzadigitale.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="hover:text-stone-400 focus:outline-none transition-colors"
+                >
+                  Presenza Digitale
+                </a>
+              </span>
+            </div>
             <div className="flex gap-4">
               <Link to="/privacy-policy" className="hover:text-stone-400 focus:outline-none transition-colors">
                 Informativa Privacy & Cookie Policy
