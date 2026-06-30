@@ -8,6 +8,7 @@ import { HeroPortfolio } from './components/HeroPortfolio';
 import { Expertise } from './components/Expertise';
 import { TrustTestimonials } from './components/TrustTestimonials';
 
+import { BookingCalendar } from './components/BookingCalendar';
 import { ContactForm } from './components/ContactForm';
 
 // Service pages
@@ -26,6 +27,7 @@ const HomePage = () => (
     <Expertise />
 
     <TrustTestimonials />
+    <BookingCalendar />
     <ContactForm />
   </main>
 );

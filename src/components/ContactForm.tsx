@@ -2,19 +2,33 @@ import { useState, useId } from 'react';
 import type { FormEvent } from 'react';
 import { MessageCircle } from 'lucide-react';
 
+const SERVICES = [
+  "Dipendenti (TFR e Fondi)",
+  "Giovani e Accumulo (PAC)",
+  "Gestione Risorse (Mezza età)",
+  "Pensionati e Decumulo",
+  "Grandi Patrimoni",
+  "Servizi per le Aziende",
+] as const;
+
 export const ContactForm = () => {
   const nameId = useId();
   const emailId = useId();
+  const categoryId = useId();
   const messageId = useId();
   const privacyId = useId();
 
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
+  const [category, setCategory] = useState<string>(SERVICES[0]);
   const [message, setMessage] = useState('');
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const text = `Ciao Ilaria, sono ${name} (${email}). Vorrei richiedere un'analisi patrimoniale. Nota aggiuntiva: ${message || 'Nessuna nota aggiuntiva.'}`;
+    const text =
+      `Ciao Ilaria, sono ${name} (${email}). ` +
+      `Vorrei richiedere informazioni per l'ambito: ${category}. ` +
+      `Messaggio: ${message || 'Nessun messaggio aggiuntivo.'}`;
     const whatsappUrl = `https://wa.me/390523123456?text=${encodeURIComponent(text)}`;
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
   };
@@ -56,6 +70,24 @@ export const ContactForm = () => {
               onChange={(e) => setEmail(e.target.value)}
               className="w-full p-3 bg-stone-50 border border-stone-300 rounded-lg focus:outline-none"
             />
+          </div>
+
+          <div>
+            <label htmlFor={categoryId} className="block text-sm font-bold text-text-primary mb-1">
+              Seleziona l'area di tuo interesse
+            </label>
+            <select
+              id={categoryId}
+              value={category}
+              onChange={(e) => setCategory(e.target.value)}
+              className="w-full p-3 bg-bg-primary border border-stone-300 rounded-lg focus:outline-none text-sm font-medium text-text-primary"
+            >
+              {SERVICES.map((service) => (
+                <option key={service} value={service}>
+                  {service}
+                </option>
+              ))}
+            </select>
           </div>
 
           <div>
