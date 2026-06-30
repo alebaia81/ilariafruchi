@@ -1,5 +1,6 @@
 import { useState, useId } from 'react';
-import { Calendar as CalendarIcon, Clock, MessageSquare } from 'lucide-react';
+import { Calendar as CalendarIcon, Clock } from 'lucide-react';
+import { WhatsAppIcon } from './icons/WhatsAppIcon';
 
 export const BookingCalendar: React.FC = () => {
   const selectServiceId = useId();
@@ -196,7 +197,7 @@ export const BookingCalendar: React.FC = () => {
                   : 'bg-stone-200 text-stone-400 cursor-not-allowed'
               }`}
             >
-              <MessageSquare className="w-5 h-5 shrink-0" aria-hidden="true" />
+              <WhatsAppIcon className="w-5 h-5 shrink-0" aria-hidden="true" />
               <span>Conferma e Invia su WhatsApp</span>
             </button>
             {(!selectedDate || !selectedTime) && (

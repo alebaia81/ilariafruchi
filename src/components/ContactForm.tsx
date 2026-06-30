@@ -1,6 +1,6 @@
 import { useState, useId } from 'react';
 import type { FormEvent } from 'react';
-import { MessageCircle } from 'lucide-react';
+import { WhatsAppIcon } from './icons/WhatsAppIcon';
 
 const SERVICES = [
   "Dipendenti (TFR e Fondi)",
@@ -124,7 +124,7 @@ export const ContactForm = () => {
             type="submit"
             className="w-full bg-[#25D366] text-[#1A1816] font-bold py-3 px-6 rounded-lg shadow-md hover:brightness-95 transition-all focus:outline-none min-h-[48px] flex items-center justify-center gap-2"
           >
-            <MessageCircle className="w-5 h-5 shrink-0" aria-hidden="true" />
+            <WhatsAppIcon className="w-5 h-5 shrink-0" aria-hidden="true" />
             <span>Contattami su WhatsApp</span>
           </button>
         </form>

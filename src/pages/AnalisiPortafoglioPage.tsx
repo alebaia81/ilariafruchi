@@ -1,6 +1,7 @@
 import { useState, useId } from 'react';
 import type { FormEvent } from 'react';
 import { Link } from 'react-router-dom';
+import { WhatsAppIcon } from '../components/icons/WhatsAppIcon';
 import {
   ArrowLeft,
   Search,
@@ -11,7 +12,7 @@ import {
   BadgeCheck,
   FileUp,
   Mail,
-  MessageCircle,
+  Mail,
   CheckCircle2,
   Phone,
 } from 'lucide-react';
@@ -147,7 +148,7 @@ const AnalysisForm = () => {
               type="submit"
               className="w-full bg-[#25D366] text-[#1A1816] font-bold py-3.5 px-6 rounded-lg shadow-md hover:brightness-95 transition-all focus:outline-none min-h-[48px] flex items-center justify-center gap-2 text-base"
             >
-              <MessageCircle className="w-5 h-5 shrink-0" aria-hidden="true" />
+              <WhatsAppIcon className="w-5 h-5 shrink-0" aria-hidden="true" />
               <span>Contattami su WhatsApp</span>
             </button>
 
