@@ -11,6 +11,7 @@ import { TrustTestimonials } from './components/TrustTestimonials';
 
 import { BookingCalendar } from './components/BookingCalendar';
 import { ContactForm } from './components/ContactForm';
+import { FaqSection } from './components/FaqSection';
 
 // Service pages
 import { DipendentiPage } from './pages/DipendentiPage';
@@ -32,6 +33,7 @@ const HomePage = () => (
       <BookingCalendar />
     </div>
     <ContactForm />
+    <FaqSection />
   </main>
 );
 
