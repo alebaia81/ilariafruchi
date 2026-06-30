@@ -12,7 +12,6 @@ import {
   BadgeCheck,
   FileUp,
   Mail,
-  Mail,
   CheckCircle2,
   Phone,
 } from 'lucide-react';
