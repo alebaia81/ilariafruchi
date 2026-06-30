@@ -78,10 +78,17 @@ export const BookingCalendar: React.FC = () => {
             Fissa una Call Conoscitiva
           </h2>
         </div>
-        <p className="text-sm text-text-secondary mb-8 leading-relaxed max-w-2xl">
+        <p className="text-sm text-text-secondary mb-6 leading-relaxed max-w-2xl">
           Seleziona l'area di tuo interesse, scegli il giorno e l'orario più comodi.
           Il sistema ti reindirizzerà su WhatsApp per confermare lo slot con Ilaria.
         </p>
+
+        {/* Micro-incentivo */}
+        <div className="mb-8 border-l-2 border-gold-amber pl-4 py-1">
+          <p className="text-sm italic text-text-secondary font-medium leading-relaxed">
+            Il primo colloquio conoscitivo è strettamente confidenziale, non comporta alcun vincolo informativo e serve unicamente a mappare i tuoi obiettivi patrimoniali.
+          </p>
+        </div>
 
         <form onSubmit={handleBookingSubmit} className="space-y-6" noValidate>
 
