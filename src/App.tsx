@@ -1,4 +1,5 @@
-import { Routes, Route } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { SkipLink } from './components/SkipLink';
 import { Navbar } from './components/Navbar';
 import { FooterInstitutional } from './components/FooterInstitutional';
@@ -27,14 +28,36 @@ const HomePage = () => (
     <Expertise />
 
     <TrustTestimonials />
-    <BookingCalendar />
+    <div id="booking-section" className="scroll-mt-16">
+      <BookingCalendar />
+    </div>
     <ContactForm />
   </main>
 );
 
+function ScrollToHash() {
+  const { pathname, hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      setTimeout(() => {
+        const element = document.getElementById(hash.replace('#', ''));
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, hash]);
+
+  return null;
+}
+
 function App() {
   return (
     <>
+      <ScrollToHash />
       <SkipLink />
       <Navbar />
       <Routes>

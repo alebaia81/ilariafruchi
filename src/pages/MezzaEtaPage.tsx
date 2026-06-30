@@ -437,6 +437,20 @@ export const MezzaEtaPage = () => {
 
       {/* ── Form di contatto ── */}
       <ServiceContactForm />
+      {/* ── CTA Booking ── */}
+      <section className="bg-[#FCFAF7] py-16 px-4 border-t border-stone-200 text-center">
+        <div className="max-w-2xl mx-auto">
+          <h2 className="text-2xl font-extrabold text-text-primary mb-6">
+            Vuoi approfondire la tua situazione?
+          </h2>
+          <Link
+            to="/#booking-section"
+            className="inline-flex items-center justify-center bg-gold-amber text-white font-bold py-3.5 px-8 rounded-xl shadow-md hover:opacity-90 transition-opacity focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-gold-amber"
+          >
+            Fissa una Call Conoscitiva
+          </Link>
+        </div>
+      </section>
     </main>
   );
 };
