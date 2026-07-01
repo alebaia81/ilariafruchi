@@ -1,4 +1,4 @@
-import { User, TrendingUp, Shield, BarChart3, Landmark, ArrowRight } from 'lucide-react';
+import { User, TrendingUp, Shield, BarChart3, Landmark, ArrowRight, Briefcase } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const serviceCategories = [
@@ -6,36 +6,43 @@ const serviceCategories = [
     id: "servizi-dipendenti",
     path: "/servizi/dipendenti",
     icon: User,
-    title: "Dipendenti",
-    desc: "TFR, fondo pensione e previdenza complementare: la risorsa che l'azienda versa per te, ottimizzata per costruire patrimonio."
+    title: "Pianificazione Previdenziale & TFR",
+    desc: "Ottimizzazione del TFR e previdenza complementare per valorizzare le risorse accumulate e costruire un futuro sereno."
   },
   {
     id: "servizi-giovani",
     path: "/servizi/giovani",
     icon: TrendingUp,
-    title: "Giovani e accumulo",
+    title: "Piani di Accumulo e Costruzione Capitale (PAC)",
     desc: "Piani di accumulo del capitale (PAC) efficienti per costruire un patrimonio solido nel tempo, sfruttando l'interesse composto."
   },
   {
     id: "servizi-mezza-eta",
     path: "/servizi/mezza-eta",
     icon: Shield,
-    title: "Gestione delle risorse – Mezza età",
-    desc: "Bilanciamento del rischio del portafoglio, protezione dei beni accumulati e pianificazione degli obiettivi di vita intermedi."
+    title: "Ottimizzazione e Gestione Risorse",
+    desc: "Bilanciamento del rischio di portafoglio, protezione dei beni accumulati e pianificazione degli obiettivi finanziari di medio-lungo termine."
   },
   {
     id: "servizi-pensionati",
     path: "/servizi/pensionati",
     icon: Landmark,
-    title: "Pensionati e fase di decumulo",
-    desc: "Strategie di prelievo programmato e integrazione pensionistica per mantenere inalterato lo stile di vita senza intaccare il capitale core."
+    title: "Gestione del Decumulo e Integrazione",
+    desc: "Strategie di prelievo programmato e integrazione pensionistica per mantenere inalterato lo stile di vita tutelando il capitale."
   },
   {
     id: "servizi-patrimoni",
     path: "/servizi/grandi-patrimoni",
     icon: BarChart3,
-    title: "Grandi Patrimoni",
-    desc: "Consulenza avanzata su architetture finanziarie complesse, efficienza nei costi di gestione e diversificazione internazionale."
+    title: "Passaggio Generazionale & Grandi Patrimoni",
+    desc: "Consulenza avanzata su pianificazione successoria, tutela del patrimonio familiare, efficienza fiscale e diversificazione."
+  },
+  {
+    id: "servizi-aziende",
+    path: "/#contact",
+    icon: Briefcase,
+    title: "Servizi di Pianificazione per le Aziende",
+    desc: "Soluzioni patrimoniali dedicate alle imprese: gestione della liquidità aziendale, TFM e ottimizzazione della tesoreria."
   },
 ];
 
@@ -59,8 +66,17 @@ export const Expertise = () => {
               key={category.id}
               id={category.id}
               onClick={() => {
-                navigate(category.path);
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                if (category.path.startsWith('/#')) {
+                  navigate(category.path);
+                  const id = category.path.split('#')[1];
+                  const el = document.getElementById(id);
+                  if (el) {
+                    el.scrollIntoView({ behavior: 'smooth' });
+                  }
+                } else {
+                  navigate(category.path);
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
               }}
               className="bg-white p-6 rounded-xl border border-stone-200 shadow-sm hover:border-gold-amber hover:shadow-md transition-all focus:outline-none scroll-mt-20 text-left group cursor-pointer w-full"
             >

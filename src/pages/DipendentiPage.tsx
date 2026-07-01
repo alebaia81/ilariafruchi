@@ -216,15 +216,15 @@ export const DipendentiPage = () => {
       >
         <div className="max-w-5xl mx-auto">
           <p className="text-xs font-bold uppercase tracking-widest text-gold-amber mb-4">
-            Servizio dedicato · Lavoratori dipendenti
+            Servizio dedicato · Pianificazione Previdenziale & TFR
           </p>
           <h1
             id="dipendenti-hero-title"
             className="text-4xl sm:text-5xl font-extrabold text-text-primary leading-tight mb-6 max-w-3xl"
           >
-            Il TFR che lasci dormire in azienda
+            Pianificazione Previdenziale & TFR
             <br />
-            <span className="text-gold-amber">ti costa molto più di quanto pensi.</span>
+            <span className="text-gold-amber">per un futuro sereno ed efficiente.</span>
           </h1>
           <p className="text-lg text-text-secondary max-w-2xl leading-relaxed">
             Come dipendente hai accesso a uno strumento che quasi nessun altro investitore

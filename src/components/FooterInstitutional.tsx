@@ -10,8 +10,8 @@ export const FooterInstitutional = () => {
           <p className="text-stone-400 text-sm max-w-sm mb-6">
             Consulenza finanziaria e patrimoniale personalizzata, basata su trasparenza, assenza di conflitti d'interesse ed efficacia normativa.
           </p>
-          <p className="text-[11px] text-stone-500 leading-relaxed max-w-md">
-            Iscritta all'Albo Unico dei Consulenti Finanziari. Attività svolta esclusivamente sotto mandato Fideuram. Le informazioni fornite non costituiscono sollecitazione al pubblico risparmio.
+          <p className="text-xs text-stone-300 leading-relaxed max-w-xl mb-6 border-l-2 border-amber-500 pl-3">
+            Sito personale di Ilaria Fruchi, Consulente Finanziario abilitato all'offerta fuori sede di Fideuram. Questa comunicazione è realizzata a titolo personale dal singolo Private Banker e non dalla Società. Per informazioni specifiche su prodotti, servizi e performance si rimanda ai canali ufficiali della Società e ad Alfabeto.
           </p>
         </div>
         

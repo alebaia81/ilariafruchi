@@ -12,7 +12,7 @@ export const FaqSection: React.FC = () => {
     },
     {
       q: "I miei soldi rimangono al sicuro?",
-      a: "Assolutamente sì. I tuoi capitali rimangono sempre depositati in un conto a tuo nome presso un istituto bancario custode estremamente solido (Fideuram). Il mio ruolo è esclusivamente consultivo: ti aiuto a pianificare le scelte migliori, ma non ho e non avrò mai accesso materiale ai tuoi fondi."
+      a: "Sì. In quanto Consulente Finanziario abilitato all'offerta fuori sede, la mia attività è strettamente regolamentata e vigilata dall'Albo OCF. Il consulente non tocca mai direttamente il tuo denaro e non può effettuare prelievi: i capitali rimangono depositati in totale sicurezza sul tuo conto corrente e dossier titoli presso l'istituto bancario di riferimento (Fideuram), che opera come ente custode esclusivo dei tuoi investimenti."
     },
     {
       q: "Non ho grandi capitali, posso richiedere una consulenza lo stesso?",

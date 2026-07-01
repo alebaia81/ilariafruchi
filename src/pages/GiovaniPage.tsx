@@ -224,16 +224,16 @@ export const GiovaniPage = () => {
       >
         <div className="max-w-5xl mx-auto">
           <p className="text-xs font-bold uppercase tracking-widest text-gold-amber mb-4">
-            Servizio dedicato · Fase di accumulo
+            Servizio dedicato · Piani di Accumulo e Costruzione Capitale (PAC)
           </p>
           <h1
             id="giovani-hero-title"
             className="text-4xl sm:text-5xl font-extrabold text-text-primary leading-tight mb-6 max-w-3xl"
           >
-            Ogni mese metti da parte qualcosa.
+            Piani di Accumulo e Costruzione Capitale (PAC)
             <br />
             <span className="text-gold-amber">
-              Stai già facendo la cosa più difficile.
+              per dare valore nel tempo al tuo risparmio.
             </span>
           </h1>
           <p className="text-lg text-text-secondary max-w-2xl leading-relaxed">

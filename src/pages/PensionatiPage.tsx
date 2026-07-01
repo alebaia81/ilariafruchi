@@ -202,16 +202,16 @@ export const PensionatiPage = () => {
       >
         <div className="max-w-5xl mx-auto">
           <p className="text-xs font-bold uppercase tracking-widest text-gold-amber mb-4">
-            Servizio dedicato · Pensionati e fase di decumulo
+            Servizio dedicato · Gestione del Decumulo e Integrazione
           </p>
           <h1
             id="pensionati-hero-title"
             className="text-4xl sm:text-5xl font-extrabold text-text-primary leading-tight mb-6 max-w-3xl"
           >
-            Il capitale c'è.
+            Gestione del Decumulo e Integrazione
             <br />
             <span className="text-gold-amber">
-              Ora deve lavorare per te, ogni mese.
+              per un flusso finanziario regolare e pianificato.
             </span>
           </h1>
           <p className="text-lg text-text-secondary max-w-2xl leading-relaxed">

@@ -219,15 +219,15 @@ export const GrandiPatrimoniPage = () => {
       >
         <div className="max-w-5xl mx-auto">
           <p className="text-xs font-bold uppercase tracking-widest text-gold-amber mb-4">
-            Servizio dedicato · Grandi Patrimoni
+            Servizio dedicato · Passaggio Generazionale & Grandi Patrimoni
           </p>
           <h1
             id="patrimoni-hero-title"
             className="text-4xl sm:text-5xl font-extrabold text-text-primary leading-tight mb-6 max-w-3xl"
           >
-            Patrimoni complessi
+            Passaggio Generazionale & Grandi Patrimoni
             <br />
-            <span className="text-gold-amber">richiedono soluzioni su misura.</span>
+            <span className="text-gold-amber">soluzioni strategiche su misura.</span>
           </h1>
           <p className="text-lg text-text-secondary max-w-2xl leading-relaxed">
             Oltre una certa soglia, la gestione finanziaria cessa di essere

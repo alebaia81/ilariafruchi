@@ -29,7 +29,7 @@ export const PrivacyPolicyPage: React.FC = () => {
           <section aria-labelledby="legal-titolare">
             <h2 id="legal-titolare" className="text-lg font-bold text-[#1A1816] mb-2">1. Titolare del Trattamento</h2>
             <p>
-              Il Titolare del trattamento dei dati personali è <strong>Ilaria Fruchi</strong>, Consulente Finanziario Fideuram, operante a Piacenza (Partita IVA: <em>[Dato in arrivo]</em> - Iscrizione Albo OCF: <em>[Dato in arrivo]</em>). Per qualsiasi richiesta relativa alla protezione dei dati, è possibile inviare una comunicazione formale ai recapiti istituzionali presenti nel footer del sito.
+              Il Titolare del trattamento dei dati personali è <strong>Ilaria Fruchi</strong>, Consulente Finanziario abilitato all'offerta fuori sede di Fideuram, operante a Piacenza (Partita IVA: <em>[Dato in arrivo]</em> - Iscrizione Albo OCF: <em>[Dato in arrivo]</em>). Per qualsiasi richiesta relativa alla protezione dei dati, è possibile inviare una comunicazione formale ai recapiti istituzionali presenti nel footer del sito.
             </p>
           </section>
 

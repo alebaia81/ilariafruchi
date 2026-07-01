@@ -8,13 +8,14 @@ export const BookingCalendar: React.FC = () => {
   // Orari disponibili per la call
   const timeSlots = ["09:00", "10:00", "11:00", "14:30", "15:30", "16:30", "17:30"];
 
-  // Le 6 macro-categorie di servizio concordate
+  // Le macro-categorie di servizio concordate
   const services = [
-    "Dipendenti (TFR e Fondi)",
-    "Giovani e Accumulo (PAC)",
-    "Gestione Risorse (Mezza età)",
-    "Pensionati e Decumulo",
-    "Grandi Patrimoni",
+    "Pianificazione Previdenziale & TFR",
+    "Piani di Accumulo e Costruzione Capitale (PAC)",
+    "Ottimizzazione e Gestione Risorse",
+    "Gestione del Decumulo e Integrazione",
+    "Passaggio Generazionale & Grandi Patrimoni",
+    "Servizi di Pianificazione per le Aziende",
   ];
 
   // Stato locale del form

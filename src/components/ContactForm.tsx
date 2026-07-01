@@ -3,12 +3,12 @@ import type { FormEvent } from 'react';
 import { WhatsAppIcon } from './icons/WhatsAppIcon';
 
 const SERVICES = [
-  "Dipendenti (TFR e Fondi)",
-  "Giovani e Accumulo (PAC)",
-  "Gestione Risorse (Mezza età)",
-  "Pensionati e Decumulo",
-  "Grandi Patrimoni",
-  "Servizi per le Aziende",
+  "Pianificazione Previdenziale & TFR",
+  "Piani di Accumulo e Costruzione Capitale (PAC)",
+  "Ottimizzazione e Gestione Risorse",
+  "Gestione del Decumulo e Integrazione",
+  "Passaggio Generazionale & Grandi Patrimoni",
+  "Servizi di Pianificazione per le Aziende",
 ] as const;
 
 export const ContactForm = () => {

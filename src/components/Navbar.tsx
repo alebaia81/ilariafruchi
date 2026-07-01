@@ -4,11 +4,12 @@ import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 const subServices = [
   { name: "Analisi Portafoglio (Gratuita)", path: "/analisi-portafoglio" },
-  { name: "Dipendenti", path: "/servizi/dipendenti" },
-  { name: "Giovani e accumulo", path: "/servizi/giovani" },
-  { name: "Gestione delle risorse – Mezza età", path: "/servizi/mezza-eta" },
-  { name: "Pensionati e fase di decumulo", path: "/servizi/pensionati" },
-  { name: "Grandi Patrimoni", path: "/servizi/grandi-patrimoni" },
+  { name: "Pianificazione Previdenziale & TFR", path: "/servizi/dipendenti" },
+  { name: "Piani di Accumulo e Costruzione Capitale (PAC)", path: "/servizi/giovani" },
+  { name: "Ottimizzazione e Gestione Risorse", path: "/servizi/mezza-eta" },
+  { name: "Gestione del Decumulo e Integrazione", path: "/servizi/pensionati" },
+  { name: "Passaggio Generazionale & Grandi Patrimoni", path: "/servizi/grandi-patrimoni" },
+  { name: "Servizi di Pianificazione per le Aziende", path: "/#contact" },
 ];
 
 export const Navbar = () => {

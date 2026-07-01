@@ -221,16 +221,16 @@ export const MezzaEtaPage = () => {
       >
         <div className="max-w-5xl mx-auto">
           <p className="text-xs font-bold uppercase tracking-widest text-gold-amber mb-4">
-            Servizio dedicato · Gestione delle risorse
+            Servizio dedicato · Ottimizzazione e Gestione Risorse
           </p>
           <h1
             id="mezza-eta-hero-title"
             className="text-4xl sm:text-5xl font-extrabold text-text-primary leading-tight mb-6 max-w-3xl"
           >
-            Hai costruito un patrimonio.
+            Ottimizzazione e Gestione Risorse
             <br />
             <span className="text-gold-amber">
-              Ora l'obiettivo cambia.
+              per proteggere e valorizzare il tuo patrimonio.
             </span>
           </h1>
           <p className="text-lg text-text-secondary max-w-2xl leading-relaxed">
