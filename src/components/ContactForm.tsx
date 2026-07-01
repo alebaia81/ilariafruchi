@@ -22,6 +22,7 @@ export const ContactForm = () => {
   const [email, setEmail] = useState('');
   const [category, setCategory] = useState<string>(SERVICES[0]);
   const [message, setMessage] = useState('');
+  const [acceptedPrivacy, setAcceptedPrivacy] = useState(false);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -109,10 +110,12 @@ export const ContactForm = () => {
               type="checkbox"
               id={privacyId}
               required
-              className="mt-1 w-4 h-4 shrink-0 accent-gold-amber cursor-pointer"
+              checked={acceptedPrivacy}
+              onChange={(e) => setAcceptedPrivacy(e.target.checked)}
+              className="mt-1 w-4 h-4 shrink-0 accent-gold-amber cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-amber"
             />
             <label htmlFor={privacyId} className="text-sm text-text-secondary leading-snug cursor-pointer">
-              Accetto il trattamento dei dati personali secondo la{' '}
+              Acconsento al trattamento dei dati personali per l'invio della richiesta tramite WhatsApp secondo la{' '}
               <a href="/privacy-policy" className="underline hover:text-text-primary focus:outline-none">
                 Privacy Policy
               </a>
@@ -122,7 +125,13 @@ export const ContactForm = () => {
           {/* Pulsante WhatsApp — verde ufficiale #25D366, testo nero #1A1816 (ratio contrasto 4.2:1 WCAG AA) */}
           <button
             type="submit"
-            className="w-full bg-[#25D366] text-[#1A1816] font-bold py-3 px-6 rounded-lg shadow-md hover:brightness-95 transition-all focus:outline-none min-h-[48px] flex items-center justify-center gap-2"
+            disabled={!acceptedPrivacy}
+            aria-disabled={!acceptedPrivacy}
+            className={`w-full font-bold py-3 px-6 rounded-lg shadow-md transition-all min-h-[48px] flex items-center justify-center gap-2 focus:outline-none ${
+              acceptedPrivacy
+                ? 'bg-[#25D366] text-[#1A1816] cursor-pointer hover:brightness-95'
+                : 'bg-stone-200 text-stone-400 cursor-not-allowed opacity-60'
+            }`}
           >
             <WhatsAppIcon className="w-5 h-5 shrink-0" aria-hidden="true" />
             <span>Contattami su WhatsApp</span>

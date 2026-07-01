@@ -41,6 +41,7 @@ export const FooterInstitutional = () => {
           <div className="border-t border-stone-800 pt-6 mt-6 text-xs text-stone-500 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
             <div className="flex flex-col gap-1">
               <span>© {new Date().getFullYear()} Ilaria Fruchi. Tutti i diritti riservati.</span>
+              <span>P.IVA [INSERIRE_PARTITA_IVA] | Iscrizione Albo OCF n. [INSERIRE_NUMERO_OCF]</span>
               <span>
                 Design & Sviluppo:{' '}
                 <a 

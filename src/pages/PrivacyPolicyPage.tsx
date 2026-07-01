@@ -29,7 +29,7 @@ export const PrivacyPolicyPage: React.FC = () => {
           <section aria-labelledby="legal-titolare">
             <h2 id="legal-titolare" className="text-lg font-bold text-[#1A1816] mb-2">1. Titolare del Trattamento</h2>
             <p>
-              Il Titolare del trattamento dei dati personali è <strong>Ilaria Fruchi</strong>, Consulente Finanziario abilitato all'offerta fuori sede di Fideuram, operante a Piacenza (Partita IVA: <em>[Dato in arrivo]</em> - Iscrizione Albo OCF: <em>[Dato in arrivo]</em>). Per qualsiasi richiesta relativa alla protezione dei dati, è possibile inviare una comunicazione formale ai recapiti istituzionali presenti nel footer del sito.
+              Il Titolare del trattamento dei dati personali è <strong>Ilaria Fruchi</strong>, Consulente Finanziario abilitato all'offerta fuori sede di Fideuram, P.IVA [INSERIRE_PARTITA_IVA], iscritta all'Albo OCF al n. [INSERIRE_NUMERO_OCF]. Per qualsiasi richiesta relativa alla protezione dei dati, è possibile inviare una comunicazione formale ai recapiti istituzionali presenti nel footer del sito.
             </p>
           </section>
 
@@ -50,13 +50,19 @@ export const PrivacyPolicyPage: React.FC = () => {
             <p>
               I dati personali vengono trattati unicamente per rispondere alle richieste informative o di consulenza patrimoniale inoltrate dall'utente. La base giuridica del trattamento è costituita dal consenso esplicito dell'interessato, espresso tramite la selezione della checkbox obbligatoria presente nel modulo prima dell'invio.
             </p>
+            <p className="mt-2">
+              <strong>Interazione con piattaforme di messaggistica (WhatsApp):</strong> Il sito utilizza reindirizzamenti diretti a WhatsApp per l'invio di richieste e la prenotazione di call. I dati di contatto trasmessi dall'utente (numero di telefono, nome) vengono trattati esclusivamente per riscontrare la specifica richiesta informativa o di consulenza. È esclusa qualsiasi finalità di tracciamento, profilazione o WhatsApp Marketing automatizzato senza ulteriore consenso esplicito.
+            </p>
           </section>
 
           {/* Sezione 4: Conservazione e Luogo */}
           <section aria-labelledby="legal-conservazione">
             <h2 id="legal-conservazione" className="text-lg font-bold text-[#1A1816] mb-2">4. Luogo di Trattamento e Conservazione</h2>
             <p>
-              L'infrastruttura web è ospitata sui server europei della piattaforma Hostinger. I dati non vengono trasferiti al di fuori dello Spazio Economico Europeo (SEE). Le informazioni inviate tramite messaggio verranno conservate nei terminali della titolare per il tempo strettamente necessario a evadere la richiesta conoscitiva e per i successivi obblighi di legge istituzionali.
+              <strong>Fornitore di Hosting e Luogo del Trattamento:</strong> Il presente sito web è ospitato in modalità statica sulle infrastrutture cloud sicure di Vercel Inc., configurate nella region europea di Francoforte, Germania (eu-central-1 / fra1). Vercel Inc. opera in qualità di Responsabile Esterno del Trattamento (Data Processor). Nessun dato personale viene trasferito o memorizzato al di fuori dello Spazio Economico Europeo (SEE).
+            </p>
+            <p className="mt-2">
+              Le informazioni inviate tramite messaggio verranno conservate nei terminali della titolare per il tempo strettamente necessario a evadere la richiesta conoscitiva e per i successivi obblighi di legge istituzionali.
             </p>
           </section>
 

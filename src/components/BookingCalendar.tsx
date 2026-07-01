@@ -4,6 +4,7 @@ import { WhatsAppIcon } from './icons/WhatsAppIcon';
 
 export const BookingCalendar: React.FC = () => {
   const selectServiceId = useId();
+  const privacyId = useId();
 
   // Orari disponibili per la call
   const timeSlots = ["09:00", "10:00", "11:00", "14:30", "15:30", "16:30", "17:30"];
@@ -22,6 +23,7 @@ export const BookingCalendar: React.FC = () => {
   const [selectedService, setSelectedService] = useState(services[0]);
   const [selectedTime, setSelectedTime] = useState("");
   const [selectedDate, setSelectedDate] = useState<string>("");
+  const [acceptedPrivacy, setAcceptedPrivacy] = useState(false);
 
   // Genera i prossimi 12 giorni lavorativi (esclusi sabato e domenica)
   const getAvailableDays = (): Date[] => {
@@ -193,26 +195,48 @@ export const BookingCalendar: React.FC = () => {
             </fieldset>
           )}
 
+          {/* Consenso GDPR — checkbox obbligatoria, non pre-selezionata */}
+          <div className="flex items-start gap-3 mt-4">
+            <input
+              type="checkbox"
+              id={privacyId}
+              required
+              checked={acceptedPrivacy}
+              onChange={(e) => setAcceptedPrivacy(e.target.checked)}
+              className="mt-1 w-4 h-4 shrink-0 accent-gold-amber cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-amber"
+            />
+            <label htmlFor={privacyId} className="text-sm text-text-secondary leading-snug cursor-pointer">
+              Acconsento al trattamento dei dati personali per l'invio della richiesta tramite WhatsApp secondo la{' '}
+              <a href="/privacy-policy" className="underline hover:text-text-primary focus:outline-none">
+                Privacy Policy
+              </a>
+            </label>
+          </div>
+
           {/* Step 4 — CTA WhatsApp */}
           <div className="pt-2">
             <button
               type="submit"
-              disabled={!selectedDate || !selectedTime}
-              aria-disabled={!selectedDate || !selectedTime}
+              disabled={!selectedDate || !selectedTime || !acceptedPrivacy}
+              aria-disabled={!selectedDate || !selectedTime || !acceptedPrivacy}
               className={`w-full font-bold py-3.5 px-6 rounded-xl shadow-md transition-all flex items-center justify-center gap-2 text-sm min-h-[48px] focus:outline-none ${
-                selectedDate && selectedTime
+                selectedDate && selectedTime && acceptedPrivacy
                   ? 'bg-[#25D366] text-[#1A1816] cursor-pointer hover:brightness-95'
-                  : 'bg-stone-200 text-stone-400 cursor-not-allowed'
+                  : 'bg-stone-200 text-stone-400 cursor-not-allowed opacity-60'
               }`}
             >
               <WhatsAppIcon className="w-5 h-5 shrink-0" aria-hidden="true" />
               <span>Conferma e Invia su WhatsApp</span>
             </button>
-            {(!selectedDate || !selectedTime) && (
+            {(!selectedDate || !selectedTime) ? (
               <p className="text-xs text-text-secondary text-center mt-2" aria-live="polite">
                 {!selectedDate
                   ? 'Seleziona un giorno per continuare'
                   : 'Seleziona un orario per continuare'}
+              </p>
+            ) : !acceptedPrivacy && (
+              <p className="text-xs text-text-secondary text-center mt-2" aria-live="polite">
+                Accetta l'informativa sulla privacy per continuare
               </p>
             )}
           </div>
