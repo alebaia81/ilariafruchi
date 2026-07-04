@@ -34,14 +34,18 @@ export const BiografiaSection = () => {
             <div className="absolute -inset-3 rounded-2xl border border-amber-500/30" />
             <div className="absolute -inset-6 rounded-2xl border border-amber-500/10" />
             <div className="relative rounded-2xl overflow-hidden shadow-2xl aspect-[3/4]">
-              <img
-                src="/images/biografica.avif"
-                alt="Ilaria Fruchi — ritratto professionale in bianco e nero"
-                className="w-full h-full object-cover grayscale"
-                loading="lazy"
-                width={420}
-                height={560}
-              />
+              <picture>
+                <source srcSet="/images/biografica.avif" type="image/avif" />
+                <source srcSet="/images/biografica.webp" type="image/webp" />
+                <img
+                  src="/images/biografica.webp"
+                  alt="Ilaria Fruchi — ritratto professionale in bianco e nero"
+                  className="w-full h-full object-cover grayscale"
+                  loading="lazy"
+                  width={420}
+                  height={560}
+                />
+              </picture>
               {/* Warm amber tint overlay — subtle */}
               <div className="absolute inset-0 bg-amber-900/10 mix-blend-multiply" />
             </div>

@@ -32,15 +32,19 @@ export const HeroPortfolio = () => {
       
       <div className="lg:col-span-5 flex justify-center">
         <div className="relative w-full max-w-md aspect-[4/5] rounded-2xl overflow-hidden shadow-xl border border-stone-200">
-          <img
-            src="/images/home.avif"
-            alt="Ilaria Fruchi, Consulente Finanziario Fideuram a Piacenza"
-            className="w-full h-full object-cover object-top"
-            loading="eager"
-            fetchPriority="high"
-            width={480}
-            height={600}
-          />
+          <picture>
+            <source srcSet="/images/home.avif" type="image/avif" />
+            <source srcSet="/images/home.webp" type="image/webp" />
+            <img
+              src="/images/home.webp"
+              alt="Ilaria Fruchi, Consulente Finanziario Fideuram a Piacenza"
+              className="w-full h-full object-cover object-top"
+              loading="eager"
+              fetchPriority="high"
+              width={480}
+              height={600}
+            />
+          </picture>
           {/* Soft gradient overlay at bottom for legibility */}
           <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black/30 to-transparent rounded-b-2xl" />
         </div>
