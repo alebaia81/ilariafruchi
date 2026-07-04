@@ -33,10 +33,10 @@ export const HeroPortfolio = () => {
       <div className="lg:col-span-5 flex justify-center">
         <div className="relative w-full max-w-md aspect-[4/5] rounded-2xl overflow-hidden shadow-xl border border-stone-200">
           <picture>
-            <source srcSet="/images/home.avif" type="image/avif" />
-            <source srcSet="/images/home.webp" type="image/webp" />
+            <source srcSet={`${import.meta.env.BASE_URL}images/home.avif`} type="image/avif" />
+            <source srcSet={`${import.meta.env.BASE_URL}images/home.webp`} type="image/webp" />
             <img
-              src="/images/home.webp"
+              src={`${import.meta.env.BASE_URL}images/home.webp`}
               alt="Ilaria Fruchi, Consulente Finanziario Fideuram a Piacenza"
               className="w-full h-full object-cover object-top"
               loading="eager"
