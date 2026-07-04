@@ -1,0 +1,19 @@
+# Tracciamento Ore - Consulente Finanziario
+
+Questo file viene aggiornato automaticamente dal sistema.
+
+## Riepilogo per data
+
+| Data | Ore Stimate | Attività Svolte |
+| :--- | :--- | :--- |
+| 2026-06-26 | 0.78 | - Aggiunge .agents/ al file di esclusione locale di Git per mantenere la cartella .agents fuori dal versionamento senza modificarlo globalmente.<br>- Write implementation plan for Ilaria Fruchi portfolio project.<br>- Create task.md for tracking progress.<br>- Recreate MEMORY.md<br>- Recreate MEMORY.md file<br>- *...e altre 49 operazioni* |
+| 2026-06-28 | 2.21 | - Setting base to '/ilariafruchi/' so all assets are served from the correct subpath on GitHub Pages (username.github.io/ilariafruchi/).<br>- GitHub Actions workflow for automatic deployment to GitHub Pages on every push to main. Uses the modern pages deployment approach with upload-pages-artifact and deploy-pages actions.<br>- Adding basename to BrowserRouter so all routes are correctly prefixed with /ilariafruchi/ on GitHub Pages. Without this, navigating to sub-routes would 404.<br>- GitHub Pages 404 redirect hack — when a user navigates directly to a sub-route (e.g., /ilariafruchi/giovani), GitHub Pages returns 404. This file catches it and redirects to index.html with the path encoded as a query string, where the SPA router can pick it up.<br>- Adding the SPA redirect script that pairs with 404.html. When GitHub Pages redirects to /?/path, this script restores the original path via history.replaceState so the React Router can handle it correctly.<br>- *...e altre 32 operazioni* |
+| 2026-06-29 | 0.97 | - Project summary for Gemini AI assistant<br>- Rimozione voce Collaborazioni dal dropdown e link Simulatore dalla navbar<br>- Rimozione card \"Collaborazioni tra professionisti\" dall'array serviceCategories — la griglia passa da 7 a 6 elementi<br>- Rimozione import CompoundCalculator e relativo JSX tag dal componente HomePage<br>- Rimozione import orfano Users (usato solo dalla card collaborazioni, ora eliminata)<br>- *...e altre 31 operazioni* |
+| 2026-06-30 | 0.81 | - New interactive booking calendar widget with WhatsApp integration, accessible day/time pickers, and 6 service categories.<br>- Adds BookingCalendar import and places the widget between the testimonials section and the contact form — the highest-intent position in the conversion funnel.<br>- Removed the \"Servizi per le Aziende\" category from the dropdown as requested.<br>- Adds a category dropdown before the message field, wires it to state, and updates the WhatsApp message template to include the selected category. Follows existing design tokens and accessibility patterns of the file.<br>- Create a standard WhatsApp SVG icon to replace Lucide React generic message icons.<br>- *...e altre 9 operazioni* |
+| 2026-07-01 | 3.70 | - Creating implementation plan for Fideuram compliance alignment.<br>- Tradotto il piano di implementazione in italiano.<br>- Aggiornato il piano di implementazione integrando la standardizzazione dei nomi dei servizi.<br>- Creazione del file task.md per tenere traccia delle attività da svolgere.<br>- Aggiornato il disclaimer istituzionale Fideuram nel Footer per garantire la visibilità e l'adeguato contrasto.<br>- *...e altre 148 operazioni* |
+| 2026-07-03 | 2.03 | - Creation of the implementation plan proposing Supabase as the database backend.<br>- Task list created to organize Supabase integration<br>- Creation of SQL script for user to copy into Supabase<br>- Creation of supabase client file<br>- Refactor App.jsx to use Supabase instead of localStorage<br>- *...e altre 53 operazioni* |
+| 2026-07-04 | 0.37 | - Update Footer with real institutional data<br>- Update privacy policy with real data<br>- Update WhatsApp number in ContactForm<br>- Update WhatsApp number in BookingCalendar<br>- Replace abstract placeholder with real color photo in Hero section<br>- *...e altre 3 operazioni* |
+
+---
+
+### **TOTALE COMPLESSIVO: 10.88 ore**

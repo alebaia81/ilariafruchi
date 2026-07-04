@@ -6,6 +6,7 @@ import { FooterInstitutional } from './components/FooterInstitutional';
 
 // Home sections
 import { HeroPortfolio } from './components/HeroPortfolio';
+import { BiografiaSection } from './components/BiografiaSection';
 import { Expertise } from './components/Expertise';
 import { TrustTestimonials } from './components/TrustTestimonials';
 
@@ -27,7 +28,7 @@ const HomePage = () => (
   <main id="main-content" className="min-h-screen bg-bg-primary text-text-primary">
     <HeroPortfolio />
     <Expertise />
-
+    <BiografiaSection />
     <TrustTestimonials />
     <div id="booking-section" className="scroll-mt-16">
       <BookingCalendar />

@@ -21,18 +21,18 @@ export const FooterInstitutional = () => {
             <ul className="space-y-3 text-sm text-stone-400">
               <li className="flex items-center gap-3">
                 <MapPin className="w-4 h-4 text-gold-amber shrink-0" aria-hidden="true" />
-                <span>Via Roma 1, 29121 Piacenza (PC)</span>
+                <span>via G. Manfredi 105, Piacenza (PC)</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-gold-amber shrink-0" aria-hidden="true" />
-                <a href="tel:+390523123456" className="hover:text-white transition-colors focus:outline-none">
-                  +39 0523 123456
+                <a href="tel:+393463470232" className="hover:text-white transition-colors focus:outline-none">
+                  346-3470232
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-gold-amber shrink-0" aria-hidden="true" />
-                <a href="mailto:ilaria.fruchi@fideuram.it" className="hover:text-white transition-colors focus:outline-none">
-                  ilaria.fruchi@fideuram.it
+                <a href="mailto:ifruchi@fideuram.it" className="hover:text-white transition-colors focus:outline-none">
+                  ifruchi@fideuram.it
                 </a>
               </li>
             </ul>
@@ -41,7 +41,9 @@ export const FooterInstitutional = () => {
           <div className="border-t border-stone-800 pt-6 mt-6 text-xs text-stone-500 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
             <div className="flex flex-col gap-1">
               <span>© {new Date().getFullYear()} Ilaria Fruchi. Tutti i diritti riservati.</span>
-              <span>P.IVA [INSERIRE_PARTITA_IVA] | Iscrizione Albo OCF n. [INSERIRE_NUMERO_OCF]</span>
+              <span className="text-stone-300 border-l-2 border-amber-500 pl-3">
+                Ilaria Fruchi | Consulente Finanziario abilitato all'offerta fuori sede di Fideuram | Sede: via G. Manfredi 105, Piacenza (PC) | P.IVA 01923650335 | Albo OCF: Delibera n. 2895 | RUI n. E000808810
+              </span>
               <span>
                 Design & Sviluppo:{' '}
                 <a 

@@ -62,7 +62,7 @@ export const BookingCalendar: React.FC = () => {
       `*Giorno richiesto:* ${formattedDate}\n` +
       `*Orario:* ${selectedTime}`;
 
-    const whatsappUrl = `https://wa.me/390523123456?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/393463470232?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
   };
 

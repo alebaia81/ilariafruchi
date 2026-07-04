@@ -30,7 +30,7 @@ export const ContactForm = () => {
       `Ciao Ilaria, sono ${name} (${email}). ` +
       `Vorrei richiedere informazioni per l'ambito: ${category}. ` +
       `Messaggio: ${message || 'Nessun messaggio aggiuntivo.'}`;
-    const whatsappUrl = `https://wa.me/390523123456?text=${encodeURIComponent(text)}`;
+    const whatsappUrl = `https://wa.me/393463470232?text=${encodeURIComponent(text)}`;
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
   };
 

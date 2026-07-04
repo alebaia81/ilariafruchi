@@ -31,21 +31,18 @@ export const HeroPortfolio = () => {
       </div>
       
       <div className="lg:col-span-5 flex justify-center">
-        {/* Elegant geometric abstract placeholder representing a premium portrait frame */}
-        <div className="relative w-full max-w-md aspect-[4/5] rounded-2xl overflow-hidden shadow-lg border border-stone-200 bg-stone-100 flex items-center justify-center p-8">
-          <div className="absolute inset-0 bg-gradient-to-tr from-stone-200 via-stone-50 to-[#FCFAF7] opacity-60"></div>
-          {/* Abstract elegant inner frames to simulate depth */}
-          <div className="relative w-full h-full border border-dashed border-stone-300 rounded-xl flex flex-col items-center justify-center text-center p-6 bg-white/40 backdrop-blur-[2px]">
-            <div className="w-16 h-16 rounded-full bg-gradient-to-tr from-gold-amber/20 to-gold-amber/5 border border-gold-amber/30 flex items-center justify-center mb-4">
-              <span className="text-xl font-semibold text-gold-amber">IF</span>
-            </div>
-            <p className="text-xs font-bold text-text-primary tracking-wide uppercase mb-1">
-              Ilaria Fruchi
-            </p>
-            <p className="text-[11px] text-text-secondary max-w-[200px]">
-              Ritratto professionale in arrivo per il lancio del portfolio.
-            </p>
-          </div>
+        <div className="relative w-full max-w-md aspect-[4/5] rounded-2xl overflow-hidden shadow-xl border border-stone-200">
+          <img
+            src="/images/home.avif"
+            alt="Ilaria Fruchi, Consulente Finanziario Fideuram a Piacenza"
+            className="w-full h-full object-cover object-top"
+            loading="eager"
+            fetchPriority="high"
+            width={480}
+            height={600}
+          />
+          {/* Soft gradient overlay at bottom for legibility */}
+          <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black/30 to-transparent rounded-b-2xl" />
         </div>
       </div>
     </section>
