@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: mode === 'development' ? '/' : '/ilariafruchi/',
+  base: process.env.VITE_BASE_URL ?? '/',
   plugins: [react(), tailwindcss()],
   test: {
     globals: true,
