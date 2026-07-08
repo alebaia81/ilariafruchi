@@ -11,7 +11,7 @@ export const FooterInstitutional = () => {
             Consulenza finanziaria e patrimoniale personalizzata, basata su trasparenza, assenza di conflitti d'interesse ed efficacia normativa.
           </p>
           <p className="text-xs text-stone-300 leading-relaxed max-w-xl mb-6 border-l-2 border-amber-500 pl-3">
-            Sito personale di Ilaria Fruchi, Consulente Finanziario abilitato all'offerta fuori sede di Fideuram. Questa comunicazione è realizzata a titolo personale dal singolo Private Banker e non dalla Società. Per informazioni specifiche su prodotti, servizi e performance si rimanda ai canali ufficiali della Società e ad Alfabeto.
+            Sito personale di Ilaria Fruchi, Consulente Finanziario abilitato all'offerta fuori sede. Questa comunicazione è realizzata a titolo personale dal singolo Private Banker. Per informazioni specifiche su prodotti, servizi e performance si rimanda ai canali ufficiali della Società in questione.
           </p>
         </div>
         
@@ -19,9 +19,12 @@ export const FooterInstitutional = () => {
           <div>
             <h4 className="text-white font-bold text-sm uppercase tracking-wider mb-4">Contatti & Sede</h4>
             <ul className="space-y-3 text-sm text-stone-400">
-              <li className="flex items-center gap-3">
-                <MapPin className="w-4 h-4 text-gold-amber shrink-0" aria-hidden="true" />
-                <span>via G. Manfredi 105, Piacenza (PC)</span>
+              <li className="flex items-start gap-3">
+                <MapPin className="w-4 h-4 text-gold-amber shrink-0 mt-0.5" aria-hidden="true" />
+                <div className="flex flex-col">
+                  <span>via G. Manfredi 105, Piacenza (PC)</span>
+                  <span className="text-xs text-stone-500 mt-1">Operativa su appuntamento anche a Cremona</span>
+                </div>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-gold-amber shrink-0" aria-hidden="true" />
@@ -31,8 +34,8 @@ export const FooterInstitutional = () => {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-gold-amber shrink-0" aria-hidden="true" />
-                <a href="mailto:ifruchi@fideuram.it" className="hover:text-white transition-colors focus:outline-none">
-                  ifruchi@fideuram.it
+                <a href="mailto:info@ilariafruchi.it" className="hover:text-white transition-colors focus:outline-none">
+                  info@ilariafruchi.it
                 </a>
               </li>
             </ul>
@@ -42,7 +45,7 @@ export const FooterInstitutional = () => {
             <div className="flex flex-col gap-1">
               <span>© {new Date().getFullYear()} Ilaria Fruchi. Tutti i diritti riservati.</span>
               <span className="text-stone-300 border-l-2 border-amber-500 pl-3">
-                Ilaria Fruchi | Consulente Finanziario abilitato all'offerta fuori sede di Fideuram | Sede: via G. Manfredi 105, Piacenza (PC) | P.IVA 01923650335 | Albo OCF: Delibera n. 2895 | RUI n. E000808810
+                Ilaria Fruchi | Consulente Finanziario abilitato all'offerta fuori sede | Attiva nelle province di Piacenza e Cremona | Sede principale: via G. Manfredi 105, Piacenza (PC) | P.IVA 01923650335 | Albo OCF: Delibera n. 2895 | RUI n. E000808810
               </span>
               <span>
                 Design & Sviluppo:{' '}

@@ -252,8 +252,7 @@ export const GiovaniPage = () => {
               Costruiamo il tuo piano
             </a>
             <Link
-              to="/#calculator-section"
-              onClick={() => window.scrollTo({ top: 0 })}
+              to="/#simulatore-interessi"
               className="inline-flex items-center gap-2 border border-stone-300 text-text-primary font-bold py-3 px-6 rounded-xl hover:border-gold-amber transition-colors focus:outline-none"
             >
               Prova il simulatore di interessi
@@ -314,14 +313,7 @@ export const GiovaniPage = () => {
           <p className="mt-6 text-sm text-stone-500 text-center">
             Vuoi vedere la simulazione con i tuoi numeri?{' '}
             <Link
-              to="/"
-              onClick={() => {
-                setTimeout(() => {
-                  document
-                    .getElementById('calculator-section')
-                    ?.scrollIntoView({ behavior: 'smooth' });
-                }, 100);
-              }}
+              to="/#simulatore-interessi"
               className="font-bold text-gold-amber hover:underline focus:outline-none"
             >
               Usa il simulatore nella home →

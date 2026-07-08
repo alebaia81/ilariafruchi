@@ -11,7 +11,7 @@ const SERVICES = [
   "Servizi di Pianificazione per le Aziende",
 ] as const;
 
-export const ContactForm = () => {
+export const ContactForm = ({ locationText = "Inserisci i tuoi dati per concordare un primo appuntamento conoscitivo o un'analisi di persona a Piacenza." }: { locationText?: string }) => {
   const nameId = useId();
   const emailId = useId();
   const categoryId = useId();
@@ -41,7 +41,7 @@ export const ContactForm = () => {
           Richiedi un'Analisi Patrimoniale
         </h2>
         <p className="text-text-secondary text-sm mb-6 text-left">
-          Inserisci i tuoi dati per concordare un primo appuntamento conoscitivo o un'analisi di persona a Piacenza.
+          {locationText}
         </p>
 
         <form className="space-y-4 text-left" onSubmit={handleSubmit}>

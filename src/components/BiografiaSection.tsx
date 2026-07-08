@@ -4,17 +4,17 @@ const highlights = [
   {
     icon: BookOpen,
     label: 'Formazione',
-    value: 'Laurea in Economia e Finanza, Università Cattolica di Piacenza',
+    value: 'Laurea in Giurisprudenza presso Università degli Studi di Milano',
   },
   {
     icon: Award,
     label: 'Esperienza',
-    value: 'Oltre 15 anni nella consulenza patrimoniale con Fideuram',
+    value: '13 anni nel settore bancario come gestore e vice responsabile di filiale',
   },
   {
     icon: MapPin,
     label: 'Territorio',
-    value: 'Piacenza e provincia — presenza locale, visione globale',
+    value: 'Piacenza e Cremona — presenza locale, visione globale al fianco di famiglie e imprese',
   },
 ];
 
@@ -62,21 +62,25 @@ export const BiografiaSection = () => {
             id="biografia-title"
             className="text-3xl sm:text-4xl font-extrabold text-white leading-tight mb-6"
           >
-            Una consulente che mette il cliente al centro, sempre.
+            Benvenuti nel mio spazio!
           </h2>
 
           <div className="space-y-4 text-stone-300 text-[15px] leading-relaxed mb-8">
             <p>
-              Nata e cresciuta a Piacenza, ho costruito la mia carriera professionale con una convinzione chiara:{' '}
+              Nata a Cremona, ho sviluppato fin dagli studi classici una forte propensione per il pensiero analitico che mi ha guidato verso la Laurea Magistrale in Giurisprudenza. Il percorso legale ha affinato la mia naturale attitudine a risolvere problematiche patrimoniali complesse.
+            </p>
+            <p>
+              Nel 2013 ho fatto il mio ingresso nel settore bancario: una scelta di famiglia, ereditando questa passione da papà e nonno. Lavorando per tanti anni in filiale, ho sentito il bisogno di fare di più per i miei clienti. Sono mossa da una convinzione:{' '}
               <strong className="text-white font-semibold">la consulenza finanziaria vera non vende prodotti, costruisce futuro</strong>.
-              Dopo la laurea in Economia e Finanza all'Università Cattolica, ho scelto Fideuram perché condividevo la sua visione: un consulente indipendente, vicino alle persone, non agli indici.
             </p>
             <p>
-              Negli ultimi quindici anni ho affiancato centinaia di famiglie, liberi professionisti e imprenditori piacentini in ogni fase della vita patrimoniale — dalla costruzione del capitale alla pianificazione previdenziale, dal passaggio generazionale alla gestione delle liquidità aziendali.
+              Oggi opero come <strong className="text-white font-semibold">consulente finanziario monomandatario</strong>, una scelta orientata alla qualità. Unisco la tutela legale del patrimonio a strategie finanziarie "sartoriali" per tradurre la complessità dei mercati in scelte chiare, serene e lungimiranti, avendo alle spalle la solidità di un grande gruppo bancario.
             </p>
             <p>
-              Il mio metodo è semplice:{' '}
-              <em className="text-amber-300 not-italic font-medium">ascolto prima di consigliare</em>. Perché ogni patrimonio è diverso, ogni obiettivo è personale, e la soluzione giusta esiste solo quando si capisce davvero chi si ha di fronte.
+              Offro servizi patrimoniali di alto valore a privati e aziende. Accompagno i giovani che costruiscono il loro futuro e le famiglie nel pianificare i propri obiettivi. Guido imprenditori e aziende nella gestione delle risorse, dalla pianificazione previdenziale al passaggio generazionale.
+            </p>
+            <p className="text-amber-300 font-medium mt-2">
+              Costruiremo insieme il percorso giusto per la crescita della Vostra famiglia e impresa con l’attenzione, l’ascolto e la professionalità che meritate.
             </p>
           </div>
 
@@ -96,7 +100,7 @@ export const BiografiaSection = () => {
 
           {/* Quote */}
           <blockquote className="border-l-2 border-amber-500 pl-5 italic text-stone-400 text-sm leading-relaxed">
-            "Gestire un patrimonio non significa solo far crescere i numeri. Significa proteggere i sogni di chi me li affida."
+            "Dove la tutela del vostro futuro finanziario trova risposte concrete, solide e d’avanguardia."
             <footer className="mt-2 text-xs text-stone-500 not-italic font-semibold uppercase tracking-wider">
               — Ilaria Fruchi
             </footer>

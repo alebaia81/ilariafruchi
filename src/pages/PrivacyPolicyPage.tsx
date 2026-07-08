@@ -29,7 +29,7 @@ export const PrivacyPolicyPage: React.FC = () => {
           <section aria-labelledby="legal-titolare">
             <h2 id="legal-titolare" className="text-lg font-bold text-[#1A1816] mb-2">1. Titolare del Trattamento</h2>
             <p>
-              Ilaria Fruchi, Consulente Finanziario abilitato all'offerta fuori sede di Fideuram, con sede in via G. Manfredi 105, Piacenza (PC), P.IVA 01923650335, iscritta all'Albo OCF con Delibera n. 2895 e al Registro Unico degli Intermediari (RUI) al n. E000808810. Contatti: Cell. 346-3470232 | E-mail: ifruchi@fideuram.it.
+              Ilaria Fruchi, Consulente Finanziario abilitato all'offerta fuori sede, con sede in via G. Manfredi 105, Piacenza (PC), P.IVA 01923650335, iscritta all'Albo OCF con Delibera n. 2895 e al Registro Unico degli Intermediari (RUI) al n. E000808810. Contatti: Cell. 346-3470232 | E-mail: info@ilariafruchi.it.
             </p>
           </section>
 

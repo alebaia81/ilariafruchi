@@ -13,6 +13,7 @@ import { TrustTestimonials } from './components/TrustTestimonials';
 import { BookingCalendar } from './components/BookingCalendar';
 import { ContactForm } from './components/ContactForm';
 import { FaqSection } from './components/FaqSection';
+import { CompoundCalculator } from './components/CompoundCalculator';
 
 // Service pages
 import { DipendentiPage } from './pages/DipendentiPage';
@@ -21,6 +22,7 @@ import { MezzaEtaPage } from './pages/MezzaEtaPage';
 import { PensionatiPage } from './pages/PensionatiPage';
 import { GrandiPatrimoniPage } from './pages/GrandiPatrimoniPage';
 import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
+import { CremonaPage } from './pages/CremonaPage';
 
 import { AnalisiPortafoglioPage } from './pages/AnalisiPortafoglioPage';
 
@@ -30,6 +32,7 @@ const HomePage = () => (
     <Expertise />
     <BiografiaSection />
     <TrustTestimonials />
+    <CompoundCalculator />
     <div id="booking-section" className="scroll-mt-16">
       <BookingCalendar />
     </div>
@@ -66,6 +69,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/analisi-portafoglio" element={<AnalisiPortafoglioPage />} />
+        <Route path="/cremona" element={<CremonaPage />} />
         <Route path="/servizi/dipendenti" element={<DipendentiPage />} />
         <Route path="/servizi/giovani" element={<GiovaniPage />} />
         <Route path="/servizi/mezza-eta" element={<MezzaEtaPage />} />

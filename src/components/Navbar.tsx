@@ -113,6 +113,15 @@ export const Navbar = () => {
             )}
           </div>
 
+
+
+          <a
+            href="/#simulatore-interessi"
+            className="hidden lg:inline-flex items-center text-sm font-bold py-2 px-3 rounded-lg bg-stone-100 text-stone-700 hover:bg-stone-200 transition-colors focus:outline-none"
+          >
+            Simula Rendimento
+          </a>
+
           <button
             onClick={() => handleNavigate('/analisi-portafoglio')}
             className="inline-flex items-center gap-1.5 bg-stone-900 text-white text-sm font-bold py-2 px-4 rounded-lg hover:bg-stone-700 transition-colors focus:outline-none"
@@ -187,6 +196,15 @@ export const Navbar = () => {
               ))}
             </ul>
           )}
+
+          {/* CTA Simulatore */}
+          <a
+            href="/#simulatore-interessi"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="w-full mt-2 flex items-center justify-center bg-stone-100 text-stone-700 text-sm font-bold py-3 px-4 rounded-xl hover:bg-stone-200 transition-colors focus:outline-none min-h-[48px]"
+          >
+            Simula Rendimento
+          </a>
 
           {/* CTA Analisi Portafoglio */}
           <button

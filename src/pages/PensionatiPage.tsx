@@ -342,7 +342,7 @@ export const PensionatiPage = () => {
               La successione non è un tema morboso. È un atto di responsabilità.
             </h3>
             <p className="text-sm text-text-secondary leading-relaxed max-w-2xl">
-              In Italia, circa il 40% delle eredità con patrimonio immobiliare genera
+              In Italia, la maggior parte delle eredità con patrimonio immobiliare genera
               attriti significativi tra gli eredi. Nella maggior parte dei casi, il
               problema non è la mancanza di affetto, ma l'assenza di indicazioni chiare
               lasciate in vita. Pianificare non significa pensare alla morte: significa

@@ -154,7 +154,7 @@ const AnalysisForm = () => {
             {/* Canali alternativi */}
             <div className="flex flex-col sm:flex-row gap-3 pt-2">
               <a
-                href="mailto:ilaria.fruchi@fideuram.it"
+                href="mailto:info@ilariafruchi.it"
                 className="flex-1 flex items-center justify-center gap-2 border border-stone-300 text-text-secondary text-sm font-bold py-3 px-4 rounded-lg hover:border-gold-amber hover:text-text-primary transition-colors focus:outline-none"
               >
                 <Mail className="w-4 h-4" aria-hidden="true" />

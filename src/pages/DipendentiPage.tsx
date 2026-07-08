@@ -4,7 +4,6 @@ import { WhatsAppIcon } from '../components/icons/WhatsAppIcon';
 import { Link } from 'react-router-dom';
 import {
   ArrowLeft,
-  TrendingUp,
   ShieldCheck,
   PiggyBank,
   Percent,
@@ -131,29 +130,7 @@ const ServiceContactForm = () => {
   );
 };
 
-/* ─────────────────────────────────────────────
-   Dati comparativi TFR
-───────────────────────────────────────────── */
-const stats = [
-  {
-    icon: TrendingUp,
-    value: '+3,5%',
-    label: 'Rendimento medio annuo',
-    sub: 'Linea bilanciata del fondo pensione negli ultimi 20 anni',
-  },
-  {
-    icon: Percent,
-    value: '1,7%',
-    label: 'Rivalutazione TFR in azienda',
-    sub: 'Media storica della rivalutazione legale lasciando il TFR al datore',
-  },
-  {
-    icon: BadgeEuro,
-    value: '9%',
-    label: 'Aliquota minima sul riscatto',
-    sub: 'Raggiungibile nel fondo pensione dopo 35 anni di partecipazione',
-  },
-];
+
 
 const advantages = [
   {
@@ -250,42 +227,6 @@ export const DipendentiPage = () => {
         </div>
       </section>
 
-      {/* ── Blocco statistiche ── */}
-      <section
-        aria-labelledby="stats-title"
-        className="py-14 px-4 bg-stone-50 border-b border-stone-200"
-      >
-        <div className="max-w-5xl mx-auto">
-          <h2
-            id="stats-title"
-            className="text-2xl font-bold text-text-primary mb-2"
-          >
-            I dati storici parlano chiaro
-          </h2>
-          <p className="text-text-secondary text-sm mb-10 max-w-xl">
-            Prima di qualunque valutazione personale, ecco cosa dice la storia degli
-            ultimi vent'anni.
-          </p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            {stats.map((s) => (
-              <div
-                key={s.value}
-                className="bg-white rounded-2xl border border-stone-200 p-6 shadow-sm text-left"
-              >
-                <div className="w-10 h-10 bg-stone-100 text-gold-amber rounded-lg flex items-center justify-center mb-4">
-                  <s.icon className="w-5 h-5" aria-hidden="true" />
-                </div>
-                <p className="text-3xl font-extrabold text-text-primary mb-1">
-                  {s.value}
-                </p>
-                <p className="text-sm font-bold text-text-primary mb-1">{s.label}</p>
-                <p className="text-xs text-stone-500 leading-relaxed">{s.sub}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ── Esempio numeri concreti ── */}
       <section

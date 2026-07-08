@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-export const HeroPortfolio = () => {
+export const HeroCremona = () => {
   return (
     <section className="py-20 px-6 max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
       <div className="lg:col-span-7 text-left">
@@ -8,10 +8,10 @@ export const HeroPortfolio = () => {
           Ilaria Fruchi — Consulente Finanziaria
         </span>
         <h1 className="text-4xl sm:text-5xl font-extrabold text-text-primary tracking-tight leading-tight mb-6">
-          Pianificazione Patrimoniale Trasparente a Piacenza e Cremona
+          Consulenza Finanziaria e Patrimoniale a Cremona
         </h1>
         <p className="text-text-secondary text-lg leading-relaxed mb-8 max-w-xl">
-          Consulente Finanziario attiva su Piacenza e Cremona. Aiuto famiglie e imprese a proteggere e far crescere il patrimonio attraverso soluzioni chiare, trasparenti e allineate ai vostri obiettivi reali.
+          Pianifica il tuo futuro finanziario con una strategia indipendente e personalizzata. Gestione patrimoniale e investimenti a Cremona e provincia, anche da remoto.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
           <Link
@@ -37,7 +37,7 @@ export const HeroPortfolio = () => {
             <source srcSet={`${import.meta.env.BASE_URL}images/home.webp`} type="image/webp" />
             <img
               src={`${import.meta.env.BASE_URL}images/home.webp`}
-              alt="Ilaria Fruchi, Consulente Finanziario a Piacenza"
+              alt="Ilaria Fruchi, Consulente Finanziario a Cremona"
               className="w-full h-full object-cover object-top"
               loading="eager"
               fetchPriority="high"
