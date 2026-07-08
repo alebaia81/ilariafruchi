@@ -167,6 +167,10 @@ export const CompoundCalculator = () => {
             <Calculator className="w-5 h-5" aria-hidden="true" />
             <span>Calcola</span>
           </button>
+          
+          <p className="text-xs text-text-secondary mt-4 block text-left leading-relaxed">
+            <strong>Nota di trasparenza:</strong> I risultati generati da questo simulatore hanno un valore puramente indicativo e illustrativo. Le simulazioni si basano su ipotesi di rendimento storico e non costituiscono in alcun modo una promessa, una garanzia di rendimento futuro o una sollecitazione al pubblico risparmio. I mercati finanziari sono soggetti a fluttuazioni e i rendimenti passati non sono indicativi di quelli futuri. Ogni strategia di investimento reale verrà personalizzata e definita esclusivamente in sede di consulenza ufficiale con il professionista.
+          </p>
         </form>
 
         {/* Grafici e Risultati (Destra) */}
