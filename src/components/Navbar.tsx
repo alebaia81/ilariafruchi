@@ -3,13 +3,10 @@ import { ChevronDown, Phone, Menu, X } from 'lucide-react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 const subServices = [
-  { name: "Analisi Portafoglio (Gratuita)", path: "/analisi-portafoglio" },
-  { name: "Pianificazione Previdenziale & TFR", path: "/servizi/dipendenti" },
-  { name: "Piani di Accumulo e Costruzione Capitale (PAC)", path: "/servizi/giovani" },
-  { name: "Ottimizzazione e Gestione Risorse", path: "/servizi/mezza-eta" },
-  { name: "Gestione del Decumulo e Integrazione", path: "/servizi/pensionati" },
-  { name: "Passaggio Generazionale & Grandi Patrimoni", path: "/servizi/grandi-patrimoni" },
-  { name: "Servizi di Pianificazione per le Aziende", path: "/#contact" },
+  { name: 'Analisi Portafoglio (Gratuita)', path: '/servizi/analisi-portafoglio' },
+  { name: 'Pianificazione Previdenziale & TFR', path: '/servizi/pianificazione-previdenziale-tfr' },
+  { name: 'Piani di Accumulo (PAC)', path: '/servizi/piani-di-accumulo-pac' },
+  { name: 'Ottimizzazione e Gestione Risorse', path: '/servizi/gestione-risorse-patrimonio' },
 ];
 
 export const Navbar = () => {
@@ -35,7 +32,9 @@ export const Navbar = () => {
   // Blocca lo scroll del body quando il menu mobile è aperto
   useEffect(() => {
     document.body.style.overflow = isMobileMenuOpen ? 'hidden' : '';
-    return () => { document.body.style.overflow = ''; };
+    return () => {
+      document.body.style.overflow = '';
+    };
   }, [isMobileMenuOpen]);
 
   // Chiudi il menu mobile con Escape
@@ -56,7 +55,6 @@ export const Navbar = () => {
   return (
     <header role="banner" className="bg-white border-b border-stone-200 h-16 sticky top-0 z-50 px-4">
       <div className="max-w-7xl mx-auto w-full h-full flex justify-between items-center">
-
         {/* Logo */}
         <Link
           to="/"
@@ -71,6 +69,13 @@ export const Navbar = () => {
           aria-label="Navigazione principale"
           className="hidden md:flex items-center gap-6 relative"
         >
+          <Link
+            to="/chi-sono"
+            className="font-bold text-stone-600 hover:text-text-primary focus:outline-none py-2"
+          >
+            Chi Sono
+          </Link>
+
           {/* Dropdown Servizi Desktop */}
           <div className="relative">
             <button
@@ -113,24 +118,22 @@ export const Navbar = () => {
             )}
           </div>
 
-
-
-          <a
-            href="/#simulatore-interessi"
-            className="hidden lg:inline-flex items-center text-sm font-bold py-2 px-3 rounded-lg bg-stone-100 text-stone-700 hover:bg-stone-200 transition-colors focus:outline-none"
+          <Link
+            to="/contatti"
+            className="font-bold text-stone-600 hover:text-text-primary focus:outline-none py-2"
           >
-            Simula Rendimento
-          </a>
+            Contatti
+          </Link>
 
           <button
-            onClick={() => handleNavigate('/analisi-portafoglio')}
+            onClick={() => handleNavigate('/servizi/analisi-portafoglio')}
             className="inline-flex items-center gap-1.5 bg-stone-900 text-white text-sm font-bold py-2 px-4 rounded-lg hover:bg-stone-700 transition-colors focus:outline-none"
           >
             Analisi portafoglio
           </button>
 
           <a
-            href="tel:+390523123456"
+            href="tel:+393463470232"
             className="inline-flex items-center gap-2 border-2 border-gold-amber text-gold-amber text-sm font-bold py-2 px-4 rounded-lg hover:bg-gold-amber hover:text-white transition-colors focus:outline-none"
           >
             <Phone className="w-4 h-4" aria-hidden="true" />
@@ -147,10 +150,11 @@ export const Navbar = () => {
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className="md:hidden flex items-center justify-center w-10 h-10 rounded-lg text-text-primary hover:bg-stone-100 transition-colors focus:outline-none"
         >
-          {isMobileMenuOpen
-            ? <X className="w-6 h-6" aria-hidden="true" />
-            : <Menu className="w-6 h-6" aria-hidden="true" />
-          }
+          {isMobileMenuOpen ? (
+            <X className="w-6 h-6" aria-hidden="true" />
+          ) : (
+            <Menu className="w-6 h-6" aria-hidden="true" />
+          )}
         </button>
       </div>
 
@@ -167,6 +171,13 @@ export const Navbar = () => {
         }`}
       >
         <nav aria-label="Navigazione mobile" className="flex flex-col px-4 py-6 gap-1">
+          <Link
+            to="/chi-sono"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="w-full text-left py-3 px-2 font-bold text-text-primary text-base rounded-lg hover:bg-stone-50 transition-colors focus:outline-none"
+          >
+            Chi Sono
+          </Link>
 
           {/* Accordion Servizi Mobile */}
           <button
@@ -177,7 +188,9 @@ export const Navbar = () => {
           >
             <span>Servizi</span>
             <ChevronDown
-              className={`w-5 h-5 transition-transform duration-200 ${isMobileServicesOpen ? 'rotate-180' : ''}`}
+              className={`w-5 h-5 transition-transform duration-200 ${
+                isMobileServicesOpen ? 'rotate-180' : ''
+              }`}
               aria-hidden="true"
             />
           </button>
@@ -187,7 +200,10 @@ export const Navbar = () => {
               {subServices.map((service) => (
                 <li key={service.path}>
                   <button
-                    onClick={() => handleNavigate(service.path)}
+                    onClick={() => {
+                      handleNavigate(service.path);
+                      setIsMobileMenuOpen(false);
+                    }}
                     className="w-full text-left py-2.5 px-2 text-sm font-medium text-text-secondary hover:text-text-primary transition-colors focus:outline-none rounded-md"
                   >
                     {service.name}
@@ -197,18 +213,20 @@ export const Navbar = () => {
             </ul>
           )}
 
-          {/* CTA Simulatore */}
-          <a
-            href="/#simulatore-interessi"
+          <Link
+            to="/contatti"
             onClick={() => setIsMobileMenuOpen(false)}
-            className="w-full mt-2 flex items-center justify-center bg-stone-100 text-stone-700 text-sm font-bold py-3 px-4 rounded-xl hover:bg-stone-200 transition-colors focus:outline-none min-h-[48px]"
+            className="w-full text-left py-3 px-2 font-bold text-text-primary text-base rounded-lg hover:bg-stone-50 transition-colors focus:outline-none"
           >
-            Simula Rendimento
-          </a>
+            Contatti
+          </Link>
 
           {/* CTA Analisi Portafoglio */}
           <button
-            onClick={() => handleNavigate('/analisi-portafoglio')}
+            onClick={() => {
+              handleNavigate('/servizi/analisi-portafoglio');
+              setIsMobileMenuOpen(false);
+            }}
             className="w-full mt-4 bg-stone-900 text-white text-sm font-bold py-3 px-4 rounded-xl hover:bg-stone-700 transition-colors focus:outline-none min-h-[48px]"
           >
             Analisi portafoglio
@@ -216,13 +234,12 @@ export const Navbar = () => {
 
           {/* CTA Chiama */}
           <a
-            href="tel:+390523123456"
+            href="tel:+393463470232"
             className="mt-2 flex items-center justify-center gap-2 border-2 border-gold-amber text-gold-amber text-sm font-bold py-3 px-4 rounded-xl hover:bg-gold-amber hover:text-white transition-colors focus:outline-none min-h-[48px]"
           >
             <Phone className="w-4 h-4" aria-hidden="true" />
             Chiama ora
           </a>
-
         </nav>
       </div>
     </header>

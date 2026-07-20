@@ -66,7 +66,7 @@ export const PrivacyPolicyPage: React.FC = () => {
           <section aria-labelledby="legal-conservazione">
             <h2 id="legal-conservazione" className="text-lg font-bold text-[#1A1816] mb-2">4. Luogo di Trattamento e Conservazione</h2>
             <p>
-              <strong>Fornitore di Hosting e Luogo del Trattamento:</strong> Il presente sito web è ospitato in modalità statica sulle infrastrutture cloud sicure di Vercel Inc., configurate nella region europea di Francoforte, Germania (eu-central-1 / fra1). Vercel Inc. opera in qualità di Responsabile Esterno del Trattamento (Data Processor). Nessun dato personale viene trasferito o memorizzato al di fuori dello Spazio Economico Europeo (SEE).
+              <strong>Fornitore di Hosting e Luogo del Trattamento:</strong> Il presente sito web è ospitato in modalità statica sulle infrastrutture cloud sicure di Cloudflare, Inc. (tramite il servizio Cloudflare Pages). Cloudflare, Inc. opera in qualità di Responsabile Esterno del Trattamento (Data Processor). I dati di navigazione e tecnici vengono trattati prevalentemente all'interno dello Spazio Economico Europeo (SEE); eventuali trasferimenti extra-UE sono regolati da clausole contrattuali standard in conformità al GDPR.
             </p>
             <p className="mt-2">
               Le informazioni inviate tramite messaggio verranno conservate nei terminali della titolare per il tempo strettamente necessario a evadere la richiesta conoscitiva e per i successivi obblighi di legge istituzionali.
@@ -88,7 +88,7 @@ export const PrivacyPolicyPage: React.FC = () => {
               Questo sito applica una politica di tracciamento minimale. Non vengono utilizzati cookie di profilazione statistica, di marketing o di terze parti (es. Google Analytics o Pixel pubblicitari).
             </p>
             <p className="mt-2">
-              Vengono rilasciati esclusivamente <strong>cookie tecnici essenziali di prima parte</strong>, strettamente necessari a garantire la navigazione sicura, la reattività dell'interfaccia React e il corretto funzionamento del routing della Single Page Application. Trattandosi di componenti essenziali all'erogazione del servizio, non richiedono un banner di consenso preventivo ai sensi della normativa vigente.
+              Vengono rilasciati esclusivamente <strong>cookie tecnici essenziali di prima parte</strong>, strettamente necessari a garantire la navigazione sicura, la reattività dell'interfaccia React e il corretto funzionamento del routing della Single Page Application. Vengono inoltre applicati cookie e tecnologie di sicurezza forniti da Cloudflare, Inc. al solo scopo di proteggere il sito web da attacchi informatici e traffico dannoso (es. mitigazione DDoS). Trattandosi di componenti essenziali all'erogazione in sicurezza del servizio, non richiedono un banner di consenso preventivo ai sensi della normativa vigente.
             </p>
           </section>
 

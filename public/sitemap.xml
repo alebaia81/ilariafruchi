@@ -7,43 +7,49 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://ilariafruchi.it/analisi-portafoglio</loc>
+    <loc>https://ilariafruchi.it/chi-sono</loc>
     <lastmod>2026-07-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ilariafruchi.it/cremona</loc>
+    <loc>https://ilariafruchi.it/servizi/analisi-portafoglio</loc>
+    <lastmod>2026-07-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://ilariafruchi.it/servizi/pianificazione-previdenziale-tfr</loc>
     <lastmod>2026-07-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ilariafruchi.it/servizi/dipendenti</loc>
+    <loc>https://ilariafruchi.it/servizi/piani-di-accumulo-pac</loc>
     <lastmod>2026-07-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ilariafruchi.it/servizi/giovani</loc>
+    <loc>https://ilariafruchi.it/servizi/gestione-risorse-patrimonio</loc>
     <lastmod>2026-07-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ilariafruchi.it/servizi/mezza-eta</loc>
+    <loc>https://ilariafruchi.it/dove-sono/consulente-finanziario-piacenza</loc>
     <lastmod>2026-07-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ilariafruchi.it/servizi/pensionati</loc>
+    <loc>https://ilariafruchi.it/dove-sono/consulente-finanziario-cremona</loc>
     <lastmod>2026-07-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://ilariafruchi.it/servizi/grandi-patrimoni</loc>
+    <loc>https://ilariafruchi.it/contatti</loc>
     <lastmod>2026-07-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

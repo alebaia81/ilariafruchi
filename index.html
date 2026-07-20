@@ -36,31 +36,54 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "FinancialService",
-      "name": "Ilaria Fruchi - Consulente Finanziario",
-      "image": "https://www.ilariafruchi.it/og-preview.jpg",
-      "@id": "https://www.ilariafruchi.it",
-      "url": "https://www.ilariafruchi.it",
-      "telephone": "+393463470232",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Via G. Manfredi 105",
-        "addressLocality": "Piacenza",
-        "postalCode": "29122",
-        "addressRegion": "PC",
-        "addressCountry": "IT"
-      },
-      "areaServed": [
+      "@graph": [
         {
-          "@type": "City",
-          "name": "Piacenza"
+          "@type": "FinancialService",
+          "@id": "https://ilariafruchi.it/#organization",
+          "name": "Ilaria Fruchi - Consulente Finanziario",
+          "url": "https://ilariafruchi.it",
+          "logo": "https://ilariafruchi.it/favicon.png",
+          "image": "https://ilariafruchi.it/images/home.webp",
+          "description": "Consulenza finanziaria, analisi portafoglio, gestione TFR e pianificazione patrimoniale a Piacenza, Cremona e Online.",
+          "telephone": "+393463470232",
+          "priceRange": "€€",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Via G. Manfredi 105",
+            "addressLocality": "Piacenza",
+            "postalCode": "29122",
+            "addressRegion": "PC",
+            "addressCountry": "IT"
+          },
+          "areaServed": [
+            {
+              "@type": "City",
+              "name": "Piacenza"
+            },
+            {
+              "@type": "City",
+              "name": "Cremona"
+            }
+          ],
+          "knowsAbout": [
+            "Analisi Portafoglio",
+            "Pianificazione Previdenziale",
+            "Gestione TFR",
+            "Piani di Accumulo (PAC)",
+            "Gestione Patrimoniale"
+          ]
         },
         {
-          "@type": "City",
-          "name": "Cremona"
+          "@type": "Person",
+          "@id": "https://ilariafruchi.it/#person",
+          "name": "Ilaria Fruchi",
+          "jobTitle": "Consulente Finanziario",
+          "image": "https://ilariafruchi.it/images/biografica.webp",
+          "worksFor": {
+            "@id": "https://ilariafruchi.it/#organization"
+          }
         }
-      ],
-      "description": "Consulente Finanziario abilitato all'offerta fuori sede attiva su Piacenza e Cremona. Offro servizi di pianificazione patrimoniale, investimenti e gestione del risparmio per privati e aziende."
+      ]
     }
     </script>
   </head>

@@ -4,6 +4,8 @@ import { WhatsAppIcon } from './icons/WhatsAppIcon';
 
 export const BookingCalendar: React.FC = () => {
   const selectServiceId = useId();
+  const nameInputId = useId();
+  const messageInputId = useId();
   const privacyId = useId();
 
   // Orari disponibili per la call
@@ -23,6 +25,8 @@ export const BookingCalendar: React.FC = () => {
   const [selectedService, setSelectedService] = useState(services[0]);
   const [selectedTime, setSelectedTime] = useState("");
   const [selectedDate, setSelectedDate] = useState<string>("");
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
   const [acceptedPrivacy, setAcceptedPrivacy] = useState(false);
 
   // Genera i prossimi 12 giorni lavorativi (esclusi sabato e domenica)
@@ -46,7 +50,7 @@ export const BookingCalendar: React.FC = () => {
 
   const handleBookingSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!selectedDate || !selectedTime) return;
+    if (!selectedDate || !selectedTime || !name.trim()) return;
 
     // Evita lo shift UTC aggiungendo T12:00:00
     const dateObj = new Date(selectedDate + 'T12:00:00');
@@ -56,13 +60,15 @@ export const BookingCalendar: React.FC = () => {
       month: 'short',
     });
 
-    const message =
-      `Ciao Ilaria, vorrei prenotare una call conoscitiva.\n\n` +
+    const whatsappMessage =
+      `Ciao Ilaria, sono ${name}.\n` +
+      `Vorrei prenotare una call conoscitiva.\n\n` +
       `*Ambito:* ${selectedService}\n` +
       `*Giorno richiesto:* ${formattedDate}\n` +
-      `*Orario:* ${selectedTime}`;
+      `*Orario:* ${selectedTime}` +
+      (message.trim() ? `\n*Messaggio:* ${message.trim()}` : '');
 
-    const whatsappUrl = `https://wa.me/393463470232?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/393463470232?text=${encodeURIComponent(whatsappMessage)}`;
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
   };
 
@@ -195,6 +201,46 @@ export const BookingCalendar: React.FC = () => {
             </fieldset>
           )}
 
+          {/* Step 4 — Informazioni personali (visibili solo dopo aver scelto orario) */}
+          {selectedDate && selectedTime && (
+            <div className="space-y-6 pt-6 border-t border-stone-100 animate-fadeIn">
+              <div>
+                <label
+                  htmlFor={nameInputId}
+                  className="block text-sm font-bold text-text-primary mb-2"
+                >
+                  Come ti chiami?
+                </label>
+                <input
+                  type="text"
+                  id={nameInputId}
+                  required
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="Inserisci il tuo nome e cognome"
+                  className="w-full p-3 bg-bg-primary border border-stone-300 rounded-xl focus:outline-none focus-visible:border-gold-amber text-sm font-medium text-text-primary"
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor={messageInputId}
+                  className="block text-sm font-bold text-text-primary mb-2"
+                >
+                  Scrivi un messaggio (opzionale)
+                </label>
+                <textarea
+                  id={messageInputId}
+                  rows={3}
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  placeholder="Dettaglia pure qui la tua richiesta o necessità..."
+                  className="w-full p-3 bg-bg-primary border border-stone-300 rounded-xl focus:outline-none focus-visible:border-gold-amber text-sm font-medium text-text-primary resize-y"
+                />
+              </div>
+            </div>
+          )}
+
           {/* Consenso GDPR — checkbox obbligatoria, non pre-selezionata */}
           <div className="flex items-start gap-3 mt-4">
             <input
@@ -213,14 +259,14 @@ export const BookingCalendar: React.FC = () => {
             </label>
           </div>
 
-          {/* Step 4 — CTA WhatsApp */}
+          {/* Step 5 — CTA WhatsApp */}
           <div className="pt-2">
             <button
               type="submit"
-              disabled={!selectedDate || !selectedTime || !acceptedPrivacy}
-              aria-disabled={!selectedDate || !selectedTime || !acceptedPrivacy}
+              disabled={!selectedDate || !selectedTime || !acceptedPrivacy || !name.trim()}
+              aria-disabled={!selectedDate || !selectedTime || !acceptedPrivacy || !name.trim()}
               className={`w-full font-bold py-3.5 px-6 rounded-xl shadow-md transition-all flex items-center justify-center gap-2 text-sm min-h-[48px] focus:outline-none ${
-                selectedDate && selectedTime && acceptedPrivacy
+                selectedDate && selectedTime && acceptedPrivacy && name.trim()
                   ? 'bg-[#25D366] text-[#1A1816] cursor-pointer hover:brightness-95'
                   : 'bg-stone-200 text-stone-400 cursor-not-allowed opacity-60'
               }`}
@@ -233,6 +279,10 @@ export const BookingCalendar: React.FC = () => {
                 {!selectedDate
                   ? 'Seleziona un giorno per continuare'
                   : 'Seleziona un orario per continuare'}
+              </p>
+            ) : !name.trim() ? (
+              <p className="text-xs text-text-secondary text-center mt-2" aria-live="polite">
+                Inserisci il tuo nome per continuare
               </p>
             ) : !acceptedPrivacy && (
               <p className="text-xs text-text-secondary text-center mt-2" aria-live="polite">

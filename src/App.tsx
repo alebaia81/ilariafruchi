@@ -6,16 +6,13 @@ import { FooterInstitutional } from './components/FooterInstitutional';
 
 // Home sections
 import { HeroPortfolio } from './components/HeroPortfolio';
-import { BiografiaSection } from './components/BiografiaSection';
 import { Expertise } from './components/Expertise';
 import { TrustTestimonials } from './components/TrustTestimonials';
-
-import { BookingCalendar } from './components/BookingCalendar';
-import { ContactForm } from './components/ContactForm';
-import { FaqSection } from './components/FaqSection';
 import { CompoundCalculator } from './components/CompoundCalculator';
+import { BookingCalendar } from './components/BookingCalendar';
+import { FaqSection } from './components/FaqSection';
 
-// Service pages
+// Service & Info pages
 import { DipendentiPage } from './pages/DipendentiPage';
 import { GiovaniPage } from './pages/GiovaniPage';
 import { MezzaEtaPage } from './pages/MezzaEtaPage';
@@ -23,8 +20,11 @@ import { PensionatiPage } from './pages/PensionatiPage';
 import { GrandiPatrimoniPage } from './pages/GrandiPatrimoniPage';
 import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
 import { CremonaPage } from './pages/CremonaPage';
-
+import { PiacenzaPage } from './pages/PiacenzaPage';
 import { AnalisiPortafoglioPage } from './pages/AnalisiPortafoglioPage';
+import { ChiSonoPage } from './pages/ChiSonoPage';
+import { ContattiPage } from './pages/ContattiPage';
+
 import { useDocumentHead } from './hooks/useDocumentHead';
 
 const HomePage = () => {
@@ -38,13 +38,11 @@ const HomePage = () => {
     <main id="main-content" className="min-h-screen bg-bg-primary text-text-primary">
       <HeroPortfolio />
       <Expertise />
-      <BiografiaSection />
       <TrustTestimonials />
       <CompoundCalculator />
       <div id="booking-section" className="scroll-mt-16">
         <BookingCalendar />
       </div>
-      <ContactForm />
       <FaqSection />
     </main>
   );
@@ -76,12 +74,22 @@ function App() {
       <SkipLink />
       <Navbar />
       <Routes>
+        {/* Core Pages */}
         <Route path="/" element={<HomePage />} />
-        <Route path="/analisi-portafoglio" element={<AnalisiPortafoglioPage />} />
-        <Route path="/cremona" element={<CremonaPage />} />
-        <Route path="/servizi/dipendenti" element={<DipendentiPage />} />
-        <Route path="/servizi/giovani" element={<GiovaniPage />} />
-        <Route path="/servizi/mezza-eta" element={<MezzaEtaPage />} />
+        <Route path="/chi-sono" element={<ChiSonoPage />} />
+        <Route path="/contatti" element={<ContattiPage />} />
+
+        {/* SEO Silo Services */}
+        <Route path="/servizi/analisi-portafoglio" element={<AnalisiPortafoglioPage />} />
+        <Route path="/servizi/pianificazione-previdenziale-tfr" element={<DipendentiPage />} />
+        <Route path="/servizi/piani-di-accumulo-pac" element={<GiovaniPage />} />
+        <Route path="/servizi/gestione-risorse-patrimonio" element={<MezzaEtaPage />} />
+
+        {/* Local Landing Pages */}
+        <Route path="/dove-sono/consulente-finanziario-piacenza" element={<PiacenzaPage />} />
+        <Route path="/dove-sono/consulente-finanziario-cremona" element={<CremonaPage />} />
+
+        {/* Legacy / Helper Routes (Secondary) */}
         <Route path="/servizi/pensionati" element={<PensionatiPage />} />
         <Route path="/servizi/grandi-patrimoni" element={<GrandiPatrimoniPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
