@@ -2,6 +2,7 @@ import { useState, useId } from 'react';
 import type { FormEvent } from 'react';
 import { WhatsAppIcon } from '../components/icons/WhatsAppIcon';
 import { Link } from 'react-router-dom';
+import { useDocumentHead } from '../hooks/useDocumentHead';
 import {
   ArrowLeft,
   TrendingUp,
@@ -195,6 +196,12 @@ const pacExamples = [
    Componente principale pagina
 ───────────────────────────────────────────── */
 export const GiovaniPage = () => {
+  useDocumentHead({
+    title: 'Pianificazione Finanziaria per Giovani Risparmiatori | Ilaria Fruchi',
+    description:
+      "Inizia a pianificare il tuo futuro finanziario. Scopri l'interesse composto, piani di accumulo (PAC) e investimenti a lungo termine su misura per i giovani.",
+  });
+
   return (
     <main
       id="main-content"

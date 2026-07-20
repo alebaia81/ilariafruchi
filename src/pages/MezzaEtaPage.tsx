@@ -2,6 +2,7 @@ import { useState, useId } from 'react';
 import type { FormEvent } from 'react';
 import { WhatsAppIcon } from '../components/icons/WhatsAppIcon';
 import { Link } from 'react-router-dom';
+import { useDocumentHead } from '../hooks/useDocumentHead';
 import {
   ArrowLeft,
   Shield,
@@ -192,6 +193,12 @@ const tools = [
    Componente principale pagina
 ───────────────────────────────────────────── */
 export const MezzaEtaPage = () => {
+  useDocumentHead({
+    title: 'Gestione Patrimoniale per Famiglie e Professionisti | Ilaria Fruchi',
+    description:
+      'Proteggi e fai crescere il patrimonio della tua famiglia. Pianificazione degli investimenti, tutela del risparmio e ottimizzazione fiscale per la mezza età.',
+  });
+
   return (
     <main
       id="main-content"

@@ -2,6 +2,7 @@ import { useState, useId } from 'react';
 import type { FormEvent } from 'react';
 import { WhatsAppIcon } from '../components/icons/WhatsAppIcon';
 import { Link } from 'react-router-dom';
+import { useDocumentHead } from '../hooks/useDocumentHead';
 import {
   ArrowLeft,
   BarChart3,
@@ -190,6 +191,12 @@ const differentiators = [
    Componente principale pagina
 ───────────────────────────────────────────── */
 export const GrandiPatrimoniPage = () => {
+  useDocumentHead({
+    title: 'Consulenza Patrimoniale per Grandi Patrimoni e Aziende | Ilaria Fruchi',
+    description:
+      'Servizi di Family Office, tutela patrimoniale, passaggi generazionali e gestione tesoreria aziendale. Consulenza finanziaria sartoriale ad alto valore.',
+  });
+
   return (
     <main
       id="main-content"

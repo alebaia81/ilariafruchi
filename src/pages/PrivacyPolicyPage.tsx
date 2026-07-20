@@ -1,8 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Shield, ArrowLeft } from 'lucide-react';
+import { useDocumentHead } from '../hooks/useDocumentHead';
 
 export const PrivacyPolicyPage: React.FC = () => {
+  useDocumentHead({
+    title: 'Privacy Policy | Ilaria Fruchi - Consulente Finanziario',
+    description:
+      'Informativa sulla privacy e sul trattamento dei dati personali dei visitatori del sito web ilariafruchi.it.',
+  });
+
   return (
     <div className="bg-[#FCFAF7] min-h-screen py-12 px-4 sm:px-6 lg:px-8 text-left">
       <div className="max-w-3xl mx-auto bg-white p-8 rounded-2xl border border-stone-200 shadow-sm">

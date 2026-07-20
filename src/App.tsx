@@ -25,21 +25,30 @@ import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
 import { CremonaPage } from './pages/CremonaPage';
 
 import { AnalisiPortafoglioPage } from './pages/AnalisiPortafoglioPage';
+import { useDocumentHead } from './hooks/useDocumentHead';
 
-const HomePage = () => (
-  <main id="main-content" className="min-h-screen bg-bg-primary text-text-primary">
-    <HeroPortfolio />
-    <Expertise />
-    <BiografiaSection />
-    <TrustTestimonials />
-    <CompoundCalculator />
-    <div id="booking-section" className="scroll-mt-16">
-      <BookingCalendar />
-    </div>
-    <ContactForm />
-    <FaqSection />
-  </main>
-);
+const HomePage = () => {
+  useDocumentHead({
+    title: 'Ilaria Fruchi | Consulente Finanziario Piacenza e Cremona',
+    description:
+      'Consulenza finanziaria, gestione patrimoniale e pianificazione degli investimenti a Piacenza, Cremona e limitrofi. Proteggi il tuo futuro con Ilaria Fruchi.',
+  });
+
+  return (
+    <main id="main-content" className="min-h-screen bg-bg-primary text-text-primary">
+      <HeroPortfolio />
+      <Expertise />
+      <BiografiaSection />
+      <TrustTestimonials />
+      <CompoundCalculator />
+      <div id="booking-section" className="scroll-mt-16">
+        <BookingCalendar />
+      </div>
+      <ContactForm />
+      <FaqSection />
+    </main>
+  );
+};
 
 function ScrollToHash() {
   const { pathname, hash } = useLocation();

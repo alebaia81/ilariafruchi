@@ -2,6 +2,7 @@ import { useState, useId } from 'react';
 import type { FormEvent } from 'react';
 import { WhatsAppIcon } from '../components/icons/WhatsAppIcon';
 import { Link } from 'react-router-dom';
+import { useDocumentHead } from '../hooks/useDocumentHead';
 import {
   ArrowLeft,
   ShieldCheck,
@@ -164,6 +165,12 @@ const advantages = [
    Componente principale pagina
 ───────────────────────────────────────────── */
 export const DipendentiPage = () => {
+  useDocumentHead({
+    title: 'Previdenza Complementare e TFR per Dipendenti | Ilaria Fruchi',
+    description:
+      'Ottimizza il tuo TFR e scopri i vantaggi fiscali dei fondi pensione. Consulenza patrimoniale e previdenziale personalizzata per lavoratori dipendenti.',
+  });
+
   return (
     <main
       id="main-content"

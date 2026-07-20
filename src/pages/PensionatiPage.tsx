@@ -2,6 +2,7 @@ import { useState, useId } from 'react';
 import type { FormEvent } from 'react';
 import { WhatsAppIcon } from '../components/icons/WhatsAppIcon';
 import { Link } from 'react-router-dom';
+import { useDocumentHead } from '../hooks/useDocumentHead';
 import {
   ArrowLeft,
   Landmark,
@@ -173,6 +174,12 @@ const decumuloTools = [
    Componente principale pagina
 ───────────────────────────────────────────── */
 export const PensionatiPage = () => {
+  useDocumentHead({
+    title: 'Pianificazione Successoria e Integrazione Reddito | Ilaria Fruchi',
+    description:
+      'Pianifica il passaggio generazionale e proteggi il capitale per la pensione. Consulenza su successione patrimoniale e rendite integrative a Piacenza e Cremona.',
+  });
+
   return (
     <main
       id="main-content"

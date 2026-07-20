@@ -1,6 +1,7 @@
 import { useState, useId } from 'react';
 import type { FormEvent } from 'react';
 import { Link } from 'react-router-dom';
+import { useDocumentHead } from '../hooks/useDocumentHead';
 import { WhatsAppIcon } from '../components/icons/WhatsAppIcon';
 import {
   ArrowLeft,
@@ -229,6 +230,12 @@ const steps = [
    Componente principale pagina
 ───────────────────────────────────────────── */
 export const AnalisiPortafoglioPage = () => {
+  useDocumentHead({
+    title: 'Analisi Gratuita Portafoglio Investimenti | Ilaria Fruchi',
+    description:
+      "Richiedi un'analisi indipendente e gratuita del tuo portafoglio di investimenti. Scopri i costi reali, i rischi nascosti e come ottimizzare il rendimento.",
+  });
+
   return (
     <main
       id="main-content"
