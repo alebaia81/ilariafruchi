@@ -49,10 +49,7 @@ export const FooterInstitutional = () => {
             <ul className="space-y-3 text-sm text-stone-400">
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-gold-amber shrink-0 mt-0.5" aria-hidden="true" />
-                <div className="flex flex-col">
-                  <span>via G. Manfredi 105, Piacenza (PC)</span>
-                  <span className="text-xs text-stone-500 mt-1">Operativa su appuntamento anche a Cremona</span>
-                </div>
+                <span>via Ugo Pelò 9, 29010 Castelvetro Piacentino (PC)</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-gold-amber shrink-0" aria-hidden="true" />
@@ -75,7 +72,7 @@ export const FooterInstitutional = () => {
           <div className="flex flex-col gap-1">
             <span>© {new Date().getFullYear()} Ilaria Fruchi. Tutti i diritti riservati.</span>
             <span className="text-stone-300 border-l-2 border-amber-500 pl-3">
-              Ilaria Fruchi | Consulente Finanziario abilitato all'offerta fuori sede | Attiva nelle province di Piacenza e Cremona | Sede principale: via G. Manfredi 105, Piacenza (PC) | P.IVA 01923650335 | Albo OCF: Delibera n. 2895 | RUI n. E000808810
+              Ilaria Fruchi | Consulente Finanziario abilitato all'offerta fuori sede | Attiva nelle province di Piacenza e Cremona | Sede principale: via Ugo Pelò 9, 29010 Castelvetro Piacentino (PC) | P.IVA 01923650335 | Albo OCF: Delibera n. 2895 | RUI n. E000808810
             </span>
             <span>
               Design & Sviluppo:{' '}
