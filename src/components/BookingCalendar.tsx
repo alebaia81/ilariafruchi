@@ -15,8 +15,8 @@ export const BookingCalendar: React.FC = () => {
   const services = [
     "Pianificazione Previdenziale & TFR",
     "Piani di Accumulo e Costruzione Capitale (PAC)",
-    "Ottimizzazione e Gestione Risorse",
-    "Gestione del Decumulo e Integrazione",
+    "Ottimizzazione e Gestione Patrimoniale",
+    "Gestione e Integrazione del Decumulo",
     "Passaggio Generazionale & Grandi Patrimoni",
     "Servizi di Pianificazione per le Aziende",
   ];

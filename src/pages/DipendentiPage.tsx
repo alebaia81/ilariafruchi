@@ -29,7 +29,7 @@ const ServiceContactForm = () => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const text = `Ciao Ilaria, sono ${name} (${email}). Vorrei richiedere un'analisi del mio TFR. Nota aggiuntiva: ${message || 'Nessuna nota aggiuntiva.'}`;
-    const whatsappUrl = `https://wa.me/390523123456?text=${encodeURIComponent(text)}`;
+    const whatsappUrl = `https://wa.me/393463470232?text=${encodeURIComponent(text)}`;
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
   };
 
@@ -44,10 +44,10 @@ const ServiceContactForm = () => {
           id="form-dipendenti-title"
           className="text-2xl font-bold text-text-primary mb-2 text-left"
         >
-          Richiedi un'analisi del tuo TFR
+          Pianifica la tua previdenza
         </h2>
         <p className="text-text-secondary text-sm mb-6 text-left">
-          Un confronto gratuito e senza impegno. Ti mostro i numeri del tuo caso specifico.
+          Un colloquio dedicato e senza impegno per analizzare le tue prospettive e valorizzare il tuo futuro pensionistico.
         </p>
 
         <form
@@ -137,17 +137,17 @@ const advantages = [
   {
     icon: ShieldCheck,
     title: 'Nessun esborso dal tuo stipendio',
-    body: 'Il TFR è accantonato dall\'azienda per legge: scegliere dove mandarlo non costa nulla di più. È una decisione, non una spesa.',
+    body: 'Il TFR è una quota già accantonata dal datore di lavoro per legge. Scegliere dove destinarlo è una decisione, non una spesa aggiuntiva.',
   },
   {
     icon: PiggyBank,
     title: 'Deducibilità fiscale dei versamenti volontari',
-    body: 'Ogni euro versato volontariamente nel fondo pensione fino a 5.164,57 € annui è deducibile dal reddito imponibile: il Fisco ti restituisce una parte di quanto investi.',
+    body: 'Ogni euro versato volontariamente nel fondo pensione, fino al limite massimo di 5.300,00 euro annui, è deducibile dal reddito imponibile. Questo ti permette di accedere subito ad un importante risparmio d’imposta in sede di dichiarazione dei redditi.',
   },
   {
     icon: Percent,
     title: 'Tassazione agevolata sulle plusvalenze',
-    body: 'I guadagni all\'interno del fondo pensione scontano un\'imposta sostitutiva del 20%, contro il 26% degli strumenti finanziari classici.',
+    body: 'I rendimenti generati all’interno del fondo pensione scontano un’imposta sostitutiva del 20% (che scende al 12,5% per la quota investita in Titoli di Stato), a fronte del 26% ordinario degli altri strumenti finanziari.',
   },
   {
     icon: BadgeEuro,
@@ -208,27 +208,25 @@ export const DipendentiPage = () => {
           >
             Pianificazione Previdenziale & TFR
             <br />
-            <span className="text-gold-amber">per un futuro sereno ed efficiente.</span>
+            <span className="text-gold-amber">per un futuro sereno e sicuro.</span>
           </h1>
           <p className="text-lg text-text-secondary max-w-2xl leading-relaxed">
-            Come dipendente hai accesso a uno strumento che quasi nessun altro investitore
-            può sfruttare: il versamento del TFR da parte dell'azienda a tuo favore.
-            Il problema non è avercelo — il problema è non sapere dove mandarlo.
+            Come lavoratore dipendente hai a disposizione un asset straordinario per la costruzione della tua ricchezza: il trattamento di fine rapporto. Questa risorsa alimentata regolarmente, rappresenta una base solida che merita una gestione strategica. La vera sfida non è l’accumulo, ma saper indirizzare il proprio TFR verso le soluzioni più efficienti per massimizzarne il rendimento e proteggere il proprio domani.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
             <a
               href="#contact-dipendenti"
-              className="inline-flex items-center gap-2 bg-gold-amber text-white font-bold py-3 px-6 rounded-xl shadow-md hover:opacity-90 transition-opacity focus:outline-none"
+              className="inline-flex items-center gap-2 bg-brand-bordeaux text-white font-bold py-3 px-6 rounded-xl shadow-md hover:opacity-90 transition-opacity focus:outline-none"
             >
               <Phone className="w-4 h-4" aria-hidden="true" />
-              Analisi gratuita del tuo TFR
+              PIANIFICA LA TUA PREVIDENZA
             </a>
             <a
               href="tel:+390523123456"
-              className="inline-flex items-center gap-2 border border-stone-300 text-text-primary font-bold py-3 px-6 rounded-xl hover:border-gold-amber transition-colors focus:outline-none"
+              className="inline-flex items-center gap-2 border border-stone-300 text-text-primary font-bold py-3 px-6 rounded-xl hover:border-brand-bordeaux transition-colors focus:outline-none"
             >
-              Chiamami direttamente
+              Prenota un appuntamento telefonico
             </a>
           </div>
         </div>
@@ -316,6 +314,10 @@ export const DipendentiPage = () => {
               </p>
             </div>
           </div>
+
+          <p className="text-xs text-stone-400 mt-8 leading-relaxed text-left border-t border-stone-250 pt-4">
+            * Nota informativa: I dati riportati rappresentano una simulazione puramente indicativa a scopo illustrativo. L’esempio è calcolato al lordo dei costi di gestione e al netto dell’imposta sostitutiva sui rendimenti finanziari annuali, applicata secondo le rispettive normative vigenti per il TFR in azienda e per le forme pensionistiche complementari.
+          </p>
         </div>
       </section>
 
@@ -359,11 +361,7 @@ export const DipendentiPage = () => {
         <div className="max-w-3xl mx-auto text-left">
           <blockquote className="border-l-4 border-gold-amber pl-6">
             <p className="text-lg text-text-secondary leading-relaxed italic">
-              "Il fondo pensione non è uno strumento per tutti i gusti: le somme non
-              sono sempre disponibili in modo immediato. Ma per chi ha un orizzonte
-              temporale lungo e vuole costruire un patrimonio previdenziale efficiente,
-              è difficile trovare qualcosa di comparabile in termini di vantaggi fiscali
-              e di costo reale."
+              "La previdenza complementare risponde ad una scelta lungimirante. Per chi si focalizza su un orizzonte temporale di lungo periodo e desidera costruire una stabilità futura, rappresenta una soluzione fondamentale, capace di offrire importanti tutele e un impianto fiscale fortemente agevolato."
             </p>
             <footer className="mt-4 text-sm font-bold text-text-primary not-italic">
               — Ilaria Fruchi, Consulente Finanziaria
@@ -382,7 +380,7 @@ export const DipendentiPage = () => {
           </h2>
           <Link
             to="/#booking-section"
-            className="inline-flex items-center justify-center bg-gold-amber text-white font-bold py-3.5 px-8 rounded-xl shadow-md hover:opacity-90 transition-opacity focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-gold-amber"
+            className="inline-flex items-center justify-center bg-brand-bordeaux text-white font-bold py-3.5 px-8 rounded-xl shadow-md hover:opacity-90 transition-opacity focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-bordeaux"
           >
             Fissa una Call Conoscitiva
           </Link>

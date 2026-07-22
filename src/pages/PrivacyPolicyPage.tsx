@@ -36,7 +36,7 @@ export const PrivacyPolicyPage: React.FC = () => {
           <section aria-labelledby="legal-titolare">
             <h2 id="legal-titolare" className="text-lg font-bold text-[#1A1816] mb-2">1. Titolare del Trattamento</h2>
             <p>
-              Ilaria Fruchi, Consulente Finanziario abilitato all'offerta fuori sede, con sede in via Ugo Pelò 9, 29010 Castelvetro Piacentino (PC), P.IVA 01923650335, iscritta all'Albo OCF con Delibera n. 2895 e al Registro Unico degli Intermediari (RUI) al n. E000808810. Contatti: Cell. 346-3470232 | E-mail: info@ilariafruchi.it.
+              Ilaria Fruchi, Consulente Finanziario abilitato all'offerta fuori sede, con sede legale in via Ugo Pelò 9, 29010 Castelvetro Piacentino (PC) e ufficio in via G. Manfredi 105, 29121 Piacenza (PC), P.IVA 01923650335, iscritta all'Albo OCF con Delibera n. 2895 e al Registro Unico degli Intermediari (RUI) al n. E000808810. Contatti: Cell. 346-3470232 | E-mail: ifruchi@fideuram.it.
             </p>
           </section>
 

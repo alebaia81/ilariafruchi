@@ -9,12 +9,11 @@ import {
   Layers,
   SlidersHorizontal,
   Target,
-  EyeOff,
-  BadgeCheck,
   FileUp,
   Mail,
   CheckCircle2,
   Phone,
+  Shield,
 } from 'lucide-react';
 
 /* ─────────────────────────────────────────────
@@ -32,8 +31,8 @@ const AnalysisForm = () => {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const text = `Ciao Ilaria, sono ${name} (${email}). Vorrei richiedere un'analisi gratuita del mio portafoglio. Note: ${notes || 'Nessuna nota aggiuntiva.'}`;
-    const whatsappUrl = `https://wa.me/390523123456?text=${encodeURIComponent(text)}`;
+    const text = `Ciao Ilaria, sono ${name} (${email}). Vorrei richiedere un'analisi del mio portafoglio. Note: ${notes || 'Nessuna nota aggiuntiva.'}`;
+    const whatsappUrl = `https://wa.me/393463470232?text=${encodeURIComponent(text)}`;
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
   };
 
@@ -49,7 +48,7 @@ const AnalysisForm = () => {
             id="form-analisi-title"
             className="text-3xl font-extrabold text-text-primary mb-3"
           >
-            Richiedi la tua analisi gratuita
+            RICHIEDI LA TUA ANALISI PERSONALIZZATA
           </h2>
           <p className="text-text-secondary">
             Compila il form oppure inviami direttamente i tuoi documenti
@@ -155,7 +154,7 @@ const AnalysisForm = () => {
             {/* Canali alternativi */}
             <div className="flex flex-col sm:flex-row gap-3 pt-2">
               <a
-                href="mailto:info@ilariafruchi.it"
+                href="mailto:ifruchi@fideuram.it"
                 className="flex-1 flex items-center justify-center gap-2 border border-stone-300 text-text-secondary text-sm font-bold py-3 px-4 rounded-lg hover:border-gold-amber hover:text-text-primary transition-colors focus:outline-none"
               >
                 <Mail className="w-4 h-4" aria-hidden="true" />
@@ -170,38 +169,32 @@ const AnalysisForm = () => {
 };
 
 /* ─────────────────────────────────────────────
-   I 5 criteri di analisi
+   I 4 criteri di analisi
 ───────────────────────────────────────────── */
 const criteria = [
   {
     icon: Layers,
     number: '01',
     title: 'Diversificazione reale',
-    body: 'Avere tanti prodotti non significa essere diversificati. Molti portafogli bancari contengono strumenti che si muovono nella stessa direzione in caso di crisi — il rischio è concentrato anche quando sembra distribuito. Verificheremo se le tue asset class sono realmente decorrelate tra loro.',
+    body: 'Avere molteplici posizioni non garantisce una vera diversificazione. Esamineremo insieme se il patrimonio è distribuito in modo da non risentire di eventi legati ad un singolo settore o mercato, garantendone la stabilità nel tempo.',
   },
   {
     icon: SlidersHorizontal,
     number: '02',
-    title: 'Equilibrio rischio / rendimento',
-    body: 'Il rendimento atteso deve essere proporzionale al rischio che stai effettivamente assumendo. Spesso si scopre di tollerare una volatilità significativa per un rendimento modesto — o l\'opposto: di stare troppo fermi per paura di perdere. Valuteremo se il tuo profilo di rischio è coerente con la struttura del portafoglio.',
+    title: 'Equilibrio rischio e rendimento',
+    body: 'Il rendimento atteso deve essere proporzionale al rischio che stai effettivamente assumendo. Spesso si scopre di tollerare una volatilità significativa per un rendimento modesto — o l\'opposto: di stare troppo fermi per paura di perdere. Valuteremo se il tuo profilo di rischio è coerente con la struttura del portafoglio, con l’obiettivo di evitare scelte troppo esposte o, al contrario, troppo prudenziali rispetto ai tuoi traguardi.',
   },
   {
     icon: Target,
     number: '03',
     title: 'Coerenza con i tuoi obiettivi',
-    body: 'Investire bene significa investire con uno scopo. Un portafoglio costruito per chi ha 35 anni e vuole comprare casa tra 10 anni è strutturalmente diverso da uno pensato per chi vuole una rendita tra 20 anni. Verificheremo che i tuoi investimenti siano allineati con gli obiettivi che hai davvero.',
+    body: 'Ogni scelta deve avere uno scopo temporale definito. Un portafoglio costruito per chi ha 35 anni e vuole comprare casa tra 10 anni è strutturalmente diverso da uno pensato per chi vuole una rendita tra 20 anni. Analizzeremo se i tuoi investimenti sono allineati con i tuoi veri obiettivi.',
   },
   {
-    icon: EyeOff,
+    icon: Shield,
     number: '04',
-    title: 'Costi reali e costi nascosti',
-    body: 'I costi espliciti sono quelli che vedi: le commissioni di ingresso, i costi di gestione dichiarati. Poi ci sono i costi impliciti: retrocessioni, spread sui prodotti strutturati, TER totale dei fondi. Su un portafoglio di 100.000€, un punto percentuale di costo annuo in più vale 1.000€ sottratti ogni anno alla crescita del capitale.',
-  },
-  {
-    icon: BadgeCheck,
-    number: '05',
-    title: 'Qualità degli strumenti',
-    body: 'Non tutti i fondi e i prodotti strutturati hanno la stessa qualità. Alcuni sono efficienti e trasparenti; altri hanno strutture di costo opache, liquidità limitata o rendimenti storici che non giustificano i rischi assunti. Esamineremo ogni strumento nel tuo portafoglio con criteri oggettivi.',
+    title: 'Ottimizzazione fiscale',
+    body: 'Esaminiamo la posizione dal punto di vista fiscale e successorio. Questo assicura che il patrimonio sia protetto nel tempo e che il passaggio generazionale sia pianificato in modo sereno e lineare.',
   },
 ];
 
@@ -211,18 +204,18 @@ const criteria = [
 const steps = [
   {
     n: '1',
-    title: 'Condividi i tuoi documenti',
-    body: 'Il rendiconto della tua banca, un estratto conto degli investimenti o anche solo una lista dei prodotti che possiedi. Qualsiasi formato va bene.',
+    title: 'Condividi la tua situazione',
+    body: 'È sufficiente un estratto conto aggiornato dei tuoi investimenti o una lista dei prodotti che possiedi. Qualsiasi formato o documento riassuntivo è adatto per iniziare.',
   },
   {
     n: '2',
-    title: 'Analizzo la tua situazione',
-    body: 'Esamino struttura, costi reali, diversificazione e coerenza con il tuo profilo. L\'analisi richiede normalmente qualche giorno lavorativo.',
+    title: 'Analisi del portafoglio',
+    body: 'Esamino la struttura complessiva, il livello di diversificazione e la coerenza con il tuo profilo. L’approfondimento normalmente richiede qualche giorno lavorativo.',
   },
   {
     n: '3',
-    title: 'Ti presento i risultati',
-    body: 'Un confronto chiaro, con dati alla mano. Se ci sono margini di miglioramento te lo dico con trasparenza. Se invece la tua situazione è già solida, te lo confermo senza giri di parole.',
+    title: 'Condividiamo i risultati',
+    body: 'Ci confronteremo insieme sui dati emersi. Se individueremo margini per ottimizzare la pianificazione o allinearla meglio ai tuoi obiettivi, valuteremo le alternative più adatte. In caso contrario avrai la conferma che la tua strada attuale è quella corretta.',
   },
 ];
 
@@ -231,9 +224,9 @@ const steps = [
 ───────────────────────────────────────────── */
 export const AnalisiPortafoglioPage = () => {
   useDocumentHead({
-    title: 'Analisi Gratuita Portafoglio Investimenti | Ilaria Fruchi',
+    title: 'Analisi Portafoglio Investimenti | Ilaria Fruchi',
     description:
-      "Richiedi un'analisi indipendente e gratuita del tuo portafoglio di investimenti. Scopri i costi reali, i rischi nascosti e come ottimizzare il rendimento.",
+      "Richiedi un'analisi indipendente del tuo portafoglio di investimenti. Scopri i costi reali, i rischi nascosti e come ottimizzare il rendimento.",
   });
 
   return (
@@ -265,35 +258,35 @@ export const AnalisiPortafoglioPage = () => {
       >
         <div className="max-w-5xl mx-auto">
           <p className="text-xs font-bold uppercase tracking-widest text-gold-amber mb-4">
-            Servizio gratuito · Analisi del portafoglio
+            Analisi del portafoglio
           </p>
           <h1
             id="analisi-hero-title"
             className="text-4xl sm:text-5xl font-extrabold text-text-primary leading-tight mb-6 max-w-3xl"
           >
-            La tua banca lavora
+            Hai il pieno controllo della tua
             <br />
-            <span className="text-gold-amber">nel tuo interesse?</span>
+            <span className="text-brand-bordeaux">situazione patrimoniale?</span>
           </h1>
           <p className="text-lg text-text-secondary max-w-2xl leading-relaxed">
-            È una domanda legittima — e spesso la risposta non è quella che ci si aspetta.
-            Costi non dichiarati, prodotti inefficienti, diversificazione più apparente
-            che reale: questi elementi limitano i tuoi rendimenti in modo silenzioso,
-            anno dopo anno. Un'analisi professionale esterna è il primo passo per
-            scoprire se il tuo portafoglio lavora davvero per te.
+            I mercati finanziari e le esigenze personali evolvono continuamente e spesso
+            accumuliamo soluzioni finanziarie diverse nel corso degli anni, perdendo di vista
+            il quadro d'insieme. L'analisi approfondita del tuo portafoglio nasce per darti
+            una fotografia nitida e oggettiva dei tuoi asset: un check up fondamentale per
+            trasformare la complessità in chiarezza e investire con assoluta serenità.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
             <a
               href="#richiedi-analisi"
-              className="inline-flex items-center gap-2 bg-gold-amber text-white font-bold py-3 px-6 rounded-xl shadow-md hover:opacity-90 transition-opacity focus:outline-none"
+              className="inline-flex items-center gap-2 bg-brand-bordeaux text-white font-bold py-3 px-6 rounded-xl shadow-md hover:opacity-90 transition-opacity focus:outline-none"
             >
               <Search className="w-4 h-4" aria-hidden="true" />
-              Analisi gratuita — inizia qui
+              Analisi portafoglio — inizia qui
             </a>
             <a
-              href="tel:+390523123456"
-              className="inline-flex items-center gap-2 border border-stone-300 text-text-primary font-bold py-3 px-6 rounded-xl hover:border-gold-amber transition-colors focus:outline-none"
+              href="tel:+393463470232"
+              className="inline-flex items-center gap-2 border border-stone-300 text-text-primary font-bold py-3 px-6 rounded-xl hover:border-brand-bordeaux transition-colors focus:outline-none"
             >
               <Phone className="w-4 h-4" aria-hidden="true" />
               Preferisci chiamare?
@@ -302,7 +295,7 @@ export const AnalisiPortafoglioPage = () => {
 
           {/* Garanzie rapide */}
           <div className="mt-10 flex flex-wrap gap-5">
-            {['Gratuita e senza impegno', 'Massima riservatezza', 'Risposta entro 48 ore'].map((g) => (
+            {['Con riferimento al tuo orizzonte temporale', 'Massima riservatezza', 'Risposta entro 48 ore'].map((g) => (
               <div key={g} className="flex items-center gap-2 text-sm text-text-secondary">
                 <CheckCircle2 className="w-4 h-4 text-gold-amber shrink-0" aria-hidden="true" />
                 <span>{g}</span>
@@ -322,28 +315,25 @@ export const AnalisiPortafoglioPage = () => {
             id="perche-title"
             className="text-2xl font-bold text-text-primary mb-2"
           >
-            Perché un secondo parere cambia tutto
+            Il valore di un secondo parere professionale
           </h2>
-          <p className="text-text-secondary text-sm mb-10 max-w-2xl">
-            Il consulente della tua banca non è indipendente: è remunerato
-            per vendere i prodotti della casa. Questo non significa che stia
-            sbagliando, ma significa che il suo punto di vista è strutturalmente
-            orientato. Un'analisi esterna non ha questo vincolo.
+          <p className="text-text-secondary text-sm mb-10 max-w-2xl leading-relaxed">
+            Un’analisi esterna non serve a giudicare le scelte passate, ma a valorizzare quelle future. Offre un punto di vista focalizzato unicamente sulle tue esigenze attuali, per verificare che ogni investimento sia ancora la soluzione migliore per te.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {[
               {
-                label: 'Conflitto di interessi',
-                text: 'Le banche guadagnano dalle retrocessioni sui prodotti che vendono. I fondi più remunerativi per la banca non sono necessariamente quelli migliori per te.',
+                label: 'Visione d’insieme',
+                text: 'Permette di coordinare i tuoi investimenti in modo strategico. Assicura che ogni scelta sia finalizzata a raggiungere lo stesso traguardo complessivo, rispettando fedelmente le priorità personali e familiari che hai definito nel tempo.',
               },
               {
-                label: 'Costi che non vedi',
-                text: 'Il TER (Total Expense Ratio) di un fondo include costi che non appaiono mai in modo esplicito nel rendiconto. Su orizzonti lunghi, l\'impatto è enorme.',
+                label: 'Gestione del rischio',
+                text: 'Verifica che l’esposizione del portafoglio sia realmente in linea con la tua tollerabilità. Evita concentrazioni eccessive e migliora la stabilità complessiva.',
               },
               {
-                label: 'Complessità apparente',
-                text: 'Prodotti strutturati, polizze multiramo, fondi di fondi: spesso la complessità serve a rendere difficile il confronto. La chiarezza è un vantaggio per il cliente, non per la banca.',
+                label: 'Pianificazione e monitoraggio',
+                text: 'Un controllo accurato offre una panoramica chiara della tua situazione e ti permette di adattare tempestivamente le scelte ai tuoi mutati orizzonti temporali.',
               },
             ].map((item) => (
               <div
@@ -414,7 +404,7 @@ export const AnalisiPortafoglioPage = () => {
             Come funziona il processo
           </h2>
           <p className="text-text-secondary text-sm mb-10 max-w-xl">
-            Tre passaggi semplici. Nessun obbligo in nessuna fase.
+            Tre passaggi semplici, nessun obbligo in nessuna fase.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -439,15 +429,10 @@ export const AnalisiPortafoglioPage = () => {
         <div className="max-w-3xl mx-auto text-left">
           <blockquote className="border-l-4 border-gold-amber pl-6">
             <p className="text-lg text-text-secondary leading-relaxed italic">
-              "Non ho mai incontrato un cliente che, dopo un'analisi approfondita
-              del proprio portafoglio, non avesse trovato almeno un'area di
-              miglioramento significativa. Non perché la banca precedente fosse
-              necessariamente disonesta — ma perché un punto di vista esterno,
-              senza conflitti di interesse, vede quello che dall'interno
-              non si riesce a vedere."
+              "Nel mio quotidiano incontro spesso persone attente e informate, che tuttavia desiderano la certezza che il proprio patrimonio sia sempre al passo con i tempi. Un’analisi approfondita non serve a giudicare il passato, ma offre una preziosa prospettiva esterna che permette di focalizzarsi su nuovi dettagli e nuove opportunità di tutela, valorizzando al massimo ogni scelta futura."
             </p>
             <footer className="mt-4 text-sm font-bold text-text-primary not-italic">
-              — Ilaria Fruchi, Consulente Finanziaria
+              — Ilaria Fruchi – Consulente finanziario
             </footer>
           </blockquote>
         </div>

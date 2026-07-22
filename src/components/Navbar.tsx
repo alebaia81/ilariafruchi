@@ -3,10 +3,13 @@ import { ChevronDown, Phone, Menu, X } from 'lucide-react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 
 const subServices = [
-  { name: 'Analisi Portafoglio (Gratuita)', path: '/servizi/analisi-portafoglio' },
+  { name: 'Analisi Portafoglio', path: '/servizi/analisi-portafoglio' },
   { name: 'Pianificazione Previdenziale & TFR', path: '/servizi/pianificazione-previdenziale-tfr' },
   { name: 'Piani di Accumulo (PAC)', path: '/servizi/piani-di-accumulo-pac' },
-  { name: 'Ottimizzazione e Gestione Risorse', path: '/servizi/gestione-risorse-patrimonio' },
+  { name: 'Ottimizzazione e Gestione Patrimoniale', path: '/servizi/gestione-risorse-patrimonio' },
+  { name: 'Gestione e Integrazione del Decumulo', path: '/servizi/pensionati' },
+  { name: 'Passaggio Generazionale & Grandi Patrimoni', path: '/servizi/grandi-patrimoni' },
+  { name: 'Servizi di Pianificazione per le Aziende', path: '/servizi/pianificazione-patrimoniale-aziende' },
 ];
 
 export const Navbar = () => {
@@ -132,13 +135,14 @@ export const Navbar = () => {
             Analisi portafoglio
           </button>
 
-          <a
-            href="tel:+393463470232"
-            className="inline-flex items-center gap-2 border-2 border-gold-amber text-gold-amber text-sm font-bold py-2 px-4 rounded-lg hover:bg-gold-amber hover:text-white transition-colors focus:outline-none"
+          <Link
+            to="/contatti"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            className="inline-flex items-center gap-2 border-2 border-brand-bordeaux text-brand-bordeaux text-sm font-bold py-2 px-4 rounded-lg hover:bg-brand-bordeaux hover:text-white transition-colors focus:outline-none"
           >
             <Phone className="w-4 h-4" aria-hidden="true" />
-            Chiama ora
-          </a>
+            Prenota appuntamento telefonico
+          </Link>
         </nav>
 
         {/* ── PULSANTE HAMBURGER (visibile solo su mobile) ── */}
@@ -233,13 +237,16 @@ export const Navbar = () => {
           </button>
 
           {/* CTA Chiama */}
-          <a
-            href="tel:+393463470232"
-            className="mt-2 flex items-center justify-center gap-2 border-2 border-gold-amber text-gold-amber text-sm font-bold py-3 px-4 rounded-xl hover:bg-gold-amber hover:text-white transition-colors focus:outline-none min-h-[48px]"
+          <button
+            onClick={() => {
+              handleNavigate('/contatti');
+              setIsMobileMenuOpen(false);
+            }}
+            className="mt-2 flex items-center justify-center gap-2 border-2 border-brand-bordeaux text-brand-bordeaux text-sm font-bold py-3 px-4 rounded-xl hover:bg-brand-bordeaux hover:text-white transition-colors focus:outline-none min-h-[48px]"
           >
             <Phone className="w-4 h-4" aria-hidden="true" />
-            Chiama ora
-          </a>
+            Prenota appuntamento telefonico
+          </button>
         </nav>
       </div>
     </header>

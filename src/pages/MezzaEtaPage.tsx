@@ -30,7 +30,7 @@ const ServiceContactForm = () => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const text = `Ciao Ilaria, sono ${name} (${email}). Vorrei rivedere il mio portafoglio. Nota aggiuntiva: ${message || 'Nessuna nota aggiuntiva.'}`;
-    const whatsappUrl = `https://wa.me/390523123456?text=${encodeURIComponent(text)}`;
+    const whatsappUrl = `https://wa.me/393463470232?text=${encodeURIComponent(text)}`;
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
   };
 
@@ -143,10 +143,10 @@ const phases = [
     color: 'border-stone-300',
     accent: 'text-stone-500',
     points: [
-      'Orizzonte temporale lungo: il mercato ha tempo per recuperare',
-      'Priorità alla crescita del capitale',
-      'Volatilità tollerabile: le oscillazioni si assorbono nel tempo',
-      'Versamenti periodici che sfruttano i cali come opportunità',
+      'Orizzonte temporale lungo: i mercati hanno il tempo di recuperare',
+      'Focus sulla crescita del capitale',
+      'Volatilità sostenibile: le oscillazioni si assorbono nel tempo',
+      'Versamenti periodici per sfruttare i cali come opportunità',
     ],
   },
   {
@@ -155,10 +155,10 @@ const phases = [
     color: 'border-gold-amber',
     accent: 'text-gold-amber',
     points: [
-      'Orizzonte temporale più contenuto: il tempo di recupero si accorcia',
+      'Orizzonte temporale ridotto: il tempo di recupero si accorcia',
       'Priorità alla protezione e alla stabilità del capitale',
-      'Volatilità da ridurre: stessa oscillazione percentuale, impatto reale maggiore',
-      'Struttura del portafoglio da riallineare agli obiettivi attuali',
+      'Riduzione della volatilità: stesso calo percentuale, impatto reale maggiore',
+      'Riallineamento del portafoglio sui nuovi obiettivi di vita',
     ],
   },
 ];
@@ -169,23 +169,23 @@ const phases = [
 const tools = [
   {
     icon: SlidersHorizontal,
-    title: 'Ribilanciamento del portafoglio',
-    body: 'Quando la composizione originale del portafoglio cambia per effetto dei mercati, alcune asset class diventano sovrarappresentate. Il ribilanciamento periodico riporta il rischio reale al livello desiderato — senza aspettare che le oscillazioni diventino problemi.',
-  },
-  {
-    icon: TrendingDown,
-    title: 'Riduzione progressiva della volatilità',
-    body: 'Man mano che l\'orizzonte temporale si accorcia, la tolleranza al rischio cambia. Un portafoglio che funzionava a 35 anni può essere inadeguato a 50. Ridurre l\'esposizione azionaria in modo graduale e controllato è una scelta strategica, non una rinuncia.',
+    title: 'Ribilanciamento',
+    body: 'Ripristino periodico dei pesi per ridurre le oscillazioni del portafoglio.',
   },
   {
     icon: Briefcase,
-    title: 'Strumenti di gestione avanzata',
-    body: 'Gestioni patrimoniali, private equity e investimenti alternativi offrono una diversificazione che va oltre i mercati quotidiani. Permettono di accedere a rendimenti decorrelati dall\'andamento di borsa, riducendo l\'impatto delle fasi di turbolenza.',
+    title: 'Strumenti',
+    body: 'Gestioni patrimoniali, private equity e investimenti alternativi offrono una diversificazione che va oltre i mercati quotidiani. Permettono di accedere a mercati decorrelati dall’andamento di borsa, riducendo l’impatto nelle fasi di turbolenza.',
+  },
+  {
+    icon: TrendingDown,
+    title: 'Volatilità',
+    body: 'Ridurre l’esposizione azionaria in modo graduale e controllato rappresenta una scelta strategica, non una rinuncia.',
   },
   {
     icon: RefreshCw,
-    title: 'Monitoraggio e adattamento continui',
-    body: 'Il patrimonio non si gestisce una volta sola. Le condizioni di mercato evolvono, le esigenze personali cambiano, gli obiettivi si ridefiniscono. Una strategia efficace è quella che prevede revisioni periodiche e la flessibilità di correggere la rotta quando necessario.',
+    title: 'Monitoraggio',
+    body: 'Le condizioni di mercato evolvono, le esigenze personali cambiano, gli obiettivi si ridefiniscono. Una strategia efficace è quella che prevede revisioni periodiche e la flessibilità di correggere la rotta quando necessario.',
   },
 ];
 
@@ -228,39 +228,31 @@ export const MezzaEtaPage = () => {
       >
         <div className="max-w-5xl mx-auto">
           <p className="text-xs font-bold uppercase tracking-widest text-gold-amber mb-4">
-            Servizio dedicato · Ottimizzazione e Gestione Risorse
+            Servizio dedicato · Ottimizzazione e Gestione Patrimoniale
           </p>
           <h1
             id="mezza-eta-hero-title"
             className="text-4xl sm:text-5xl font-extrabold text-text-primary leading-tight mb-6 max-w-3xl"
           >
-            Ottimizzazione e Gestione Risorse
-            <br />
-            <span className="text-gold-amber">
-              per proteggere e valorizzare il tuo patrimonio.
-            </span>
+            OTTIMIZZAZIONE E GESTIONE PATRIMONIALE
           </h1>
           <p className="text-lg text-text-secondary max-w-2xl leading-relaxed">
-            C'è un momento nella vita finanziaria in cui la domanda non è più
-            "come faccio crescere il capitale?" ma "come lo proteggo senza
-            rinunciare a farlo lavorare?". Riconoscere questo passaggio — e
-            strutturare il portafoglio di conseguenza — è una delle decisioni
-            più rilevanti che un investitore possa prendere.
+            C’è un momento in cui la priorità non è più solo accumulare capitale, ma capire come proteggerlo e farlo rendere in sicurezza. Riconoscere questa transizione e pianificare la giusta strategia è la decisione finanziaria più importante per il tuo futuro.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
             <a
               href="#contact-mezza-eta"
-              className="inline-flex items-center gap-2 bg-gold-amber text-white font-bold py-3 px-6 rounded-xl shadow-md hover:opacity-90 transition-opacity focus:outline-none"
+              className="inline-flex items-center gap-2 bg-brand-bordeaux text-white font-bold py-3 px-6 rounded-xl shadow-md hover:opacity-90 transition-opacity focus:outline-none"
             >
               <Phone className="w-4 h-4" aria-hidden="true" />
-              Analisi gratuita del portafoglio
+              Richiedi la tua analisi
             </a>
             <a
               href="tel:+390523123456"
-              className="inline-flex items-center gap-2 border border-stone-300 text-text-primary font-bold py-3 px-6 rounded-xl hover:border-gold-amber transition-colors focus:outline-none"
+              className="inline-flex items-center gap-2 border border-stone-300 text-text-primary font-bold py-3 px-6 rounded-xl hover:border-brand-bordeaux transition-colors focus:outline-none"
             >
-              Chiamami direttamente
+              Prenota un appuntamento telefonico
             </a>
           </div>
         </div>
@@ -278,9 +270,8 @@ export const MezzaEtaPage = () => {
           >
             Due fasi, due logiche completamente diverse
           </h2>
-          <p className="text-text-secondary text-sm mb-10 max-w-2xl">
-            Usare la stessa strategia in fasi diverse della vita finanziaria
-            è uno degli errori più comuni — e più costosi.
+          <p className="text-text-secondary text-sm mb-10 max-w-2xl leading-relaxed italic">
+            “Applicare la stessa strategia in fasi diverse della vita finanziaria è uno degli errori più comuni e penalizzanti per un investitore”
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -324,10 +315,10 @@ export const MezzaEtaPage = () => {
             id="volatilita-title"
             className="text-2xl font-bold text-text-primary mb-2"
           >
-            Perché la stessa oscillazione pesa di più quando il capitale cresce
+            Perché lo stesso calo fa più male quando il patrimonio cresce?
           </h2>
           <p className="text-text-secondary text-sm mb-10 max-w-2xl">
-            Non è una questione psicologica. È aritmetica.
+            Non è una percezione emotiva. È pura matematica finanziaria.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -345,7 +336,7 @@ export const MezzaEtaPage = () => {
                   <span className="font-bold text-text-primary">− 3.000 €</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-text-secondary">Impatto psicologico</span>
+                  <span className="text-text-secondary">Impatto emotivo</span>
                   <span className="font-bold text-text-primary">Tollerabile</span>
                 </div>
                 <div className="flex justify-between">
@@ -369,7 +360,7 @@ export const MezzaEtaPage = () => {
                   <span className="font-bold text-red-600">− 30.000 €</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-text-secondary">Impatto psicologico</span>
+                  <span className="text-text-secondary">Impatto emotivo</span>
                   <span className="font-bold text-red-600">Significativo</span>
                 </div>
                 <div className="flex justify-between">
@@ -377,8 +368,8 @@ export const MezzaEtaPage = () => {
                   <span className="font-bold text-red-600">Più breve</span>
                 </div>
               </div>
-              <p className="text-xs text-stone-400 mt-4">
-                * Stessa percentuale. Impatto reale dieci volte superiore.
+              <p className="text-xs text-stone-400 mt-4 leading-relaxed">
+                * A parità di oscillazione, l’impatto reale è 10 volte superiore e il tempo per recuperare è minore.
               </p>
             </div>
           </div>
@@ -395,11 +386,10 @@ export const MezzaEtaPage = () => {
             id="strumenti-title"
             className="text-2xl font-bold text-text-primary mb-2"
           >
-            Come si gestisce un patrimonio in questa fase
+            Approcci su misura per stabilità e rischio controllato
           </h2>
           <p className="text-text-secondary text-sm mb-10 max-w-2xl">
-            Strumenti diversi, obiettivo comune: rendimento stabile e rischio
-            sotto controllo.
+            Strumenti diversi, obiettivo comune: rendimento stabile e rischio sotto controllo.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -428,12 +418,7 @@ export const MezzaEtaPage = () => {
         <div className="max-w-3xl mx-auto text-left">
           <blockquote className="border-l-4 border-gold-amber pl-6">
             <p className="text-lg text-text-secondary leading-relaxed italic">
-              "Nella gestione del patrimonio non esiste un assetto definitivo.
-              Le condizioni di mercato cambiano, le esigenze personali evolvono
-              e gli obiettivi si ridefiniscono nel tempo. Un buon piano è quello
-              che prevede revisioni periodiche — non per inseguire i mercati,
-              ma per verificare che la strategia sia ancora allineata a dove
-              si vuole arrivare."
+              "Un buon piano finanziario non insegue i mercati, ma si adatta al tempo che passa. Le revisioni periodiche servono a garantire che la tua strategia sia sempre diretta dove vuoi arrivare."
             </p>
             <footer className="mt-4 text-sm font-bold text-text-primary not-italic">
               — Ilaria Fruchi, Consulente Finanziaria
@@ -452,7 +437,7 @@ export const MezzaEtaPage = () => {
           </h2>
           <Link
             to="/#booking-section"
-            className="inline-flex items-center justify-center bg-gold-amber text-white font-bold py-3.5 px-8 rounded-xl shadow-md hover:opacity-90 transition-opacity focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-gold-amber"
+            className="inline-flex items-center justify-center bg-brand-bordeaux text-white font-bold py-3.5 px-8 rounded-xl shadow-md hover:opacity-90 transition-opacity focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-bordeaux"
           >
             Fissa una Call Conoscitiva
           </Link>

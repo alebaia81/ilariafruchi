@@ -4,21 +4,21 @@ import { useNavigate } from 'react-router-dom';
 const serviceCategories = [
   {
     id: "servizi-dipendenti",
-    path: "/servizi/dipendenti",
+    path: "/servizi/pianificazione-previdenziale-tfr",
     icon: User,
     title: "Pianificazione Previdenziale & TFR a Cremona",
     desc: "Ottimizzazione del TFR e previdenza complementare per i clienti dell'area di Cremona, per valorizzare le risorse accumulate e costruire un futuro sereno."
   },
   {
     id: "servizi-giovani",
-    path: "/servizi/giovani",
+    path: "/servizi/piani-di-accumulo-pac",
     icon: TrendingUp,
     title: "Piani di Accumulo (PAC)",
     desc: "Piani di accumulo (PAC) accessibili ai risparmiatori di Cremona per costruire un patrimonio solido nel tempo sfruttando l'interesse composto."
   },
   {
     id: "servizi-mezza-eta",
-    path: "/servizi/mezza-eta",
+    path: "/servizi/gestione-risorse-patrimonio",
     icon: Shield,
     title: "Tutela del Risparmio e Gestione",
     desc: "Bilanciamento del rischio e tutela del risparmio per i clienti di Cremona e provincia, con pianificazione di medio-lungo termine."
@@ -39,7 +39,7 @@ const serviceCategories = [
   },
   {
     id: "servizi-aziende",
-    path: "/#contact",
+    path: "/servizi/pianificazione-patrimoniale-aziende",
     icon: Briefcase,
     title: "Servizi per le Aziende di Cremona",
     desc: "Soluzioni dedicate alle imprese cremonesi: gestione della liquidità aziendale, TFM e ottimizzazione della tesoreria."

@@ -31,8 +31,8 @@ const ServiceContactForm = () => {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const text = `Ciao Ilaria, sono ${name} (${email}). Vorrei organizzare un colloquio riservato sulla gestione del patrimonio. Nota aggiuntiva: ${message || 'Nessuna nota aggiuntiva.'}`;
-    const whatsappUrl = `https://wa.me/390523123456?text=${encodeURIComponent(text)}`;
+    const text = `Ciao Ilaria, sono ${name} (${email}). Vorrei prenotare un colloquio riservato sulla gestione del patrimonio. Nota aggiuntiva: ${message || 'Nessuna nota aggiuntiva.'}`;
+    const whatsappUrl = `https://wa.me/393463470232?text=${encodeURIComponent(text)}`;
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
   };
 
@@ -45,13 +45,12 @@ const ServiceContactForm = () => {
       <div className="max-w-xl mx-auto bg-white p-8 rounded-2xl border border-stone-200 shadow-md">
         <h2
           id="form-patrimoni-title"
-          className="text-2xl font-bold text-text-primary mb-2 text-left"
+          className="text-2xl font-bold text-text-primary mb-2 text-left uppercase"
         >
-          Organizziamo un colloquio riservato
+          PRENOTA UN COLLOQUIO RISERVATO
         </h2>
         <p className="text-text-secondary text-sm mb-6 text-left">
-          Un primo confronto gratuito e strettamente confidenziale.
-          Nessun impegno, nessuna pressione commerciale.
+          Un primo incontro conoscitivo e strettamente confidenziale, finalizzato a valutare le specifiche esigenze patrimoniali.
         </p>
 
         <form
@@ -141,33 +140,33 @@ const ServiceContactForm = () => {
 const areas = [
   {
     icon: BarChart3,
-    title: 'Portafoglio e ottimizzazione dei costi',
-    body: 'Patrimoni significativi richiedono architetture finanziarie più sofisticate. L\'analisi parte sempre dai costi reali — commissioni esplicite e implicite — che in portafogli di grandi dimensioni erodono rendimenti in modo spesso sottovalutato. Ridurre un punto percentuale di costo annuo su un patrimonio rilevante significa decine di migliaia di euro preservati nel tempo.',
+    title: 'Portafoglio e ottimizzazione della struttura',
+    body: 'Strutture patrimoniali articolate richiedono un’architettura finanziaria mirata. L’analisi si concentra sulla coerenza e sulla solidità degli investimenti, valorizzando la diversificazione strategica. Ottimizzare la struttura significa garantire che ogni asset contribuisca pienamente alla crescita e alla stabilità del patrimonio nel tempo.',
   },
   {
     icon: ShieldCheck,
     title: 'Polizze assicurative di investimento',
-    body: 'Le polizze vita di ramo I e III sono strumenti che combinano investimento e protezione patrimoniale. I capitali investiti beneficiano dell\'impignorabilità e dell\'insequestrabilità previste per legge, offrono vantaggi successori significativi — con la possibilità di designare beneficiari specifici al di fuori delle regole ereditarie ordinarie — e godono di un trattamento fiscale favorevole sulle plusvalenze.',
+    body: 'Le soluzioni assicurative di ramo I e III uniscono investimento e tutela del capitale. Grazie ai benefici di impignorabilità e insequestrabilità previsti dalla legge, offrono importanti vantaggi successori, consentendo di designare beneficiari specifici anche al di fuori dell’asse ereditario ordinario e di accedere ad un trattamento fiscale favorevole.',
   },
   {
     icon: ScrollText,
     title: 'Trust e strumenti fiduciari',
-    body: 'Quando un testamento non è sufficiente a esprimere in modo preciso le volontà future, il trust rappresenta uno strumento di pianificazione avanzata. Permette di definire con dettaglio come le risorse verranno amministrate e distribuite nel tempo, anche in presenza di beneficiari con esigenze particolari o situazioni patrimoniali complesse. Gli Small Trust sono soluzioni accessibili anche per patrimoni meno elevati ma con esigenze specifiche.',
+    body: 'Quando gli strumenti ordinari non bastano a pianificare il futuro patrimoniale, il trust e i mandati fiduciari offrono una tutela avanzata. Avvalendosi delle strutture specializzate e dei servizi fiduciari della Società Mandante è possibile stabilire con precisione come gestire e distribuire le risorse nel tempo, rispondendo efficacemente a esigenze di massima riservatezza o a situazioni familiari complesse.',
   },
   {
     icon: Building2,
     title: 'Cessione e acquisizione di aziende',
-    body: 'Vendere o acquistare un\'azienda è una delle operazioni finanziarie più delicate che un imprenditore possa affrontare. La consulenza in questa fase include la strutturazione dell\'operazione, la valutazione degli aspetti fiscali e l\'utilizzo di strumenti come l\'escrow agreement — un conto fiduciario che garantisce la transazione eliminando i rischi sulla controparte prima del trasferimento del bene.',
+    body: 'Il passaggio di proprietà o la vendita di un’azienda sono operazioni straordinarie che richiedono massima precisione. La consulenza accompagna l’imprenditore in ogni fase, integrando le competenze sul territorio con le soluzioni di Private Wealth Management (PWM) e le divisioni dedicate della Mandante per la pianificazione fiscale, la corretta strutturazione contrattuale e l’utilizzo di strumenti di tutela transazionale come gli escrow agreement.',
   },
   {
     icon: Landmark,
     title: 'Patrimonio immobiliare e beni di lusso',
-    body: 'Immobili, opere d\'arte, collezioni e beni di lusso richiedono una valutazione e una gestione che vadano oltre la logica del mercato finanziario standard. La consulenza integra competenze specifiche per valorizzare questi asset, pianificarne il passaggio generazionale e valutarne il peso complessivo all\'interno dell\'architettura patrimoniale.',
+    body: 'Immobili, opere d’arte e beni di pregio rispondono a logiche diverse rispetto ai mercati finanziari. La consulenza offre le competenze specialistiche necessarie per mappare e valorizzare questi asset, pianificarne il passaggio generazionale e valutarne correttamente l’impatto complessivo sull’architettura patrimoniale.',
   },
   {
     icon: Lock,
     title: 'Fiduciarie e riservatezza',
-    body: 'Per chi necessita di proteggere il capitale da rischi patrimoniali e garantire il massimo livello di privacy nella gestione delle proprie risorse, le società fiduciarie offrono uno strumento efficace. Permettono di intestare beni e investimenti in modo riservato, con la garanzia di una gestione professionale e nel pieno rispetto della normativa vigente.',
+    body: 'Per rispondere ad esigenze di massima tutela da rischi esterni e garantire la massima riservatezza, l’amministrazione fiduciaria rappresenta uno strumento d’elezione. Attraverso la collaborazione con la società fiduciaria della Mandante, è possibile intestare e gestire beni e investimenti in modo protetto, sicuro e nel rigoroso rispetto delle normative vigenti.',
   },
 ];
 
@@ -178,12 +177,12 @@ const differentiators = [
   {
     icon: RefreshCw,
     title: 'Monitoraggio e adattamento costante',
-    body: 'Un grande patrimonio non può essere strutturato una volta sola e lasciato invariato. Le condizioni di mercato, la normativa fiscale e le esigenze del cliente cambiano. La revisione periodica e la flessibilità della strategia sono elementi fondamentali, non opzionali.',
+    body: 'Una struttura patrimoniale complessa richiede un’evoluzione continua. Lo scenario dei mercati, le normative fiscali e le tue priorità cambiano nel tempo. Per questo la revisione periodica e l’adattamento della strategia sono passaggi fondamentali per garantire stabilità e sicurezza a lungo termine.',
   },
   {
     icon: Users,
-    title: 'Rete di professionisti specializzati',
-    body: 'Avvocati, notai, commercialisti, agenti immobiliari e altri esperti di settore collaborano in modo coordinato. La consulenza patrimoniale non opera in isolamento: un approccio integrato garantisce coerenza tra le decisioni finanziarie, quelle legali e quelle fiscali.',
+    title: 'Coordinamento con i professionisti di settore',
+    body: 'La gestione di patrimoni complessi non opera mai in isolamento, ma in collaborazione con gli esperti del settore (notai, avvocati, commercialisti, agenti immobiliari) scelti dal Cliente e di sua fiducia. Questo approccio integrato garantisce coerenza tra le decisioni finanziarie, legali e quelle fiscali.',
   },
 ];
 
@@ -237,26 +236,22 @@ export const GrandiPatrimoniPage = () => {
             <span className="text-gold-amber">soluzioni strategiche su misura.</span>
           </h1>
           <p className="text-lg text-text-secondary max-w-2xl leading-relaxed">
-            Oltre una certa soglia, la gestione finanziaria cessa di essere
-            un esercizio di selezione di fondi. Diventa una questione di
-            architettura: protezione legale, efficienza fiscale, pianificazione
-            successoria, coordinamento tra asset class diverse. Ogni decisione
-            ha un peso proporzionale al patrimonio che coinvolge.
+            Oltre una certa soglia, la gestione patrimoniale supera la semplice selezione di fondi per diventare una questione di architettura: protezione legale, efficienza fiscale, pianificazione successoria, coordinamento strategico fra diverse asset class. Ogni decisione ha un impatto profondo sull’intero patrimonio e sulle persone coinvolte.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
             <a
               href="#contact-patrimoni"
-              className="inline-flex items-center gap-2 bg-gold-amber text-white font-bold py-3 px-6 rounded-xl shadow-md hover:opacity-90 transition-opacity focus:outline-none"
+              className="inline-flex items-center gap-2 bg-brand-bordeaux text-white font-bold py-3 px-6 rounded-xl shadow-md hover:opacity-90 transition-opacity focus:outline-none"
             >
               <Phone className="w-4 h-4" aria-hidden="true" />
-              Colloquio riservato
+              Prenota un colloquio privato
             </a>
             <a
               href="tel:+390523123456"
-              className="inline-flex items-center gap-2 border border-stone-300 text-text-primary font-bold py-3 px-6 rounded-xl hover:border-gold-amber transition-colors focus:outline-none"
+              className="inline-flex items-center gap-2 border border-stone-300 text-text-primary font-bold py-3 px-6 rounded-xl hover:border-brand-bordeaux transition-colors focus:outline-none"
             >
-              Chiamami direttamente
+              Prenota un appuntamento telefonico
             </a>
           </div>
         </div>
@@ -275,10 +270,7 @@ export const GrandiPatrimoniPage = () => {
             Non solo investimenti
           </h2>
           <p className="text-text-secondary text-sm mb-10 max-w-2xl">
-            La consulenza per grandi patrimoni va oltre la selezione degli strumenti
-            finanziari. Include tutto ciò che riguarda la vita del patrimonio: come
-            proteggerlo, come farlo crescere in modo efficiente, come trasmetterlo
-            e come gestire le operazioni straordinarie.
+            La gestione dei grandi patrimoni supera la scelta dei singoli investimenti. Abbraccia ogni fase della vita del patrimonio: dalla protezione all’efficienza nella crescita, fino alla pianificazione del passaggio generazionale e alla gestione delle operazioni straordinarie.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
@@ -343,11 +335,7 @@ export const GrandiPatrimoniPage = () => {
         <div className="max-w-3xl mx-auto text-left">
           <blockquote className="border-l-4 border-gold-amber pl-6">
             <p className="text-lg text-text-secondary leading-relaxed italic">
-              "Quando il patrimonio raggiunge una certa dimensione, ogni decisione
-              ha un impatto reale che non può essere ignorato. Il mio compito non
-              è solo selezionare gli strumenti migliori, ma coordinare legge, fiscalità
-              e finanza in modo che il tutto funzioni come un sistema coerente —
-              oggi e per le generazioni future."
+              “Oltre determinate soglie, ogni decisione patrimoniale genera un impatto reale che richiede massima attenzione. Il ruolo della consulenza non si limita alla selezione dei singoli strumenti, ma consiste nel coordinare aspetti legali, fiscali e finanziari affinchè operino come un sistema coerente – oggi e per le generazioni future”.
             </p>
             <footer className="mt-4 text-sm font-bold text-text-primary not-italic">
               — Ilaria Fruchi, Consulente Finanziaria
@@ -366,7 +354,7 @@ export const GrandiPatrimoniPage = () => {
           </h2>
           <Link
             to="/#booking-section"
-            className="inline-flex items-center justify-center bg-gold-amber text-white font-bold py-3.5 px-8 rounded-xl shadow-md hover:opacity-90 transition-opacity focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-gold-amber"
+            className="inline-flex items-center justify-center bg-brand-bordeaux text-white font-bold py-3.5 px-8 rounded-xl shadow-md hover:opacity-90 transition-opacity focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-bordeaux"
           >
             Fissa una Call Conoscitiva
           </Link>

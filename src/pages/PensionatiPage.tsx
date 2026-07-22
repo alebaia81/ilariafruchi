@@ -29,8 +29,8 @@ const ServiceContactForm = () => {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const text = `Ciao Ilaria, sono ${name} (${email}). Vorrei parlare di un piano di decumulo e rendita. Nota aggiuntiva: ${message || 'Nessuna nota aggiuntiva.'}`;
-    const whatsappUrl = `https://wa.me/390523123456?text=${encodeURIComponent(text)}`;
+    const text = `Ciao Ilaria, sono ${name} (${email}). Vorrei richiedere una consulenza sul piano di decumulo e rendita. Nota aggiuntiva: ${message || 'Nessuna nota aggiuntiva.'}`;
+    const whatsappUrl = `https://wa.me/393463470232?text=${encodeURIComponent(text)}`;
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
   };
 
@@ -45,7 +45,7 @@ const ServiceContactForm = () => {
           id="form-pensionati-title"
           className="text-2xl font-bold text-text-primary mb-2 text-left"
         >
-          Parliamo del tuo piano
+          Richiedi una consulenza
         </h2>
         <p className="text-text-secondary text-sm mb-6 text-left">
           Un confronto gratuito, senza impegno. Dalla rendita integrativa
@@ -103,7 +103,7 @@ const ServiceContactForm = () => {
               rows={3}
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              placeholder="Es. voglio una rendita mensile dal mio capitale, ho immobili e figli, sto pensando alla successione..."
+              placeholder="Es. voglio una rendita dal mio capitale, ho immobili e figli, sto pensando alla successione..."
               className="w-full p-3 bg-stone-50 border border-stone-300 rounded-lg focus:outline-none resize-none"
             />
           </div>
@@ -141,7 +141,7 @@ const decumuloTools = [
   {
     icon: Banknote,
     title: 'Rendita integrativa dal capitale',
-    body: 'Esistono strumenti finanziari progettati per erogare un flusso di cassa mensile o trimestrale prelevando in modo programmato dal capitale accumulato. L\'obiettivo è duplice: integrare la pensione pubblica e preservare al contempo il valore reale del patrimonio nel tempo.',
+    body: 'Erogare un flusso di cassa programmato prelevando dal capitale accumulato. L’obiettivo è duplice: integrare le entrate finanziarie e preservare il valore reale del patrimonio nel tempo.',
   },
   {
     icon: Landmark,
@@ -155,7 +155,7 @@ const decumuloTools = [
   },
   {
     icon: Home,
-    title: 'Patrimonio immobiliare: pianificare prima',
+    title: 'Patrimonio immobiliare',
     body: 'Gli immobili sono l\'asset più difficile da trasmettere senza attriti. La comproprietà tra eredi con visioni diverse genera spesso blocchi decisionali e dispute lunghe anni. Strumenti come la donazione con riserva di usufrutto, il testamento ben strutturato o la valutazione di soluzioni alternative permettono di gestire questo aspetto con ordine e serenità.',
   },
   {
@@ -166,7 +166,7 @@ const decumuloTools = [
   {
     icon: Users,
     title: 'Coordinamento con professionisti del diritto',
-    body: 'La consulenza finanziaria in questa fase non opera in isolamento. Per le questioni successorie e patrimoniali più articolate, la collaborazione con notai, commercialisti e avvocati specializzati è parte integrante del servizio: un approccio integrato che garantisce coerenza tra la strategia finanziaria e quella legale.',
+    body: 'La consulenza patrimoniale d’eccellenza richiede una perfetta sinergia istituzionale. Il consulente non opera in isolamento, ma si interfaccia direttamente con i legali, notaio e commercialisti di fiducia già scelti dal Cliente. Questo approccio integrato assicura la massima coerenza fra la pianificazione finanziaria e la tutela giuridico fiscale.',
   },
 ];
 
@@ -209,44 +209,37 @@ export const PensionatiPage = () => {
       >
         <div className="max-w-5xl mx-auto">
           <p className="text-xs font-bold uppercase tracking-widest text-gold-amber mb-4">
-            Servizio dedicato · Gestione del Decumulo e Integrazione
+            Servizio dedicato · Gestione e Integrazione del Decumulo
           </p>
           <h1
             id="pensionati-hero-title"
             className="text-4xl sm:text-5xl font-extrabold text-text-primary leading-tight mb-6 max-w-3xl"
           >
-            Gestione del Decumulo e Integrazione
-            <br />
-            <span className="text-gold-amber">
-              per un flusso finanziario regolare e pianificato.
-            </span>
+            GESTIONE E INTEGRAZIONE DEL DECUMULO
           </h1>
           <p className="text-lg text-text-secondary max-w-2xl leading-relaxed">
-            Dopo anni di costruzione, il patrimonio raggiunge il suo picco. Il lavoro
-            finanziario cambia natura: non si tratta più di far crescere, ma di far
-            durare — garantendo un flusso di reddito stabile, proteggendo il capitale
-            dall'erosione e pensando a come trasmetterlo nel modo più ordinato possibile.
+            La strategia finanziaria cambia focus: l’obiettivo non è più la crescita, ma la sostenibilità nel tempo.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
             <a
               href="#contact-pensionati"
-              className="inline-flex items-center gap-2 bg-gold-amber text-white font-bold py-3 px-6 rounded-xl shadow-md hover:opacity-90 transition-opacity focus:outline-none"
+              className="inline-flex items-center gap-2 bg-brand-bordeaux text-white font-bold py-3 px-6 rounded-xl shadow-md hover:opacity-90 transition-opacity focus:outline-none"
             >
               <Phone className="w-4 h-4" aria-hidden="true" />
-              Parliamo della tua situazione
+              Richiedi una consulenza
             </a>
             <a
               href="tel:+390523123456"
-              className="inline-flex items-center gap-2 border border-stone-300 text-text-primary font-bold py-3 px-6 rounded-xl hover:border-gold-amber transition-colors focus:outline-none"
+              className="inline-flex items-center gap-2 border border-stone-300 text-text-primary font-bold py-3 px-6 rounded-xl hover:border-brand-bordeaux transition-colors focus:outline-none"
             >
-              Chiamami direttamente
+              Prenota un appuntamento telefonico
             </a>
           </div>
         </div>
       </section>
 
-      {/* ── Blocco due temi principali ── */}
+      {/* ── Blocco tre temi principali ── */}
       <section
         aria-labelledby="temi-title"
         className="py-14 px-4 bg-stone-50 border-b border-stone-200"
@@ -256,37 +249,49 @@ export const PensionatiPage = () => {
             id="temi-title"
             className="text-2xl font-bold text-text-primary mb-2"
           >
-            Due priorità, un unico filo conduttore
+            Tre priorità, un unico filo conduttore
           </h2>
           <p className="text-text-secondary text-sm mb-10 max-w-2xl">
-            La gestione finanziaria in questa fase ruota attorno a due temi distinti
-            ma strettamente connessi.
+            La gestione finanziaria in questa fase ruota attorno a tre temi distinti ma strettamente connessi.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Decumulo */}
             <div className="bg-white rounded-2xl border-2 border-gold-amber p-8 text-left shadow-md">
               <p className="text-xs font-bold uppercase tracking-widest text-gold-amber mb-3">
-                Tema 01
+                Priorità 01
               </p>
               <h3 className="text-xl font-bold text-text-primary mb-3">
-                Generare reddito dal capitale
+                Garantire un flusso di reddito stabile e costante
               </h3>
               <p className="text-sm text-text-secondary leading-relaxed">
                 La pensione pubblica copre raramente l'intero tenore di vita pre-pensionamento.
                 Il capitale accumulato può colmare questo divario generando una rendita
-                mensile programmata — senza intaccare il patrimonio di base più del necessario,
+                programmata — senza intaccare il patrimonio di base più del necessario,
                 e mantenendo la flessibilità di adattare i prelievi nel tempo.
               </p>
             </div>
 
-            {/* Successione */}
-            <div className="bg-white rounded-2xl border-2 border-stone-200 p-8 text-left">
+            {/* Protezione inflazione */}
+            <div className="bg-white rounded-2xl border-2 border-stone-200 p-8 text-left shadow-sm">
               <p className="text-xs font-bold uppercase tracking-widest text-stone-400 mb-3">
-                Tema 02
+                Priorità 02
               </p>
               <h3 className="text-xl font-bold text-text-primary mb-3">
-                Pianificare la successione
+                Proteggere il capitale dall’erosione inflazionistica
+              </h3>
+              <p className="text-sm text-text-secondary leading-relaxed">
+                L'inflazione è il rischio silenzioso più insidioso nella fase di decumulo. Senza una corretta allocazione che mantenga una quota reale di rivalutazione, il potere d'acquisto delle tue rendite diminuirà progressivamente. Calibrare gli investimenti è fondamentale per contrastare l'aumento del costo della vita.
+              </p>
+            </div>
+
+            {/* Passaggio generazionale */}
+            <div className="bg-white rounded-2xl border-2 border-stone-200 p-8 text-left shadow-sm">
+              <p className="text-xs font-bold uppercase tracking-widest text-stone-400 mb-3">
+                Priorità 03
+              </p>
+              <h3 className="text-xl font-bold text-text-primary mb-3">
+                Pianificare il passaggio generazionale
               </h3>
               <p className="text-sm text-text-secondary leading-relaxed">
                 Rimandare la pianificazione successoria è uno degli errori più costosi
@@ -313,7 +318,7 @@ export const PensionatiPage = () => {
             Gli strumenti a disposizione
           </h2>
           <p className="text-text-secondary text-sm mb-10 max-w-2xl">
-            Dalla rendita mensile alla trasmissione del patrimonio: un approccio
+            Dalla rendita alla trasmissione del patrimonio: un approccio
             integrato che coordina finanza, fiscalità e diritto.
           </p>
 
@@ -346,15 +351,10 @@ export const PensionatiPage = () => {
               Una riflessione
             </p>
             <h3 className="text-xl font-bold text-text-primary mb-4 max-w-2xl">
-              La successione non è un tema morboso. È un atto di responsabilità.
+              La pianificazione successoria: un atto di responsabilità
             </h3>
             <p className="text-sm text-text-secondary leading-relaxed max-w-2xl">
-              In Italia, la maggior parte delle eredità con patrimonio immobiliare genera
-              attriti significativi tra gli eredi. Nella maggior parte dei casi, il
-              problema non è la mancanza di affetto, ma l'assenza di indicazioni chiare
-              lasciate in vita. Pianificare non significa pensare alla morte: significa
-              decidere oggi come proteggere ciò che si è costruito e le persone a cui
-              si vuole trasmetterlo.
+              In Italia il trasferimento generazionale dei patrimoni, che includano proprietà immobiliari, asset finanziari o quote societarie, rappresenta una delle principali cause di contenzioso fra gli eredi. Nella maggior parte dei casi, le criticità non risiedono nella carenza di armonia familiare, bensì nell’assenza di disposizioni chiare, eque e formalizzate. Pianificare il passaggio generazionale non implica una riflessione sul fine vita, ma costituisce una scelta consapevole per tutelare, oggi, l’integrità del patrimonio e la serenità dei propri cari.
             </p>
           </div>
         </div>
@@ -365,10 +365,7 @@ export const PensionatiPage = () => {
         <div className="max-w-3xl mx-auto text-left">
           <blockquote className="border-l-4 border-gold-amber pl-6">
             <p className="text-lg text-text-secondary leading-relaxed italic">
-              "Arrivare alla pensione con un patrimonio solido è un traguardo.
-              Farlo durare nel modo giusto — generando reddito, proteggendo il
-              capitale e pensando agli eredi — è la parte del lavoro che molti
-              rimandano troppo a lungo."
+              "Arrivare alla pensione con un patrimonio solido è un traguardo. Garantire la durata nel tempo rappresenta la fase più complessa della gestione patrimoniale, che spesso si tende a rimandare."
             </p>
             <footer className="mt-4 text-sm font-bold text-text-primary not-italic">
               — Ilaria Fruchi, Consulente Finanziaria
@@ -387,7 +384,7 @@ export const PensionatiPage = () => {
           </h2>
           <Link
             to="/#booking-section"
-            className="inline-flex items-center justify-center bg-gold-amber text-white font-bold py-3.5 px-8 rounded-xl shadow-md hover:opacity-90 transition-opacity focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-gold-amber"
+            className="inline-flex items-center justify-center bg-brand-bordeaux text-white font-bold py-3.5 px-8 rounded-xl shadow-md hover:opacity-90 transition-opacity focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-bordeaux"
           >
             Fissa una Call Conoscitiva
           </Link>

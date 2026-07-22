@@ -18,6 +18,7 @@ import { GiovaniPage } from './pages/GiovaniPage';
 import { MezzaEtaPage } from './pages/MezzaEtaPage';
 import { PensionatiPage } from './pages/PensionatiPage';
 import { GrandiPatrimoniPage } from './pages/GrandiPatrimoniPage';
+import { AziendePage } from './pages/AziendePage';
 import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
 import { CremonaPage } from './pages/CremonaPage';
 import { PiacenzaPage } from './pages/PiacenzaPage';
@@ -84,14 +85,15 @@ function App() {
         <Route path="/servizi/pianificazione-previdenziale-tfr" element={<DipendentiPage />} />
         <Route path="/servizi/piani-di-accumulo-pac" element={<GiovaniPage />} />
         <Route path="/servizi/gestione-risorse-patrimonio" element={<MezzaEtaPage />} />
+        <Route path="/servizi/pensionati" element={<PensionatiPage />} />
+        <Route path="/servizi/grandi-patrimoni" element={<GrandiPatrimoniPage />} />
+        <Route path="/servizi/pianificazione-patrimoniale-aziende" element={<AziendePage />} />
 
         {/* Local Landing Pages */}
         <Route path="/dove-sono/consulente-finanziario-piacenza" element={<PiacenzaPage />} />
         <Route path="/dove-sono/consulente-finanziario-cremona" element={<CremonaPage />} />
 
         {/* Legacy / Helper Routes (Secondary) */}
-        <Route path="/servizi/pensionati" element={<PensionatiPage />} />
-        <Route path="/servizi/grandi-patrimoni" element={<GrandiPatrimoniPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
       </Routes>
       <FooterInstitutional />

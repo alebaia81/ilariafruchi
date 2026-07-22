@@ -7,23 +7,26 @@ export const HeroPortfolio = () => {
         <span className="inline-block text-xs font-bold uppercase tracking-wider text-gold-amber mb-3">
           Ilaria Fruchi — Consulente Finanziaria
         </span>
-        <h1 className="text-4xl sm:text-5xl font-extrabold text-text-primary tracking-tight leading-tight mb-6">
-          Pianificazione Patrimoniale Trasparente a Piacenza e Cremona
+        <h1 className="text-4xl sm:text-5xl font-extrabold text-text-primary tracking-tight leading-tight mb-3">
+          PIANIFICAZIONE PATRIMONIALE
         </h1>
-        <p className="text-text-secondary text-lg leading-relaxed mb-8 max-w-xl">
-          Consulente Finanziario attiva su Piacenza e Cremona. Aiuto famiglie e imprese a proteggere e far crescere il patrimonio attraverso soluzioni chiare, trasparenti e allineate ai vostri obiettivi reali.
+        <p className="text-xl sm:text-2xl font-normal text-text-secondary leading-relaxed mb-4 max-w-xl">
+          Strategie patrimoniali su misura a Piacenza e Cremona
+        </p>
+        <p className="text-text-secondary text-base sm:text-lg leading-relaxed mb-8 max-w-xl">
+          Consulente finanziario attiva su Piacenza e Cremona. Aiuto a proteggere il patrimonio della tua famiglia e della tua impresa con una pianificazione finanziaria esclusiva, costruita unicamente sui tuoi obiettivi reali.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
           <Link
             to="/analisi-portafoglio"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="inline-block text-center bg-gold-amber text-white font-bold px-8 py-3.5 rounded-lg shadow-md hover:opacity-90 transition-opacity focus:outline-none"
+            className="inline-block text-center bg-brand-bordeaux text-white font-bold px-8 py-3.5 rounded-lg shadow-md hover:opacity-90 transition-opacity focus:outline-none"
           >
             Richiedi un'Analisi Patrimoniale
           </Link>
           <a
             href="#expertise"
-            className="inline-block text-center border border-stone-300 text-text-primary font-bold px-8 py-3.5 rounded-lg hover:bg-stone-50 transition-colors focus:outline-none"
+            className="inline-block text-center border-2 border-brand-bordeaux text-brand-bordeaux font-bold px-8 py-3.5 rounded-lg hover:bg-brand-bordeaux/5 transition-colors focus:outline-none"
           >
             Scopri i Servizi
           </a>

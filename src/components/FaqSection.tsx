@@ -8,18 +8,31 @@ export const FaqSection: React.FC = () => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  const faqs = [
+  interface FaqItem {
+    q: string;
+    a: React.ReactNode;
+  }
+
+  const faqs: FaqItem[] = [
     {
       q: "Di cosa si occupa un consulente finanziario?",
-      a: "Un consulente finanziario si dedica alla pianificazione patrimoniale globale, aiutandoti a proteggere e far crescere i tuoi risparmi. Operando con indipendenza e metodo, costruisco strategie su misura per le famiglie e le imprese delle province di Piacenza e Cremona, guidandole attraverso la complessità dei mercati verso i loro reali obiettivi di vita."
+      a: "Un consulente finanziario si dedica alla pianificazione patrimoniale globale, aiutandoti a proteggere e far crescere i tuoi risparmi. Attraverso un metodo strutturato, costruisco strategie su misura per le famiglie e le imprese di Piacenza, Cremona e di tutto il territorio nazionale, guidandole con chiarezza verso i loro obiettivi di vita."
     },
     {
       q: "Come funziona il primo incontro conoscitivo?",
-      a: "Il primo colloquio è sempre gratuito, strettamente confidenziale e privo di vincoli commerciali o costi iniziali. È un momento informale di ascolto per inquadrare le tue esigenze e mappare i tuoi traguardi. Può avvenire in presenza (a Piacenza o Cremona) oppure comodamente in videocall da remoto, in base alle tue preferenze."
+      a: "E’ un colloquio preliminare e senza impegno che possiamo svolgere di persona oppure online. Si tratta di una sessione dedicata esclusivamente all’ascolto: valuteremo insieme la tua situazione di partenza e i tuoi progetti futuri, così da comprendere le tue reali necessità finanziarie e verificare se il mio metodo sia la soluzione più adatta a te."
     },
     {
       q: "Non ho grandi capitali, posso richiedere una consulenza lo stesso?",
-      a: "Assolutamente sì. La pianificazione finanziaria non è riservata ai grandi patrimoni: prima si inizia, meglio è. Per i risparmiatori del nostro territorio offro soluzioni accessibili e graduali, come i Piani di Accumulo del Capitale (PAC), per costruire nel tempo la tua sicurezza finanziaria passo dopo passo."
+      a: "Assolutamente sì. La pianificazione finanziaria non è riservata solo a chi ha grandi patrimoni, ma a chiunque desideri gestire i propri risparmi. Prima si inizia, meglio è. Creare un piano di accumulo e proteggere i propri cari è un passo fondamentale a prescindere dalla cifra di partenza."
+    },
+    {
+      q: "I miei investimenti saranno vincolati? Cosa succede se cambio idea?",
+      a: (
+        <>
+          Le strategie che sviluppiamo insieme si basano su <strong className="font-bold text-text-primary">un orizzonte temporale chiaro e condiviso</strong>, definito in partenza in base ai tuoi obiettivi specifici (come la pensione, l’acquisto di una casa o la tutela familiare). Questo piano è però dinamico e flessibile: in caso di necessità improvvise o cambi di programma, avrai sempre la piena libertà di modificare i tuoi obiettivi o disinvestire le tue somme in qualsiasi momento.
+        </>
+      )
     }
   ];
 
@@ -43,9 +56,9 @@ export const FaqSection: React.FC = () => {
                   aria-expanded={isOpen}
                   aria-controls={contentId}
                   onClick={() => toggleFaq(index)}
-                  className="w-full flex justify-between items-center py-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#A14400] rounded-sm group text-left"
+                  className="w-full flex justify-between items-center py-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-bordeaux rounded-sm group text-left cursor-pointer"
                 >
-                  <h3 className="text-lg font-bold text-[#1A1816] group-hover:text-[#A14400] transition-colors pr-6">
+                  <h3 className="text-lg font-bold text-[#1A1816] group-hover:text-brand-bordeaux transition-colors pr-6">
                     {faq.q}
                   </h3>
                   <ChevronDown
@@ -60,9 +73,9 @@ export const FaqSection: React.FC = () => {
                   hidden={!isOpen}
                   className="overflow-hidden"
                 >
-                  <p className="text-base text-stone-600 leading-relaxed pb-6 pt-2">
+                  <div className="text-base text-stone-600 leading-relaxed pb-6 pt-2">
                     {faq.a}
-                  </p>
+                  </div>
                 </div>
               </div>
             );

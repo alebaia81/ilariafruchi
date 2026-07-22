@@ -17,13 +17,13 @@ export const HeroCremona = () => {
           <Link
             to="/analisi-portafoglio"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="inline-block text-center bg-gold-amber text-white font-bold px-8 py-3.5 rounded-lg shadow-md hover:opacity-90 transition-opacity focus:outline-none"
+            className="inline-block text-center bg-brand-bordeaux text-white font-bold px-8 py-3.5 rounded-lg shadow-md hover:opacity-90 transition-opacity focus:outline-none"
           >
             Richiedi un'Analisi Patrimoniale
           </Link>
           <a
             href="#expertise"
-            className="inline-block text-center border border-stone-300 text-text-primary font-bold px-8 py-3.5 rounded-lg hover:bg-stone-50 transition-colors focus:outline-none"
+            className="inline-block text-center border-2 border-brand-bordeaux text-brand-bordeaux font-bold px-8 py-3.5 rounded-lg hover:bg-brand-bordeaux/5 transition-colors focus:outline-none"
           >
             Scopri i Servizi
           </a>

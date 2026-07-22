@@ -4,30 +4,30 @@ import { useNavigate } from 'react-router-dom';
 const serviceCategories = [
   {
     id: "servizi-dipendenti",
-    path: "/servizi/dipendenti",
+    path: "/servizi/pianificazione-previdenziale-tfr",
     icon: User,
     title: "Pianificazione Previdenziale & TFR",
     desc: "Ottimizzazione del TFR e previdenza complementare per valorizzare le risorse accumulate e costruire un futuro sereno."
   },
   {
     id: "servizi-giovani",
-    path: "/servizi/giovani",
+    path: "/servizi/piani-di-accumulo-pac",
     icon: TrendingUp,
     title: "Piani di Accumulo e Costruzione Capitale (PAC)",
     desc: "Piani di accumulo del capitale (PAC) efficienti per costruire un patrimonio solido nel tempo, sfruttando l'interesse composto."
   },
   {
     id: "servizi-mezza-eta",
-    path: "/servizi/mezza-eta",
+    path: "/servizi/gestione-risorse-patrimonio",
     icon: Shield,
-    title: "Ottimizzazione e Gestione Risorse",
+    title: "Ottimizzazione e Gestione Patrimoniale",
     desc: "Bilanciamento del rischio di portafoglio, protezione dei beni accumulati e pianificazione degli obiettivi finanziari di medio-lungo termine."
   },
   {
     id: "servizi-pensionati",
     path: "/servizi/pensionati",
     icon: Landmark,
-    title: "Gestione del Decumulo e Integrazione",
+    title: "Gestione e Integrazione del Decumulo",
     desc: "Strategie di prelievo programmato e integrazione pensionistica per mantenere inalterato lo stile di vita tutelando il capitale."
   },
   {
@@ -39,7 +39,7 @@ const serviceCategories = [
   },
   {
     id: "servizi-aziende",
-    path: "/#contact",
+    path: "/servizi/pianificazione-patrimoniale-aziende",
     icon: Briefcase,
     title: "Servizi di Pianificazione per le Aziende",
     desc: "Soluzioni patrimoniali dedicate alle imprese: gestione della liquidità aziendale, TFM e ottimizzazione della tesoreria."

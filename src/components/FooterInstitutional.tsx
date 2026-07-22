@@ -11,10 +11,10 @@ export const FooterInstitutional = () => {
           <div>
             <h3 className="text-white font-bold text-lg mb-4">Ilaria Fruchi</h3>
             <p className="text-stone-400 text-sm max-w-sm mb-6">
-              Consulenza finanziaria e patrimoniale personalizzata, basata su trasparenza, assenza di conflitti d'interesse ed efficacia normativa.
+              Consulenza finanziaria e patrimoniale personalizzata, focalizzata sulla tutela del capitale e sulla realizzazione dei tuoi obiettivi di vita.
             </p>
-            <p className="text-xs text-stone-300 leading-relaxed max-w-xl border-l-2 border-amber-500 pl-3">
-              Sito personale di Ilaria Fruchi, Consulente Finanziario abilitato all'offerta fuori sede. Questa comunicazione è realizzata a titolo personale dal singolo Private Banker. Per informazioni specifiche su prodotti, servizi e performance si rimanda ai canali ufficiali della Società in questione.
+            <p className="text-xs text-stone-300 leading-relaxed max-w-xl border-l-2 border-brand-bordeaux pl-3">
+              Sito personale di Ilaria Fruchi, Consulente Finanziario abilitato all’offerta fuori sede. Questa comunicazione è realizzata a titolo personale dal singolo professionista. Per informazioni specifiche su prodotti, servizi e performance si rimanda ai canali ufficiali della Società Mandante (<a href="https://www.fideuram.it/" target="_blank" rel="noopener noreferrer" className="underline hover:text-white transition-colors">Fideuram</a>).
             </p>
           </div>
 
@@ -45,11 +45,16 @@ export const FooterInstitutional = () => {
 
           {/* Colonna 3: Contatti */}
           <div>
-            <h4 className="text-white font-bold text-sm uppercase tracking-wider mb-4">Contatti & Sede</h4>
+            <h4 className="text-white font-bold text-sm uppercase tracking-wider mb-4">Contatti & Sedi</h4>
             <ul className="space-y-3 text-sm text-stone-400">
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-gold-amber shrink-0 mt-0.5" aria-hidden="true" />
-                <span>via Ugo Pelò 9, 29010 Castelvetro Piacentino (PC)</span>
+                <div>
+                  <div className="font-bold text-stone-300">Sede Legale:</div>
+                  <div>via Ugo Pelò 9, 29010 Castelvetro Piacentino (PC)</div>
+                  <div className="font-bold text-stone-300 mt-2">Ufficio:</div>
+                  <div>via G. Manfredi 105, 29121 Piacenza (PC)</div>
+                </div>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-gold-amber shrink-0" aria-hidden="true" />
@@ -59,8 +64,8 @@ export const FooterInstitutional = () => {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-gold-amber shrink-0" aria-hidden="true" />
-                <a href="mailto:info@ilariafruchi.it" className="hover:text-white transition-colors focus:outline-none">
-                  info@ilariafruchi.it
+                <a href="mailto:ifruchi@fideuram.it" className="hover:text-white transition-colors focus:outline-none">
+                  ifruchi@fideuram.it
                 </a>
               </li>
             </ul>
@@ -71,8 +76,8 @@ export const FooterInstitutional = () => {
         <div className="border-t border-stone-800 pt-6 text-xs text-stone-500 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <div className="flex flex-col gap-1">
             <span>© {new Date().getFullYear()} Ilaria Fruchi. Tutti i diritti riservati.</span>
-            <span className="text-stone-300 border-l-2 border-amber-500 pl-3">
-              Ilaria Fruchi | Consulente Finanziario abilitato all'offerta fuori sede | Attiva nelle province di Piacenza e Cremona | Sede principale: via Ugo Pelò 9, 29010 Castelvetro Piacentino (PC) | P.IVA 01923650335 | Albo OCF: Delibera n. 2895 | RUI n. E000808810
+            <span className="text-stone-300 border-l-2 border-brand-bordeaux pl-3">
+              Ilaria Fruchi | Consulente Finanziario abilitato all'offerta fuori sede | Attiva nelle province di Piacenza e Cremona | Sede legale: via Ugo Pelò 9, 29010 Castelvetro Piacentino (PC) | Ufficio: via G. Manfredi 105, 29121 Piacenza (PC) | P.IVA 01923650335 | Albo OCF: Delibera n. 2895 | RUI n. E000808810
             </span>
             <span>
               Design & Sviluppo:{' '}

@@ -31,7 +31,7 @@ const ServiceContactForm = () => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const text = `Ciao Ilaria, sono ${name} (${email}). Vorrei costruire un piano di accumulo. Nota aggiuntiva: ${message || 'Nessuna nota aggiuntiva.'}`;
-    const whatsappUrl = `https://wa.me/390523123456?text=${encodeURIComponent(text)}`;
+    const whatsappUrl = `https://wa.me/393463470232?text=${encodeURIComponent(text)}`;
     window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
   };
 
@@ -140,28 +140,28 @@ const ServiceContactForm = () => {
 const principles = [
   {
     icon: Repeat2,
-    title: 'Costanza prima di tutto',
-    body: 'Il mercato sale e scende. Chi investe la stessa cifra ogni mese, indipendentemente dal momento, compra più quote quando i prezzi sono bassi e meno quando sono alti. Nel tempo, questa disciplina batte quasi sempre il tentativo di trovare il "momento giusto".',
+    title: 'Costanza nel tempo',
+    body: 'Il mercato esprime naturali fluttuazioni. Investire con regolarità permette di mediare i prezzi di acquisto in modo automatico, indipendentemente dal momento. Questa disciplina valorizza il percorso, superando la difficoltà di dover individuare il “momento giusto”.',
   },
   {
     icon: Clock,
-    title: 'Il tempo è la variabile più potente',
-    body: 'L\'interesse composto funziona in modo esponenziale: i guadagni del primo anno diventano capitale, che genera ulteriori guadagni. Chi inizia a 25 anni con 200€ al mese arriva al pensionamento con un patrimonio molto superiore a chi inizia a 35 con 400€. Non si recupera il tempo perduto.',
+    title: 'La variabile tempo',
+    body: 'L’interesse composto esprime la sua massima forza nel lungo periodo, poiché i risultati generati si consolidano nel tempo. Avviare un piano con anticipo, anche se con piccoli importi, offre prospettive superiori rispetto ad un inizio ritardato. Non si recupera il tempo perduto.',
   },
   {
     icon: Layers,
-    title: 'Minimizzare i costi è già un rendimento',
-    body: 'Una differenza di un solo punto percentuale nelle commissioni annue si traduce, su 30 anni, in decine di migliaia di euro di capitale in meno. Scegliere strumenti efficienti non è un dettaglio: è una delle leve più concrete a disposizione di qualunque investitore.',
+    title: 'Ottimizzazione e pianificazione',
+    body: 'Una pianificazione attenta e strutturata fa la vera differenza nel lungo periodo. Scegliere soluzioni coordinate e coerenti con i propri obiettivi non è un dettaglio, ma una leva strategica fondamentale per valorizzare il patrimonio.',
   },
   {
     icon: ShieldCheck,
-    title: 'Il capitale già accumulato merita un portafoglio su misura',
-    body: 'I risparmi esistenti non devono solo "stare al sicuro": devono lavorare. Un portafoglio diversificato, costruito sulla tua reale propensione al rischio, protegge da perdite eccessive e cattura la crescita dei mercati nel lungo periodo.',
+    title: 'Portafoglio su misura',
+    body: 'I risparmi accumulati meritano di essere valorizzati. Un portafoglio diversificato, costruito sulla tua reale propensione al rischio, mira a tutelare il capitale nei momenti complessi e a catturare le opportunità di crescita nel tempo.',
   },
   {
     icon: Target,
-    title: 'Previdenza complementare: meglio prima che poi',
-    body: 'Il sistema pensionistico pubblico è sotto pressione strutturale. Iniziare a costruire una rendita integrativa da giovani non significa rinunciare a qualcosa oggi: significa non dipendere da un sistema incerto domani. E farlo presto costa proporzionalmente molto meno.',
+    title: 'Pianificazione lungimirante',
+    body: 'Costruire una stabilità per il domani richiede scelte consapevoli nel presente. Avviare un progetto di crescita patrimoniale con anticipo permette di consolidare i risultati nel tempo, riducendo l’impegno necessario e offrendo una maggiore serenità per il futuro.',
   },
 ];
 
@@ -253,16 +253,16 @@ export const GiovaniPage = () => {
           <div className="mt-8 flex flex-wrap gap-4">
             <a
               href="#contact-giovani"
-              className="inline-flex items-center gap-2 bg-gold-amber text-white font-bold py-3 px-6 rounded-xl shadow-md hover:opacity-90 transition-opacity focus:outline-none"
+              className="inline-flex items-center gap-2 bg-brand-bordeaux text-white font-bold py-3 px-6 rounded-xl shadow-md hover:opacity-90 transition-opacity focus:outline-none"
             >
               <Phone className="w-4 h-4" aria-hidden="true" />
               Costruiamo il tuo piano
             </a>
             <Link
               to="/#simulatore-interessi"
-              className="inline-flex items-center gap-2 border border-stone-300 text-text-primary font-bold py-3 px-6 rounded-xl hover:border-gold-amber transition-colors focus:outline-none"
+              className="inline-flex items-center gap-2 border border-stone-300 text-text-primary font-bold py-3 px-6 rounded-xl hover:border-brand-bordeaux transition-colors focus:outline-none"
             >
-              Prova il simulatore di interessi
+              Simula la crescita del tuo piano
               <ArrowRight className="w-4 h-4" aria-hidden="true" />
             </Link>
           </div>
@@ -281,9 +281,8 @@ export const GiovaniPage = () => {
           >
             Cosa può diventare un risparmio mensile costante
           </h2>
-          <p className="text-text-secondary text-sm mb-10 max-w-xl">
-            Simulazioni a scopo illustrativo con rendimento annuo del 4%,
-            senza considerare l'inflazione. I rendimenti reali variano.
+          <p className="text-text-secondary text-xs mb-10 max-w-3xl leading-relaxed">
+            I dati riportati costituiscono una simulazione puramente indicativa basata su un rendimento ipotetico costante. I rendimenti passati non sono indicativi di quelli futuri. La stima è calcolata al lordo degli oneri fiscali, dei costi di gestione dello strumento e dell’impatto dell’inflazione, elementi che possono ridurre il capitale finale effettivamente realizzato.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -318,12 +317,12 @@ export const GiovaniPage = () => {
           </div>
 
           <p className="mt-6 text-sm text-stone-500 text-center">
-            Vuoi vedere la simulazione con i tuoi numeri?{' '}
+            Vuoi calcolare il tuo potenziale di risparmio?{' '}
             <Link
               to="/#simulatore-interessi"
               className="font-bold text-gold-amber hover:underline focus:outline-none"
             >
-              Usa il simulatore nella home →
+              Prova il simulatore.
             </Link>
           </p>
         </div>
@@ -377,10 +376,7 @@ export const GiovaniPage = () => {
         <div className="max-w-3xl mx-auto text-left">
           <blockquote className="border-l-4 border-gold-amber pl-6">
             <p className="text-lg text-text-secondary leading-relaxed italic">
-              "Nei mercati finanziari, la disciplina vale più dell'intelligenza.
-              Chi investe con costanza nel lungo periodo, mantenendo costi bassi
-              e aspettative realistiche, ottiene quasi sempre risultati migliori
-              di chi cerca il momento perfetto per entrare o uscire."
+              "Nei mercati finanziari, la disciplina e la costanza nel lungo periodo superano qualsiasi tentativo di rincorrere il momento perfetto. Il miglior momento per investire non esiste: ieri è tardi, oggi è l’unico momento reale per iniziare a proteggere e valorizzare i propri progetti."
             </p>
             <footer className="mt-4 text-sm font-bold text-text-primary not-italic">
               — Ilaria Fruchi, Consulente Finanziaria
@@ -399,7 +395,7 @@ export const GiovaniPage = () => {
           </h2>
           <Link
             to="/#booking-section"
-            className="inline-flex items-center justify-center bg-gold-amber text-white font-bold py-3.5 px-8 rounded-xl shadow-md hover:opacity-90 transition-opacity focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-gold-amber"
+            className="inline-flex items-center justify-center bg-brand-bordeaux text-white font-bold py-3.5 px-8 rounded-xl shadow-md hover:opacity-90 transition-opacity focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-brand-bordeaux"
           >
             Fissa una Call Conoscitiva
           </Link>
