@@ -135,14 +135,13 @@ export const Navbar = () => {
             Analisi portafoglio
           </button>
 
-          <Link
-            to="/contatti"
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          <a
+            href="tel:+393463470232"
             className="inline-flex items-center gap-2 border-2 border-brand-bordeaux text-brand-bordeaux text-sm font-bold py-2 px-4 rounded-lg hover:bg-brand-bordeaux hover:text-white transition-colors focus:outline-none"
           >
             <Phone className="w-4 h-4" aria-hidden="true" />
             Prenota appuntamento telefonico
-          </Link>
+          </a>
         </nav>
 
         {/* ── PULSANTE HAMBURGER (visibile solo su mobile) ── */}
@@ -237,16 +236,14 @@ export const Navbar = () => {
           </button>
 
           {/* CTA Chiama */}
-          <button
-            onClick={() => {
-              handleNavigate('/contatti');
-              setIsMobileMenuOpen(false);
-            }}
+          <a
+            href="tel:+393463470232"
+            onClick={() => setIsMobileMenuOpen(false)}
             className="mt-2 flex items-center justify-center gap-2 border-2 border-brand-bordeaux text-brand-bordeaux text-sm font-bold py-3 px-4 rounded-xl hover:bg-brand-bordeaux hover:text-white transition-colors focus:outline-none min-h-[48px]"
           >
             <Phone className="w-4 h-4" aria-hidden="true" />
             Prenota appuntamento telefonico
-          </button>
+          </a>
         </nav>
       </div>
     </header>
