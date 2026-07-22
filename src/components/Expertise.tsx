@@ -49,7 +49,7 @@ const serviceCategories = [
 export const Expertise = () => {
   const navigate = useNavigate();
   return (
-    <section aria-labelledby="expertise-title" className="py-16 px-4 bg-stone-50 border-t border-stone-200">
+    <section id="expertise" aria-labelledby="expertise-title" className="py-16 px-4 bg-stone-50 border-t border-stone-200">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 id="expertise-title" className="text-3xl font-bold text-text-primary mb-4">
