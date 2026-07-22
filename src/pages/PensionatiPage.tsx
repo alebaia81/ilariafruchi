@@ -230,7 +230,7 @@ export const PensionatiPage = () => {
               Richiedi una consulenza
             </a>
             <a
-              href="tel:+390523123456"
+              href="tel:+393463470232"
               className="inline-flex items-center gap-2 border border-stone-300 text-text-primary font-bold py-3 px-6 rounded-xl hover:border-brand-bordeaux transition-colors focus:outline-none"
             >
               Prenota un appuntamento telefonico
