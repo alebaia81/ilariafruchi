@@ -9,7 +9,6 @@ import {
   Coins,
   ShieldCheck,
   CheckCircle2,
-  Calendar,
 } from 'lucide-react';
 
 /* ─────────────────────────────────────────────
@@ -225,13 +224,15 @@ export const AziendePage = () => {
               <Briefcase className="w-4 h-4" aria-hidden="true" />
               Richiedi una consulenza aziendale
             </a>
-            <Link
-              to="/#booking-section"
+            <a
+              href="https://wa.me/393463470232?text=Ciao%20Ilaria%2C%20vorrei%20prenotare%20un%20appuntamento%20telefonico%20per%20una%20consulenza."
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 border border-stone-300 text-text-primary font-bold py-3 px-6 rounded-xl hover:border-brand-bordeaux transition-colors focus:outline-none"
             >
-              <Calendar className="w-4 h-4" aria-hidden="true" />
+              <WhatsAppIcon className="w-4 h-4 shrink-0 text-[#25D366]" aria-hidden="true" />
               Prenota un appuntamento telefonico
-            </Link>
+            </a>
           </div>
         </div>
       </section>

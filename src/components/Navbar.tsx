@@ -1,6 +1,7 @@
 import { useState, useId, useEffect, useRef } from 'react';
-import { ChevronDown, Phone, Menu, X } from 'lucide-react';
+import { ChevronDown, Menu, X } from 'lucide-react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { WhatsAppIcon } from './icons/WhatsAppIcon';
 
 const subServices = [
   { name: 'Analisi Portafoglio', path: '/servizi/analisi-portafoglio' },
@@ -137,10 +138,12 @@ export const Navbar = () => {
           </button>
 
           <a
-            href="tel:+393463470232"
+            href="https://wa.me/393463470232?text=Ciao%20Ilaria%2C%20vorrei%20prenotare%20un%20appuntamento%20telefonico%20per%20una%20consulenza."
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 border-2 border-brand-bordeaux text-brand-bordeaux text-sm font-bold py-2 px-4 rounded-lg hover:bg-brand-bordeaux hover:text-white transition-colors focus:outline-none"
           >
-            <Phone className="w-4 h-4" aria-hidden="true" />
+            <WhatsAppIcon className="w-4 h-4 shrink-0 text-[#25D366]" aria-hidden="true" />
             Prenota appuntamento telefonico
           </a>
         </nav>
@@ -238,11 +241,13 @@ export const Navbar = () => {
 
           {/* CTA Chiama */}
           <a
-            href="tel:+393463470232"
+            href="https://wa.me/393463470232?text=Ciao%20Ilaria%2C%20vorrei%20prenotare%20un%20appuntamento%20telefonico%20per%20una%20consulenza."
+            target="_blank"
+            rel="noopener noreferrer"
             onClick={() => setIsMobileMenuOpen(false)}
             className="mt-2 flex items-center justify-center gap-2 border-2 border-brand-bordeaux text-brand-bordeaux text-sm font-bold py-3 px-4 rounded-xl hover:bg-brand-bordeaux hover:text-white transition-colors focus:outline-none min-h-[48px]"
           >
-            <Phone className="w-4 h-4" aria-hidden="true" />
+            <WhatsAppIcon className="w-4 h-4 shrink-0 text-[#25D366]" aria-hidden="true" />
             Prenota appuntamento telefonico
           </a>
         </nav>
