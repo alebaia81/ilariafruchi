@@ -208,7 +208,7 @@ export const DipendentiPage = () => {
           >
             Pianificazione Previdenziale & TFR
             <br />
-            <span className="text-gold-amber">per un futuro sereno e sicuro.</span>
+            <span className="text-brand-bordeaux">per un futuro sereno e sicuro.</span>
           </h1>
           <p className="text-lg text-text-secondary max-w-2xl leading-relaxed">
             Come lavoratore dipendente hai a disposizione un asset straordinario per la costruzione della tua ricchezza: il trattamento di fine rapporto. Questa risorsa alimentata regolarmente, rappresenta una base solida che merita una gestione strategica. La vera sfida non è l’accumulo, ma saper indirizzare il proprio TFR verso le soluzioni più efficienti per massimizzarne il rendimento e proteggere il proprio domani.
