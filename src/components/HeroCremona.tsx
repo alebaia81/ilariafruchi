@@ -15,7 +15,7 @@ export const HeroCremona = () => {
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
           <Link
-            to="/analisi-portafoglio"
+            to="/servizi/analisi-portafoglio"
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="inline-block text-center bg-brand-bordeaux text-white font-bold px-8 py-3.5 rounded-lg shadow-md hover:opacity-90 transition-opacity focus:outline-none"
           >

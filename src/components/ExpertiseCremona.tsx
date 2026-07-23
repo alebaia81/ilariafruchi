@@ -1,4 +1,4 @@
-import { User, TrendingUp, Shield, BarChart3, Landmark, ArrowRight, Briefcase, CreditCard } from 'lucide-react';
+import { User, TrendingUp, Shield, BarChart3, Landmark, ArrowRight, Briefcase } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 
 const serviceCategories = [
@@ -43,13 +43,6 @@ const serviceCategories = [
     icon: Briefcase,
     title: "Servizi per le Aziende di Cremona",
     desc: "Soluzioni dedicate alle imprese cremonesi: gestione della liquidità aziendale, TFM e ottimizzazione della tesoreria."
-  },
-  {
-    id: "servizi-complementari",
-    path: "/servizi/operativita-bancaria-servizi-complementari",
-    icon: CreditCard,
-    title: "Operatività Bancaria & Servizi Complementari",
-    desc: "Soluzioni assicurative, bancarie e di credito per una tutela a 360 gradi per la clientela di Cremona e provincia."
   },
 ];
 
