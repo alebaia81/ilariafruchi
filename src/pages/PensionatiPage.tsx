@@ -213,9 +213,9 @@ export const PensionatiPage = () => {
           </p>
           <h1
             id="pensionati-hero-title"
-            className="text-4xl sm:text-5xl font-extrabold text-brand-bordeaux leading-tight mb-6 max-w-3xl"
+            className="text-4xl sm:text-5xl font-extrabold text-text-primary leading-tight mb-6 max-w-3xl"
           >
-            GESTIONE E INTEGRAZIONE DEL DECUMULO
+            GESTIONE E <span className="text-brand-bordeaux">INTEGRAZIONE DEL DECUMULO</span>
           </h1>
           <p className="text-lg text-text-secondary max-w-2xl leading-relaxed">
             La strategia finanziaria cambia focus: l’obiettivo non è più la crescita, ma la sostenibilità nel tempo.
@@ -260,8 +260,8 @@ export const PensionatiPage = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Decumulo */}
-            <div className="bg-white rounded-2xl border-2 border-gold-amber p-8 text-left shadow-md">
-              <p className="text-xs font-bold uppercase tracking-widest text-gold-amber mb-3">
+            <div className="bg-white rounded-2xl border-2 border-brand-bordeaux p-8 text-left shadow-md">
+              <p className="text-xs font-bold uppercase tracking-widest text-brand-bordeaux mb-3">
                 Priorità 01
               </p>
               <h3 className="text-xl font-bold text-text-primary mb-3">
@@ -276,8 +276,8 @@ export const PensionatiPage = () => {
             </div>
 
             {/* Protezione inflazione */}
-            <div className="bg-white rounded-2xl border-2 border-stone-200 p-8 text-left shadow-sm">
-              <p className="text-xs font-bold uppercase tracking-widest text-stone-400 mb-3">
+            <div className="bg-white rounded-2xl border-2 border-brand-bordeaux p-8 text-left shadow-md">
+              <p className="text-xs font-bold uppercase tracking-widest text-brand-bordeaux mb-3">
                 Priorità 02
               </p>
               <h3 className="text-xl font-bold text-text-primary mb-3">
@@ -289,8 +289,8 @@ export const PensionatiPage = () => {
             </div>
 
             {/* Passaggio generazionale */}
-            <div className="bg-white rounded-2xl border-2 border-stone-200 p-8 text-left shadow-sm">
-              <p className="text-xs font-bold uppercase tracking-widest text-stone-400 mb-3">
+            <div className="bg-white rounded-2xl border-2 border-brand-bordeaux p-8 text-left shadow-md">
+              <p className="text-xs font-bold uppercase tracking-widest text-brand-bordeaux mb-3">
                 Priorità 03
               </p>
               <h3 className="text-xl font-bold text-text-primary mb-3">

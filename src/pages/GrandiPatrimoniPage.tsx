@@ -233,7 +233,7 @@ export const GrandiPatrimoniPage = () => {
           >
             Passaggio Generazionale & Grandi Patrimoni
             <br />
-            <span className="text-gold-amber">soluzioni strategiche su misura.</span>
+            <span className="text-brand-bordeaux">soluzioni strategiche su misura.</span>
           </h1>
           <p className="text-lg text-text-secondary max-w-2xl leading-relaxed">
             Oltre una certa soglia, la gestione patrimoniale supera la semplice selezione di fondi per diventare una questione di architettura: protezione legale, efficienza fiscale, pianificazione successoria, coordinamento strategico fra diverse asset class. Ogni decisione ha un impatto profondo sull’intero patrimonio e sulle persone coinvolte.

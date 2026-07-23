@@ -152,8 +152,8 @@ const phases = [
   {
     label: 'Fase di gestione',
     icon: Shield,
-    color: 'border-gold-amber',
-    accent: 'text-gold-amber',
+    color: 'border-brand-bordeaux',
+    accent: 'text-brand-bordeaux',
     points: [
       'Orizzonte temporale ridotto: il tempo di recupero si accorcia',
       'Priorità alla protezione e alla stabilità del capitale',
@@ -234,7 +234,7 @@ export const MezzaEtaPage = () => {
             id="mezza-eta-hero-title"
             className="text-4xl sm:text-5xl font-extrabold text-text-primary leading-tight mb-6 max-w-3xl"
           >
-            OTTIMIZZAZIONE E GESTIONE PATRIMONIALE
+            OTTIMIZZAZIONE E <span className="text-brand-bordeaux">GESTIONE PATRIMONIALE</span>
           </h1>
           <p className="text-lg text-text-secondary max-w-2xl leading-relaxed">
             C’è un momento in cui la priorità non è più solo accumulare capitale, ma capire come proteggerlo e farlo rendere in sicurezza. Riconoscere questa transizione e pianificare la giusta strategia è la decisione finanziaria più importante per il tuo futuro.
@@ -350,8 +350,8 @@ export const MezzaEtaPage = () => {
             </div>
 
             {/* Scenario alto capitale */}
-            <div className="bg-white rounded-2xl border-2 border-gold-amber p-8 text-left shadow-md">
-              <p className="text-xs font-bold uppercase tracking-widest text-gold-amber mb-3">
+            <div className="bg-white rounded-2xl border-2 border-brand-bordeaux p-8 text-left shadow-md">
+              <p className="text-xs font-bold uppercase tracking-widest text-brand-bordeaux mb-3">
                 Fase di gestione
               </p>
               <h3 className="text-lg font-bold text-text-primary mb-4">

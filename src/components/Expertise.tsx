@@ -41,7 +41,7 @@ const serviceCategories = [
     id: "servizi-aziende",
     path: "/servizi/pianificazione-patrimoniale-aziende",
     icon: Briefcase,
-    title: "Servizi di Pianificazione per le Aziende",
+    title: "Servizi alle Imprese",
     desc: "Soluzioni patrimoniali dedicate alle imprese: gestione della liquidità aziendale, TFM e ottimizzazione della tesoreria."
   },
 ];

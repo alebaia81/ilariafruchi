@@ -18,7 +18,7 @@ export const BookingCalendar: React.FC = () => {
     "Ottimizzazione e Gestione Patrimoniale",
     "Gestione e Integrazione del Decumulo",
     "Passaggio Generazionale & Grandi Patrimoni",
-    "Servizi di Pianificazione per le Aziende",
+    "Servizi alle Imprese",
   ];
 
   // Stato locale del form

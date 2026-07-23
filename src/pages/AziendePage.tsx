@@ -168,7 +168,7 @@ const businessAreas = [
 
 export const AziendePage = () => {
   useDocumentHead({
-    title: 'Pianificazione Patrimoniale Aziende | Ilaria Fruchi',
+    title: 'Servizi alle Imprese | Ilaria Fruchi',
     description:
       'Soluzioni patrimoniali dedicate alle imprese a Piacenza e Cremona. Gestione efficiente della liquidità aziendale, ottimizzazione fiscale con TFM e tutela della tesoreria.',
   });
