@@ -10,6 +10,7 @@ const subServices = [
   { name: 'Gestione e Integrazione del Decumulo', path: '/servizi/pensionati' },
   { name: 'Passaggio Generazionale & Grandi Patrimoni', path: '/servizi/grandi-patrimoni' },
   { name: 'Servizi di Pianificazione per le Aziende', path: '/servizi/pianificazione-patrimoniale-aziende' },
+  { name: 'Operatività Bancaria e Servizi Complementari', path: '/servizi/operativita-bancaria-servizi-complementari' },
 ];
 
 export const Navbar = () => {

@@ -14,6 +14,10 @@ const routes = [
   '/servizi/pianificazione-previdenziale-tfr',
   '/servizi/piani-di-accumulo-pac',
   '/servizi/gestione-risorse-patrimonio',
+  '/servizi/pensionati',
+  '/servizi/grandi-patrimoni',
+  '/servizi/pianificazione-patrimoniale-aziende',
+  '/servizi/operativita-bancaria-servizi-complementari',
   '/dove-sono/consulente-finanziario-piacenza',
   '/dove-sono/consulente-finanziario-cremona',
   '/privacy-policy'

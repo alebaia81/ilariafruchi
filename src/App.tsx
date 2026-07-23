@@ -19,6 +19,7 @@ import { MezzaEtaPage } from './pages/MezzaEtaPage';
 import { PensionatiPage } from './pages/PensionatiPage';
 import { GrandiPatrimoniPage } from './pages/GrandiPatrimoniPage';
 import { AziendePage } from './pages/AziendePage';
+import { ServiziComplementariPage } from './pages/ServiziComplementariPage';
 import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
 import { CremonaPage } from './pages/CremonaPage';
 import { PiacenzaPage } from './pages/PiacenzaPage';
@@ -88,6 +89,7 @@ function App() {
         <Route path="/servizi/pensionati" element={<PensionatiPage />} />
         <Route path="/servizi/grandi-patrimoni" element={<GrandiPatrimoniPage />} />
         <Route path="/servizi/pianificazione-patrimoniale-aziende" element={<AziendePage />} />
+        <Route path="/servizi/operativita-bancaria-servizi-complementari" element={<ServiziComplementariPage />} />
 
         {/* Local Landing Pages */}
         <Route path="/dove-sono/consulente-finanziario-piacenza" element={<PiacenzaPage />} />
