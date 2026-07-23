@@ -48,7 +48,7 @@ const ServiceContactForm = () => {
           Richiedi una consulenza
         </h2>
         <p className="text-text-secondary text-sm mb-6 text-left">
-          Un confronto gratuito, senza impegno. Dalla rendita integrativa
+          Un confronto diretto, senza impegno. Dalla rendita integrativa
           alla pianificazione successoria: ogni situazione è diversa e merita
           attenzione specifica.
         </p>
@@ -208,12 +208,12 @@ export const PensionatiPage = () => {
         className="py-16 px-4 border-b border-stone-200"
       >
         <div className="max-w-5xl mx-auto">
-          <p className="text-xs font-bold uppercase tracking-widest text-gold-amber mb-4">
+          <p className="text-xs font-bold uppercase tracking-widest text-brand-bordeaux mb-4">
             Servizio dedicato · Gestione e Integrazione del Decumulo
           </p>
           <h1
             id="pensionati-hero-title"
-            className="text-4xl sm:text-5xl font-extrabold text-text-primary leading-tight mb-6 max-w-3xl"
+            className="text-4xl sm:text-5xl font-extrabold text-brand-bordeaux leading-tight mb-6 max-w-3xl"
           >
             GESTIONE E INTEGRAZIONE DEL DECUMULO
           </h1>

@@ -9,7 +9,7 @@ import {
   Coins,
   ShieldCheck,
   CheckCircle2,
-  Phone,
+  Calendar,
 } from 'lucide-react';
 
 /* ─────────────────────────────────────────────
@@ -209,12 +209,12 @@ export const AziendePage = () => {
             id="aziende-hero-title"
             className="text-4xl sm:text-5xl font-extrabold text-text-primary leading-tight mb-6 max-w-3xl"
           >
-            Servizi di Pianificazione
+            Servizi alle imprese
             <br />
-            <span className="text-gold-amber">per le Aziende</span>
+            <span className="text-brand-bordeaux">e agli imprenditori</span>
           </h1>
           <p className="text-lg text-text-secondary max-w-2xl leading-relaxed">
-            Soluzioni patrimoniali dedicate al mondo societario e imprenditoriale. Un supporto strategico focalizzato sulla protezione del patrimonio personale dai rischi d’impresa, sulla gestione della liquidità aziendale e sull’accantonamento del TFR per i dipendenti.
+            Soluzioni strategiche per imprese e imprenditori: protezione del patrimonio personale dai rischi aziendali, gestione della liquidità e ottimizzazione del TFR.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
@@ -225,13 +225,13 @@ export const AziendePage = () => {
               <Briefcase className="w-4 h-4" aria-hidden="true" />
               Richiedi una consulenza aziendale
             </a>
-            <a
-              href="tel:+393463470232"
+            <Link
+              to="/#booking-section"
               className="inline-flex items-center gap-2 border border-stone-300 text-text-primary font-bold py-3 px-6 rounded-xl hover:border-brand-bordeaux transition-colors focus:outline-none"
             >
-              <Phone className="w-4 h-4" aria-hidden="true" />
-              Parliamone a voce
-            </a>
+              <Calendar className="w-4 h-4" aria-hidden="true" />
+              Prenota un appuntamento telefonico
+            </Link>
           </div>
         </div>
       </section>
@@ -290,20 +290,20 @@ export const AziendePage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
               {
-                t: 'Efficienza Fiscale',
-                d: 'Massimizza i benefici fiscali con soluzioni come il TFM e la pianificazione previdenziale per amministratori e soci.',
+                t: 'Efficienza fiscale',
+                d: 'Massimizza i benefici fiscali con soluzioni di pianificazione previdenziale dedicate ad amministratori e soci',
               },
               {
-                t: 'Ottimizzazione dei Rendimenti',
-                d: 'Evita che l\'inflazione eroda il potere d\'acquisto della liquidità in conto corrente, allocandola in strumenti coerenti con le tue scadenze.',
+                t: 'Previdenza per i dipendenti',
+                d: 'Soluzioni strategiche per l’accantonamento e la valorizzazione del TFR, garantendo stabilità e i vantaggi legati alla previdenza.',
               },
               {
-                t: 'Tutela Patrimoniale',
-                d: 'Metti al sicuro la tesoreria aziendale creando riserve patrimoniali protette e riducendo l\'esposizione ai rischi esterni.',
+                t: 'Tutela imprenditoriale e patrimoniale',
+                d: 'Strumenti mirati alla protezione della tesoreria e del patrimonio personale, isolandoli dai potenziali rischi legati all’attività d’impresa.',
               },
               {
-                t: 'Consulenza Indipendente',
-                d: 'Nessun conflitto d\'interesse. Ti guido verso soluzioni realmente allineate ai tuoi obiettivi imprenditoriali.',
+                t: 'Ottimizzazione e liquidità aziendale',
+                d: 'Ottimizzazione della tesoreria e della cassa aziendale in base alle scadenze, proteggendo il potere di acquisto della liquidità.',
               },
             ].map((item) => (
               <div key={item.t} className="flex gap-3 text-left">

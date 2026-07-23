@@ -239,15 +239,12 @@ export const GiovaniPage = () => {
           >
             Piani di Accumulo e Costruzione Capitale (PAC)
             <br />
-            <span className="text-gold-amber">
+            <span className="text-brand-bordeaux">
               per dare valore nel tempo al tuo risparmio.
             </span>
           </h1>
           <p className="text-lg text-text-secondary max-w-2xl leading-relaxed">
-            Riuscire a risparmiare una quota del proprio reddito non è scontato.
-            Chi ci riesce ha in mano lo strumento più potente della finanza personale:
-            il capitale da investire. Il passaggio successivo è farlo lavorare nel modo
-            più efficiente possibile — e questo richiede metodo, non fortuna.
+            Riuscire ad accantonare una parte del proprio reddito è un passo importante, non scontato. Chi ci riesce ha a disposizione una risorsa fondamentale per il proprio futuro: il capitale da valorizzare. Il passaggio successivo è farlo lavorare con un metodo strategico e costante, orientato ai tuoi obiettivi e indipendente dall’andamento del momento. E’ una scelta che richiede metodo, non fortuna.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">

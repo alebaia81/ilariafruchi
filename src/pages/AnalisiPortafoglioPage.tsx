@@ -12,8 +12,8 @@ import {
   FileUp,
   Mail,
   CheckCircle2,
-  Phone,
   Shield,
+  Calendar,
 } from 'lucide-react';
 
 /* ─────────────────────────────────────────────
@@ -284,13 +284,13 @@ export const AnalisiPortafoglioPage = () => {
               <Search className="w-4 h-4" aria-hidden="true" />
               Analisi portafoglio — inizia qui
             </a>
-            <a
-              href="tel:+393463470232"
+            <Link
+              to="/#booking-section"
               className="inline-flex items-center gap-2 border border-stone-300 text-text-primary font-bold py-3 px-6 rounded-xl hover:border-brand-bordeaux transition-colors focus:outline-none"
             >
-              <Phone className="w-4 h-4" aria-hidden="true" />
-              Preferisci chiamare?
-            </a>
+              <Calendar className="w-4 h-4" aria-hidden="true" />
+              Prenota un appuntamento telefonico
+            </Link>
           </div>
 
           {/* Garanzie rapide */}

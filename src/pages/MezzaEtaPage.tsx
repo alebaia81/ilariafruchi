@@ -48,7 +48,7 @@ const ServiceContactForm = () => {
           Rivediamo il tuo portafoglio insieme
         </h2>
         <p className="text-text-secondary text-sm mb-6 text-left">
-          Un confronto gratuito e senza impegno per valutare se la struttura
+          Un confronto diretto e senza impegno per valutare se la struttura
           attuale del tuo patrimonio è ancora allineata ai tuoi obiettivi.
         </p>
 
