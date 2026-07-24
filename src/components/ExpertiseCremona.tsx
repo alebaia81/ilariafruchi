@@ -6,57 +6,57 @@ const serviceCategories = [
     id: "servizi-dipendenti",
     path: "/servizi/pianificazione-previdenziale-tfr",
     icon: User,
-    title: "Pianificazione Previdenziale & TFR a Cremona",
-    desc: "Ottimizzazione del TFR e previdenza complementare per i clienti dell'area di Cremona, per valorizzare le risorse accumulate e costruire un futuro sereno."
+    title: "Pianificazione Previdenziale & TFR",
+    desc: "Ottimizzazione del TFR e previdenza complementare per valorizzare le risorse accumulate e costruire un futuro sereno."
   },
   {
     id: "servizi-giovani",
     path: "/servizi/piani-di-accumulo-pac",
     icon: TrendingUp,
-    title: "Piani di Accumulo (PAC)",
-    desc: "Piani di accumulo (PAC) accessibili ai risparmiatori di Cremona per costruire un patrimonio solido nel tempo sfruttando l'interesse composto."
+    title: "Piani di Accumulo e Costruzione Capitale (PAC)",
+    desc: "Piani di accumulo del capitale (PAC) efficienti per costruire un patrimonio solido nel tempo, sfruttando l'interesse composto."
   },
   {
     id: "servizi-mezza-eta",
     path: "/servizi/gestione-risorse-patrimonio",
     icon: Shield,
-    title: "Tutela del Risparmio e Gestione",
-    desc: "Bilanciamento del rischio e tutela del risparmio per i clienti di Cremona e provincia, con pianificazione di medio-lungo termine."
+    title: "Ottimizzazione e Gestione Patrimoniale",
+    desc: "Bilanciamento del rischio di portafoglio, protezione dei beni accumulati e pianificazione degli obiettivi finanziari di medio-lungo termine."
   },
   {
     id: "servizi-pensionati",
     path: "/servizi/pensionati",
     icon: Landmark,
-    title: "Gestione del Decumulo",
-    desc: "Strategie di prelievo programmato per mantenere inalterato lo stile di vita tutelando il capitale, attive sull'area di Cremona."
+    title: "Gestione e Integrazione del Decumulo",
+    desc: "Strategie di prelievo programmato e integrazione pensionistica per mantenere inalterato lo stile di vita tutelando il capitale."
   },
   {
     id: "servizi-patrimoni",
     path: "/servizi/grandi-patrimoni",
     icon: BarChart3,
-    title: "Pianificazione Successoria",
-    desc: "Consulenza avanzata su pianificazione successoria e tutela del patrimonio familiare, disponibile su appuntamento a Cremona o da remoto."
+    title: "Passaggio Generazionale & Grandi Patrimoni",
+    desc: "Consulenza avanzata su pianificazione successoria, tutela del patrimonio familiare, efficienza fiscale e diversificazione."
   },
   {
     id: "servizi-aziende",
     path: "/servizi/pianificazione-patrimoniale-aziende",
     icon: Briefcase,
-    title: "Servizi per le Aziende di Cremona",
-    desc: "Soluzioni dedicate alle imprese cremonesi: gestione della liquidità aziendale, TFM e ottimizzazione della tesoreria."
+    title: "Servizi alle Imprese",
+    desc: "Soluzioni patrimoniali dedicate alle imprese: gestione della liquidità aziendale, TFM e ottimizzazione della tesoreria."
   },
 ];
 
 export const ExpertiseCremona = () => {
   const navigate = useNavigate();
   return (
-    <section aria-labelledby="expertise-title" id="expertise" className="py-16 px-4 bg-stone-50 border-t border-stone-200">
+    <section id="expertise" aria-labelledby="expertise-title" className="py-16 px-4 bg-stone-50 border-t border-stone-200">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 id="expertise-title" className="text-3xl font-bold text-text-primary mb-4">
-            Aree di Consulenza e Soluzioni Patrimoniali a Cremona
+            Aree di Consulenza e Soluzioni Patrimoniali
           </h2>
           <p className="text-text-secondary max-w-2xl mx-auto">
-            Ogni fase della vita richiede una strategia finanziaria dedicata. Scopri le soluzioni studiate per i tuoi obiettivi specifici nell'area di Cremona.
+            Ogni fase della vita richiede una strategia finanziaria dedicata. Scopri le soluzioni studiate per i tuoi obiettivi specifici.
           </p>
         </div>
 

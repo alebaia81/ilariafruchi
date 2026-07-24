@@ -1,6 +1,5 @@
 import { HeroCremona } from '../components/HeroCremona';
 import { ExpertiseCremona } from '../components/ExpertiseCremona';
-import { BiografiaSection } from '../components/BiografiaSection';
 import { TrustTestimonials } from '../components/TrustTestimonials';
 import { CompoundCalculator } from '../components/CompoundCalculator';
 import { BookingCalendar } from '../components/BookingCalendar';
@@ -17,7 +16,6 @@ export const CremonaPage = () => {
     <main id="main-content" className="min-h-screen bg-bg-primary text-text-primary">
       <HeroCremona />
       <ExpertiseCremona />
-      <BiografiaSection />
       <TrustTestimonials />
       <CompoundCalculator />
       <div id="booking-section" className="scroll-mt-16">

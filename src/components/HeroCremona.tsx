@@ -7,11 +7,14 @@ export const HeroCremona = () => {
         <span className="inline-block text-xs font-bold uppercase tracking-wider text-gold-amber mb-3">
           Ilaria Fruchi — Consulente Finanziaria
         </span>
-        <h1 className="text-4xl sm:text-5xl font-extrabold text-text-primary tracking-tight leading-tight mb-6">
-          Consulenza Finanziaria e Patrimoniale a Cremona
+        <h1 className="text-4xl sm:text-5xl font-extrabold text-text-primary tracking-tight leading-tight mb-3">
+          PIANIFICAZIONE PATRIMONIALE
         </h1>
-        <p className="text-text-secondary text-lg leading-relaxed mb-8 max-w-xl">
-          Pianifica il tuo futuro finanziario con una strategia indipendente e personalizzata. Gestione patrimoniale e investimenti a Cremona e provincia, anche da remoto.
+        <p className="text-xl sm:text-2xl font-normal text-text-secondary leading-relaxed mb-4 max-w-xl">
+          Strategie patrimoniali su misura a Cremona e provincia
+        </p>
+        <p className="text-text-secondary text-base sm:text-lg leading-relaxed mb-8 max-w-xl">
+          Consulente finanziario attiva su Cremona e provincia. Aiuto a proteggere il patrimonio della tua famiglia e della tua impresa con una pianificazione finanziaria esclusiva, costruita unicamente sui tuoi obiettivi reali.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
           <Link

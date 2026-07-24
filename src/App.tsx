@@ -94,6 +94,8 @@ function App() {
         {/* Local Landing Pages */}
         <Route path="/dove-sono/consulente-finanziario-piacenza" element={<PiacenzaPage />} />
         <Route path="/dove-sono/consulente-finanziario-cremona" element={<CremonaPage />} />
+        <Route path="/cremona" element={<CremonaPage />} />
+        <Route path="/piacenza" element={<PiacenzaPage />} />
 
         {/* Legacy / Helper Routes (Secondary) */}
         <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
