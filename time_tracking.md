@@ -15,8 +15,9 @@ Questo file viene aggiornato automaticamente dal sistema.
 | 2026-07-04 | 0.72 | - Update Footer with real institutional data<br>- Update privacy policy with real data<br>- Update WhatsApp number in ContactForm<br>- Update WhatsApp number in BookingCalendar<br>- Replace abstract placeholder with real color photo in Hero section<br>- *...e altre 10 operazioni* |
 | 2026-07-08 | 2.17 | - Remove Fideuram reference in Privacy Policy<br>- Replace email address<br>- Remove Fideuram reference from FAQ<br>- Remove Fideuram references and update email in FooterInstitutional<br>- Remove Fideuram reference in BiografiaSection<br>- *...e altre 37 operazioni* |
 | 2026-07-21 | 0.20 | - Fix asset filenames in vite.config.ts to be deterministic so pre-rendered pages never break<br>- Create script to replace hardcoded hash bundle references with stable assets in seo-html<br>- Update build script to run fix-seo-hashes before copying seo-html into dist |
-| 2026-07-24 | 0.35 | - Sostituite le 3 testimonianze di esempio con le 5 vere recensioni dei clienti reali di Ilaria Fruchi.<br>- Applied brand-bordeaux color to testimonial cards: top border accent and author name color, matching the \"Prenota appuntamento telefonico\" button.<br>- Il bordo bordeaux ora contorna tutta la scheda su tutti e 4 i lati, non solo il top.<br>- Aggiunto link LinkedIn di Ilaria Fruchi nella colonna Contatti del footer, con icona Linkedin da lucide-react e stile coerente con gli altri contatti.<br>- Aggiunto voce LinkedIn nella lista contatti del footer.<br>- *...e altre 1 operazioni* |
+| 2026-07-24 | 0.94 | - Sostituite le 3 testimonianze di esempio con le 5 vere recensioni dei clienti reali di Ilaria Fruchi.<br>- Applied brand-bordeaux color to testimonial cards: top border accent and author name color, matching the \"Prenota appuntamento telefonico\" button.<br>- Il bordo bordeaux ora contorna tutta la scheda su tutti e 4 i lati, non solo il top.<br>- Aggiunto link LinkedIn di Ilaria Fruchi nella colonna Contatti del footer, con icona Linkedin da lucide-react e stile coerente con gli altri contatti.<br>- Aggiunto voce LinkedIn nella lista contatti del footer.<br>- *...e altre 7 operazioni* |
+| 2026-07-26 | 0.13 | - Added new testimonial from Eleonora S. about her mortgage experience |
 
 ---
 
-### **TOTALE COMPLESSIVO: 13.95 ore**
+### **TOTALE COMPLESSIVO: 14.67 ore**

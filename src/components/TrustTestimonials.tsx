@@ -18,6 +18,10 @@ const testimonials = [
   {
     text: "Seria, attenta e disponibile ad ascoltare qualsiasi necessità del cliente, indirizzandolo alla miglior gestione patrimoniale secondo le proprie necessità.",
     author: "Marta B. & Jonathan C."
+  },
+  {
+    text: "Ho conosciuto Ilaria quando mi ha aiutata ad ottenere il mutuo per la mia casa. In un attimo ha preso in mano la situazione e nonostante avessi ancora un contratto a tempo determinato mi ha fatto subito ottenere ciò che mi serviva per l'acquisto della casa. Ha sempre dimostrato in primis competenza, disponibilità e tanta passione per il suo lavoro. Non potevo non seguirla affidandole i miei risparmi, perché mi sento sicura nelle sue mani e sempre ben consigliata.",
+    author: "Eleonora S."
   }
 ];
 
