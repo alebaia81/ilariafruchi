@@ -3,14 +3,14 @@ import { useEffect } from 'react';
 interface HeadMeta {
   title: string;
   description: string;
+  canonicalUrl?: string;
 }
 
-export function useDocumentHead({ title, description }: HeadMeta) {
+export function useDocumentHead({ title, description, canonicalUrl }: HeadMeta) {
   useEffect(() => {
-    // Salva i valori originali per un eventuale ripristino se necessario, 
-    // o semplicemente imposta i nuovi valori.
     document.title = title;
     
+    // Description
     let metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute('content', description);
@@ -20,5 +20,18 @@ export function useDocumentHead({ title, description }: HeadMeta) {
       metaDescription.setAttribute('content', description);
       document.head.appendChild(metaDescription);
     }
-  }, [title, description]);
+
+    // Canonical Link
+    const targetCanonical = canonicalUrl || `${window.location.origin}${window.location.pathname}`;
+    let linkCanonical = document.querySelector('link[rel="canonical"]');
+    if (linkCanonical) {
+      linkCanonical.setAttribute('href', targetCanonical);
+    } else {
+      linkCanonical = document.createElement('link');
+      linkCanonical.setAttribute('rel', 'canonical');
+      linkCanonical.setAttribute('href', targetCanonical);
+      document.head.appendChild(linkCanonical);
+    }
+  }, [title, description, canonicalUrl]);
 }
+

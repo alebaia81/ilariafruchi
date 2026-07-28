@@ -37,6 +37,24 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://ilariafruchi.it/servizi/pensionati</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ilariafruchi.it/servizi/grandi-patrimoni</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ilariafruchi.it/servizi/pianificazione-patrimoniale-aziende</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://ilariafruchi.it/servizi/operativita-bancaria-servizi-complementari</loc>
     <lastmod>2026-07-23</lastmod>
     <changefreq>monthly</changefreq>
