@@ -6,6 +6,8 @@ interface HeadMeta {
   canonicalUrl?: string;
 }
 
+const DOMAIN = 'https://ilariafruchi.it';
+
 export function useDocumentHead({ title, description, canonicalUrl }: HeadMeta) {
   useEffect(() => {
     document.title = title;
@@ -22,7 +24,15 @@ export function useDocumentHead({ title, description, canonicalUrl }: HeadMeta) 
     }
 
     // Canonical Link
-    const targetCanonical = canonicalUrl || `${window.location.origin}${window.location.pathname}`;
+    let targetCanonical = canonicalUrl;
+    if (!targetCanonical) {
+      let rawPath = window.location.pathname;
+      if (rawPath !== '/' && !rawPath.endsWith('/')) {
+        rawPath = `${rawPath}/`;
+      }
+      targetCanonical = `${DOMAIN}${rawPath}`;
+    }
+
     let linkCanonical = document.querySelector('link[rel="canonical"]');
     if (linkCanonical) {
       linkCanonical.setAttribute('href', targetCanonical);
@@ -34,4 +44,5 @@ export function useDocumentHead({ title, description, canonicalUrl }: HeadMeta) 
     }
   }, [title, description, canonicalUrl]);
 }
+
 
